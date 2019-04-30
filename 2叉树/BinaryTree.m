@@ -37,26 +37,12 @@
     if (self.rootNode == nil) {
         self.rootNode = aNode;
     }
+    [datas removeObjectAtIndex:0];
     
-    [datas removeObjectAtIndex:0];
-    if (datas.count > 0 && [datas[0] integerValue] != NSIntegerMax) {
+    if (aNode != nil) {
         [self createTree:datas toParent:aNode andChild:left];
-    }
-    if (datas.count == 0) {
-        return;
-    }
-    [datas removeObjectAtIndex:0];
-    if (datas.count > 0 && [datas[0] integerValue] != NSIntegerMax) {
         [self createTree:datas toParent:aNode andChild:right];
     }
-    if (datas.count == 0) return;
-    [datas removeObjectAtIndex:0];
-//    _index++;
-//    if (_index < datas.count)
-//        [self addNode:[datas[_index] integerValue] toParent:aNode andChild:left];;
-//    _index++;
-//    if (_index < datas.count)
-//        [self addNode:[datas[_index] integerValue] toParent:aNode andChild:right];
 }
 
 - (void)createTree:(NSMutableArray *)datas {
