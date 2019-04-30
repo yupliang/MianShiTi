@@ -49,4 +49,37 @@
     [self createTree:datas toParent:nil andChild:root];
 }
 
++ (void)dlrTree:(BinaryTree *)aTree {
+    if (aTree == nil) return;
+    
+    [aTree _dlrTree:aTree.rootNode];
+}
++ (void)ldrTree:(BinaryTree *)aTree {
+    if (aTree == nil) return;
+    [aTree _ldrTree:aTree.rootNode];
+}
++ (void)lrdTree:(BinaryTree *)aTree {
+    if (aTree == nil) return;
+    [aTree _lrdTree:aTree.rootNode];
+}
+//MARK: private methods
+- (void)_dlrTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return;
+    NSLog(@"%d", aNode.data);
+    [self _dlrTree:aNode.leftNode];
+    [self _dlrTree:aNode.rightNode];
+}
+- (void)_ldrTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return;
+    [self _ldrTree:aNode.leftNode];
+    NSLog(@"%d", aNode.data);
+    [self _ldrTree:aNode.rightNode];
+}
+- (void)_lrdTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return;
+    [self _lrdTree:aNode.leftNode];
+    [self _lrdTree:aNode.rightNode];
+    NSLog(@"%d", aNode.data);
+}
+
 @end

@@ -37,6 +37,18 @@
     BinaryTree *aTree = [BinaryTree new];
     [aTree createTree:[@[@(8),@(3),@(1),@(NSIntegerMax),@(NSIntegerMax),@(6),@(4),@(NSIntegerMax),@(NSIntegerMax),@(7),@(NSIntegerMax),@(NSIntegerMax),@(10),@(NSIntegerMax),@(14),@(13),@(NSIntegerMax),@(NSIntegerMax),@(NSIntegerMax)] mutableCopy]];
     NSLog(@"tree create finished");
+    
+    NSLog(@"begin dlr a tree");
+    [BinaryTree dlrTree:aTree];
+    NSLog(@"end dlr a tree");
+    
+    NSLog(@"begin ldr a tree");
+    [BinaryTree ldrTree:aTree];
+    NSLog(@"end ldr a tree");
+    
+    NSLog(@"begin lrd a tree");
+    [BinaryTree lrdTree:aTree];
+    NSLog(@"end lrd a tree");
 }
 
 
