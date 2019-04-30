@@ -2,8 +2,8 @@
 //  BinaryTreeNode.h
 //  MianshiTi
 //
-//  Created by 于培亮 on 2019/4/29.
-//  Copyright © 2019 于培亮. All rights reserved.
+//  Created by QiQiuZhe on 2019/4/29.
+//  Copyright © 2019 QiQiuZhe. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
