@@ -11,7 +11,8 @@
 * 设计一个可以展示一棵二叉树的App
 
 ## 截图
-![](https://github.com/yupliang/MianShiTi/blob/master/截图/二叉树遍历.jpg)
+![](https://github.com/yupliang/MianShiTi/blob/master/截图/二叉树遍历.jpg)|![](https://github.com/yupliang/MianShiTi/blob/master/截图/层次遍历二叉树.jpg)
+:-------------------------:|:-------------------------:
 
 ## 参考链接
 [数据结构和算法——二叉树](https://blog.csdn.net/google19890102/article/details/53926704)
