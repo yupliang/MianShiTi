@@ -19,6 +19,8 @@
 		FD73FA11227482EA0027C89D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73FA10227482EA0027C89D /* List.m */; };
 		FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFA22773C030058F557 /* BinaryTreeNode.m */; };
 		FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFD22773CC50058F557 /* BinaryTree.m */; };
+		FD938C0222795B1B0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
+		FD938C0422795EAB0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		FD938BFA22773C030058F557 /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 		FD938BFC22773CC50058F557 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		FD938BFD22773CC50058F557 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
+		FD938C0022795B1B0058F557 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		FD938C0122795B1B0058F557 /* Queue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		FD938C0322795B750058F557 /* QueueProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +98,7 @@
 		FD18943522748236003EA507 = {
 			isa = PBXGroup;
 			children = (
+				FD938BFF22795B090058F557 /* Queue */,
 				FD938BF822773B990058F557 /* 2叉树 */,
 				FD18944022748237003EA507 /* MianshiTi */,
 				FD1894592274823C003EA507 /* MianshiTiTests */,
@@ -158,6 +164,16 @@
 				FD938BFD22773CC50058F557 /* BinaryTree.m */,
 			);
 			path = "2叉树";
+			sourceTree = "<group>";
+		};
+		FD938BFF22795B090058F557 /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				FD938C0022795B1B0058F557 /* Queue.h */,
+				FD938C0122795B1B0058F557 /* Queue.m */,
+				FD938C0322795B750058F557 /* QueueProtocol.h */,
+			);
+			path = Queue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +313,7 @@
 				FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */,
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
 				FD1894752274825D003EA507 /* Node.m in Sources */,
+				FD938C0222795B1B0058F557 /* Queue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD938C0422795EAB0058F557 /* Queue.m in Sources */,
 				FD18945B2274823C003EA507 /* MianshiTiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

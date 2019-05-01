@@ -7,6 +7,7 @@
 //
 
 #import "BinaryTree.h"
+#import "Queue.h"
 
 @implementation BinaryTree
 
@@ -62,6 +63,9 @@
     if (aTree == nil) return;
     [aTree _lrdTree:aTree.rootNode];
 }
++ (void)levelTree:(BinaryTree *)aTree {
+    [aTree _levelTree:aTree.rootNode];
+}
 //MARK: private methods
 - (void)_dlrTree:(BinaryTreeNode *)aNode {
     if (aNode == nil) return;
@@ -80,6 +84,19 @@
     [self _lrdTree:aNode.leftNode];
     [self _lrdTree:aNode.rightNode];
     NSLog(@"%d", aNode.data);
+}
+- (void)_levelTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return;
+    Queue *aQueue = [Queue new];
+    [aQueue enqueue:aNode];
+    while (![aQueue isEmpty]) {
+        BinaryTreeNode *n = (BinaryTreeNode *)[aQueue dequeue];
+        NSLog(@"%d", n.data);
+        if (n.leftNode != nil)
+            [aQueue enqueue:n.leftNode];
+        if (n.rightNode != nil)
+            [aQueue enqueue:n.rightNode];
+    }
 }
 
 @end

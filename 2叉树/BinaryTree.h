@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)dlrTree:(BinaryTree *)aTree;
 + (void)ldrTree:(BinaryTree *)aTree;
 + (void)lrdTree:(BinaryTree *)aTree;
++ (void)levelTree:(BinaryTree *)aTree;
 
 @end
 

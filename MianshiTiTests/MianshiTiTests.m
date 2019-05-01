@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Queue.h"
 
 @interface MianshiTiTests : XCTestCase
 
@@ -25,6 +26,18 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    Queue *queue = [Queue new];
+    XCTAssertTrue([queue isEmpty]);
+    NSObject *o1 = [NSObject new];
+    NSObject *o2 = [NSObject new];
+    [queue enqueue:o1];
+    [queue enqueue:o2];
+    
+    XCTAssertEqualObjects(o1, [queue peek]);
+    [queue dequeue];
+    XCTAssertEqualObjects(o2, [queue peek]);
+    XCTAssertThrowsSpecificNamed([queue enqueue:nil], NSException, @"参数错误");
+    XCTAssertThrows([queue enqueue:nil]);
 }
 
 - (void)testPerformanceExample {

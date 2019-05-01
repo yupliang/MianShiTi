@@ -49,6 +49,10 @@
     NSLog(@"begin lrd a tree");
     [BinaryTree lrdTree:aTree];
     NSLog(@"end lrd a tree");
+    
+    NSLog(@"begin level order a tree");
+    [BinaryTree levelTree:aTree];
+    NSLog(@"end level order a tree");
 }
 
 
