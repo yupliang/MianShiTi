@@ -5,9 +5,10 @@
 * 前序遍历
 * 中序遍历
 * 后序遍历
+* 层次遍历
 
 ## Todo List
-* 层次遍历
+* 设计一个可以展示一棵二叉树的App
 
 ## 截图
 ![](https://github.com/yupliang/MianShiTi/blob/master/截图/二叉树遍历.png?raw=true)
