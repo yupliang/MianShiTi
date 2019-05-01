@@ -9,8 +9,11 @@
 #import "ViewController.h"
 #import "List.h"
 #import "BinaryTree.h"
+#import "ViewController1.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    BinaryTree *_tree;
+}
 
 @end
 
@@ -36,6 +39,7 @@
 //    [@[@(8),@(3),@(1),@(NSIntegerMax),@(NSIntegerMax),@(6),@(4),@(NSIntegerMax),@(NSIntegerMax),@(7),@(NSIntegerMax),@(NSIntegerMax),@(10),@(NSIntegerMax),@(14),@(13),@(NSIntegerMax),@(NSIntegerMax),@(NSIntegerMax)] mutableCopy]
     BinaryTree *aTree = [BinaryTree new];
     [aTree createTree:[@[@(8),@(3),@(1),@(NSIntegerMax),@(NSIntegerMax),@(6),@(4),@(NSIntegerMax),@(NSIntegerMax),@(7),@(NSIntegerMax),@(NSIntegerMax),@(10),@(NSIntegerMax),@(14),@(13),@(NSIntegerMax),@(NSIntegerMax),@(NSIntegerMax)] mutableCopy]];
+    _tree = aTree;
     NSLog(@"tree create finished");
     
     NSLog(@"begin dlr a tree");
@@ -55,5 +59,11 @@
     NSLog(@"end level order a tree");
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[ViewController1 class]]) {
+        ViewController1 *vc = segue.destinationViewController;
+        vc.datas = [BinaryTree levelOrderNodeAndLRnode:_tree];
+    }
+}
 
 @end

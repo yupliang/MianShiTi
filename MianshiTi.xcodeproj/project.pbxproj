@@ -21,6 +21,7 @@
 		FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFD22773CC50058F557 /* BinaryTree.m */; };
 		FD938C0222795B1B0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
 		FD938C0422795EAB0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
+		FD938C072279AE540058F557 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C062279AE540058F557 /* ViewController1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		FD938C0022795B1B0058F557 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		FD938C0122795B1B0058F557 /* Queue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 		FD938C0322795B750058F557 /* QueueProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueProtocol.h; sourceTree = "<group>"; };
+		FD938C052279AE540058F557 /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		FD938C062279AE540058F557 /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				FD18944222748237003EA507 /* AppDelegate.m */,
 				FD18944422748237003EA507 /* ViewController.h */,
 				FD18944522748237003EA507 /* ViewController.m */,
+				FD938C052279AE540058F557 /* ViewController1.h */,
+				FD938C062279AE540058F557 /* ViewController1.m */,
 				FD18944722748237003EA507 /* Main.storyboard */,
 				FD18944A2274823C003EA507 /* Assets.xcassets */,
 				FD18944C2274823C003EA507 /* LaunchScreen.storyboard */,
@@ -314,6 +319,7 @@
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
 				FD1894752274825D003EA507 /* Node.m in Sources */,
 				FD938C0222795B1B0058F557 /* Queue.m in Sources */,
+				FD938C072279AE540058F557 /* ViewController1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,6 +66,9 @@
 + (void)levelTree:(BinaryTree *)aTree {
     [aTree _levelTree:aTree.rootNode];
 }
++ (NSArray *)levelOrderNodeAndLRnode:(BinaryTree *)aTree {
+    return [aTree _levelOrderNodeAndLRnode:aTree.rootNode];
+}
 //MARK: private methods
 - (void)_dlrTree:(BinaryTreeNode *)aNode {
     if (aNode == nil) return;
@@ -97,6 +100,25 @@
         if (n.rightNode != nil)
             [aQueue enqueue:n.rightNode];
     }
+}
+
+- (NSArray *)_levelOrderNodeAndLRnode:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return nil;
+    NSMutableArray *arr = [NSMutableArray new];
+    Queue *aQueue = [Queue new];
+    [aQueue enqueue:aNode];
+    while (![aQueue isEmpty]) {
+        BinaryTreeNode *n = (BinaryTreeNode *)[aQueue dequeue];
+        [arr addObject:[NSString stringWithFormat:@"%d->%@,%@", n.data,n.leftNode?[NSString stringWithFormat:@"%d",n.leftNode.data]:@"#",n.rightNode?[NSString stringWithFormat:@"%d",n.rightNode.data]:@"#"]];
+        if (n.leftNode) {
+            [aQueue enqueue:n.leftNode];
+        }
+        if (n.rightNode) {
+            [aQueue enqueue:n.rightNode];
+        }
+    }
+    
+    return arr;
 }
 
 @end
