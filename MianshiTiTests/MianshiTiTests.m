@@ -52,6 +52,8 @@
     result = [self.bdata addData:@[@(1234),@(5678)] AndData2:@[@(4567)]];
     resultStr = [self.bdata outPutBigData:result];
     XCTAssertEqualObjects(resultStr, @"12350245");
+    result = [self.bdata addData:@[] AndData2:@[@99,@9999]];
+    XCTAssertEqualObjects([self.bdata outPutBigData:result], @"999999");
     result = [self.bdata addData:@[@123,@9899] AndData2:@[@99,@9999]];
     XCTAssertEqualObjects([self.bdata outPutBigData:result], @"2239898");
     result = [self.bdata addData:@[@9999,@9999] AndData2:@[@9999,@9999]];
