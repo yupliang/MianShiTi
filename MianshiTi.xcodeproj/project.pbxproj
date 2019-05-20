@@ -16,6 +16,8 @@
 		FD18945B2274823C003EA507 /* MianshiTiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18945A2274823C003EA507 /* MianshiTiTests.m */; };
 		FD1894662274823C003EA507 /* MianshiTiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1894652274823C003EA507 /* MianshiTiUITests.m */; };
 		FD1894752274825D003EA507 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1894742274825D003EA507 /* Node.m */; };
+		FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1EA06B228A48C20048359D /* UITouch+Test.m */; };
+		FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD415B4A2292FC3C0034AA87 /* BigData.m */; };
 		FD73FA11227482EA0027C89D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73FA10227482EA0027C89D /* List.m */; };
 		FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFA22773C030058F557 /* BinaryTreeNode.m */; };
 		FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFD22773CC50058F557 /* BinaryTree.m */; };
@@ -60,6 +62,10 @@
 		FD1894672274823C003EA507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD1894732274825D003EA507 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		FD1894742274825D003EA507 /* Node.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		FD1EA06A228A48C20048359D /* UITouch+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITouch+Test.h"; sourceTree = "<group>"; };
+		FD1EA06B228A48C20048359D /* UITouch+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITouch+Test.m"; sourceTree = "<group>"; };
+		FD415B492292FC3C0034AA87 /* BigData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigData.h; sourceTree = "<group>"; };
+		FD415B4A2292FC3C0034AA87 /* BigData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigData.m; sourceTree = "<group>"; };
 		FD73FA0F227482EA0027C89D /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		FD73FA10227482EA0027C89D /* List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		FD938BF922773C030058F557 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		FD18943522748236003EA507 = {
 			isa = PBXGroup;
 			children = (
+				FD415B482292FC150034AA87 /* BigDataCalculate */,
 				FD938BFF22795B090058F557 /* Queue */,
 				FD938BF822773B990058F557 /* 2叉树 */,
 				FD18944022748237003EA507 /* MianshiTi */,
@@ -138,6 +145,8 @@
 				FD1894742274825D003EA507 /* Node.m */,
 				FD73FA0F227482EA0027C89D /* List.h */,
 				FD73FA10227482EA0027C89D /* List.m */,
+				FD1EA06A228A48C20048359D /* UITouch+Test.h */,
+				FD1EA06B228A48C20048359D /* UITouch+Test.m */,
 			);
 			path = MianshiTi;
 			sourceTree = "<group>";
@@ -158,6 +167,15 @@
 				FD1894672274823C003EA507 /* Info.plist */,
 			);
 			path = MianshiTiUITests;
+			sourceTree = "<group>";
+		};
+		FD415B482292FC150034AA87 /* BigDataCalculate */ = {
+			isa = PBXGroup;
+			children = (
+				FD415B492292FC3C0034AA87 /* BigData.h */,
+				FD415B4A2292FC3C0034AA87 /* BigData.m */,
+			);
+			path = BigDataCalculate;
 			sourceTree = "<group>";
 		};
 		FD938BF822773B990058F557 /* 2叉树 */ = {
@@ -314,6 +332,8 @@
 				FD73FA11227482EA0027C89D /* List.m in Sources */,
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
 				FD1894512274823C003EA507 /* main.m in Sources */,
+				FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */,
+				FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */,
 				FD18944322748237003EA507 /* AppDelegate.m in Sources */,
 				FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */,
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
@@ -491,7 +511,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Y5LDVCJBFV;
 				INFOPLIST_FILE = MianshiTi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MianshiTi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WildcardDevProvision;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -507,7 +530,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MianshiTi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,6 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MianshiTi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -523,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MianshiTiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -541,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MianshiTiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

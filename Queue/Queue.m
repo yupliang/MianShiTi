@@ -50,4 +50,8 @@
     return [_container count];
 }
 
+- (void)dealloc
+{
+    NSLog(@"queue dealloc");
+}
 @end
