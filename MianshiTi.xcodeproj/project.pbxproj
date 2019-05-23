@@ -17,6 +17,9 @@
 		FD1894662274823C003EA507 /* MianshiTiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1894652274823C003EA507 /* MianshiTiUITests.m */; };
 		FD1894752274825D003EA507 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1894742274825D003EA507 /* Node.m */; };
 		FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1EA06B228A48C20048359D /* UITouch+Test.m */; };
+		FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
+		FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
+		FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */; };
 		FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD415B4A2292FC3C0034AA87 /* BigData.m */; };
 		FD73FA11227482EA0027C89D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73FA10227482EA0027C89D /* List.m */; };
 		FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFA22773C030058F557 /* BinaryTreeNode.m */; };
@@ -67,6 +70,9 @@
 		FD1894742274825D003EA507 /* Node.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		FD1EA06A228A48C20048359D /* UITouch+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITouch+Test.h"; sourceTree = "<group>"; };
 		FD1EA06B228A48C20048359D /* UITouch+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITouch+Test.m"; sourceTree = "<group>"; };
+		FD2FC89E2296CD5500C8B432 /* LRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUCache.h; sourceTree = "<group>"; };
+		FD2FC89F2296CD5500C8B432 /* LRUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUCache.m; sourceTree = "<group>"; };
+		FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUCacheTest.m; sourceTree = "<group>"; };
 		FD415B492292FC3C0034AA87 /* BigData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigData.h; sourceTree = "<group>"; };
 		FD415B4A2292FC3C0034AA87 /* BigData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigData.m; sourceTree = "<group>"; };
 		FD73FA0F227482EA0027C89D /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		FD18943522748236003EA507 = {
 			isa = PBXGroup;
 			children = (
+				FD2FC8972296CB6A00C8B432 /* Questions */,
 				FDE7FBEC22969088001BD1CE /* Runtime */,
 				FD415B482292FC150034AA87 /* BigDataCalculate */,
 				FD938BFF22795B090058F557 /* Queue */,
@@ -161,6 +168,7 @@
 		FD1894592274823C003EA507 /* MianshiTiTests */ = {
 			isa = PBXGroup;
 			children = (
+				FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */,
 				FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */,
 				FD18945A2274823C003EA507 /* MianshiTiTests.m */,
 				FD18945C2274823C003EA507 /* Info.plist */,
@@ -175,6 +183,15 @@
 				FD1894672274823C003EA507 /* Info.plist */,
 			);
 			path = MianshiTiUITests;
+			sourceTree = "<group>";
+		};
+		FD2FC8972296CB6A00C8B432 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				FD2FC89E2296CD5500C8B432 /* LRUCache.h */,
+				FD2FC89F2296CD5500C8B432 /* LRUCache.m */,
+			);
+			path = Questions;
 			sourceTree = "<group>";
 		};
 		FD415B482292FC150034AA87 /* BigDataCalculate */ = {
@@ -348,6 +365,7 @@
 			files = (
 				FD73FA11227482EA0027C89D /* List.m in Sources */,
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
+				FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */,
 				FD1894512274823C003EA507 /* main.m in Sources */,
 				FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */,
 				FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */,
@@ -365,8 +383,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
 				FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */,
 				FDE7FBF022969088001BD1CE /* aa.m in Sources */,
+				FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */,
 				FD938C0422795EAB0058F557 /* Queue.m in Sources */,
 				FD18945B2274823C003EA507 /* MianshiTiTests.m in Sources */,
 			);
