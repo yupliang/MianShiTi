@@ -37,6 +37,22 @@
     BinaryTree *aTree = [BinaryTree new];
     [aTree createTree:[@[@(8),@(3),@(1),@(NSIntegerMax),@(NSIntegerMax),@(6),@(4),@(NSIntegerMax),@(NSIntegerMax),@(7),@(NSIntegerMax),@(NSIntegerMax),@(10),@(NSIntegerMax),@(14),@(13),@(NSIntegerMax),@(NSIntegerMax),@(NSIntegerMax)] mutableCopy]];
     NSLog(@"tree create finished");
+    
+    NSBlockOperation *aop = [NSBlockOperation blockOperationWithBlock:^{
+        [[NSRunLoop currentRunLoop] run];
+        while (true) {
+            NSLog(@"");
+        }
+    }];
+    NSOperationQueue *aq = [NSOperationQueue new];
+    [aq addOperation:aop];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [[NSRunLoop currentRunLoop] run];
+        while (true) {
+            NSLog(@"");
+        }
+    });
 }
 
 

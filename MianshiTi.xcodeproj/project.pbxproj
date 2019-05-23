@@ -19,6 +19,8 @@
 		FD73FA11227482EA0027C89D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73FA10227482EA0027C89D /* List.m */; };
 		FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFA22773C030058F557 /* BinaryTreeNode.m */; };
 		FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFD22773CC50058F557 /* BinaryTree.m */; };
+		FDE7FBE922968E01001BD1CE /* aa.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBE722968E01001BD1CE /* aa.m */; };
+		FDE7FBEB22968E29001BD1CE /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBEA22968E29001BD1CE /* RuntimeTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		FD938BFA22773C030058F557 /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 		FD938BFC22773CC50058F557 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		FD938BFD22773CC50058F557 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
+		FDE7FBE722968E01001BD1CE /* aa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aa.m; sourceTree = "<group>"; };
+		FDE7FBE822968E01001BD1CE /* aa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aa.h; sourceTree = "<group>"; };
+		FDE7FBEA22968E29001BD1CE /* RuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +98,7 @@
 		FD18943522748236003EA507 = {
 			isa = PBXGroup;
 			children = (
+				FDE7FBE622968DF3001BD1CE /* Runtime */,
 				FD938BF822773B990058F557 /* 2叉树 */,
 				FD18944022748237003EA507 /* MianshiTi */,
 				FD1894592274823C003EA507 /* MianshiTiTests */,
@@ -136,6 +142,7 @@
 			children = (
 				FD18945A2274823C003EA507 /* MianshiTiTests.m */,
 				FD18945C2274823C003EA507 /* Info.plist */,
+				FDE7FBEA22968E29001BD1CE /* RuntimeTest.m */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -158,6 +165,15 @@
 				FD938BFD22773CC50058F557 /* BinaryTree.m */,
 			);
 			path = "2叉树";
+			sourceTree = "<group>";
+		};
+		FDE7FBE622968DF3001BD1CE /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				FDE7FBE822968E01001BD1CE /* aa.h */,
+				FDE7FBE722968E01001BD1CE /* aa.m */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD73FA11227482EA0027C89D /* List.m in Sources */,
+				FDE7FBE922968E01001BD1CE /* aa.m in Sources */,
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
 				FD1894512274823C003EA507 /* main.m in Sources */,
 				FD18944322748237003EA507 /* AppDelegate.m in Sources */,
@@ -304,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE7FBEB22968E29001BD1CE /* RuntimeTest.m in Sources */,
 				FD18945B2274823C003EA507 /* MianshiTiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
