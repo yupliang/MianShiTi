@@ -23,15 +23,17 @@ typedef enum : NSUInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BinaryTree : NSObject {
-    NSInteger _index;
-}
+@interface BinaryTree : NSObject
 
 @property (nonatomic,strong) BinaryTreeNode *rootNode;
 
-- (nullable BinaryTreeNode *)addNode:(NSInteger)data toParent:(nullable BinaryTreeNode *)aParent andChild:(NodeType)aside;
-- (void)createTree:(NSMutableArray *)datas toParent:(nullable BinaryTreeNode *)aParent andChild:(NodeType)aside;
 - (void)createTree:(NSMutableArray *)datas;
++ (void)dlrTree:(BinaryTree *)aTree;
++ (void)ldrTree:(BinaryTree *)aTree;
++ (void)lrdTree:(BinaryTree *)aTree;
++ (void)levelTree:(BinaryTree *)aTree;
++ (nullable NSArray *)levelOrderNodeAndLRnode:(BinaryTree *)aTree;
+
 @end
 
 NS_ASSUME_NONNULL_END

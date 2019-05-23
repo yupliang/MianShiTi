@@ -9,8 +9,13 @@
 #import "ViewController.h"
 #import "List.h"
 #import "BinaryTree.h"
+#import "ViewController1.h"
+#import "Queue.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    BinaryTree *_tree;
+    CFRunLoopObserverRef runLoopObserver;
+}
 
 @end
 
@@ -36,6 +41,7 @@
 //    [@[@(8),@(3),@(1),@(NSIntegerMax),@(NSIntegerMax),@(6),@(4),@(NSIntegerMax),@(NSIntegerMax),@(7),@(NSIntegerMax),@(NSIntegerMax),@(10),@(NSIntegerMax),@(14),@(13),@(NSIntegerMax),@(NSIntegerMax),@(NSIntegerMax)] mutableCopy]
     BinaryTree *aTree = [BinaryTree new];
     [aTree createTree:[@[@(8),@(3),@(1),@(NSIntegerMax),@(NSIntegerMax),@(6),@(4),@(NSIntegerMax),@(NSIntegerMax),@(7),@(NSIntegerMax),@(NSIntegerMax),@(10),@(NSIntegerMax),@(14),@(13),@(NSIntegerMax),@(NSIntegerMax),@(NSIntegerMax)] mutableCopy]];
+    _tree = aTree;
     NSLog(@"tree create finished");
     
     NSBlockOperation *aop = [NSBlockOperation blockOperationWithBlock:^{
@@ -53,7 +59,77 @@
             NSLog(@"");
         }
     });
+    NSLog(@"begin dlr a tree");
+    [BinaryTree dlrTree:aTree];
+    NSLog(@"end dlr a tree");
+    
+    NSLog(@"begin ldr a tree");
+    [BinaryTree ldrTree:aTree];
+    NSLog(@"end ldr a tree");
+    
+    NSLog(@"begin lrd a tree");
+    [BinaryTree lrdTree:aTree];
+    NSLog(@"end lrd a tree");
+    
+    NSLog(@"begin level order a tree");
+    [BinaryTree levelTree:aTree];
+    NSLog(@"end level order a tree");
+    NSLog(@"首界面viewdidload方法完成");
+    
+    
+    CFRunLoopObserverContext context = {0,(__bridge void*)self,NULL,NULL};
+     runLoopObserver = CFRunLoopObserverCreate(kCFAllocatorDefault,kCFRunLoopAllActivities,YES,0,&runLoopObserverCallBack,&context);
+    
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), runLoopObserver, kCFRunLoopCommonModes);
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[ViewController1 class]]) {
+        ViewController1 *vc = segue.destinationViewController;
+        vc.datas = [BinaryTree levelOrderNodeAndLRnode:_tree];
+    }
+}
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    @autoreleasepool {
+        Queue *q = [Queue new];
+        [q autorelease];
+//        NSLog(@"大括号下边界");
+//    }
+    NSLog(@"toubegan end");
+}
+
+void runLoopObserverCallBack (CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
+    NSString *runloopActivity = @"";
+    switch (activity) {
+        case kCFRunLoopEntry:
+            runloopActivity = @"entry";
+            break;
+            case kCFRunLoopBeforeTimers:
+            runloopActivity = @"beforetimers";
+            break;
+            case kCFRunLoopBeforeSources:
+            runloopActivity = @"beforesources";
+            break;
+            case kCFRunLoopBeforeWaiting:
+            runloopActivity = @"beforewaiting";
+            break;
+            case kCFRunLoopAfterWaiting:
+            runloopActivity = @"afterwaiting";
+            break;
+            case kCFRunLoopAllActivities:
+            runloopActivity = @"allactivity";
+            break;
+            case kCFRunLoopExit:
+            runloopActivity = @"exit";
+            break;
+        default:
+            break;
+    }
+    if ([runloopActivity isEqualToString:@"afterwaiting"]) {
+        NSLog(@"");
+    }
+//    NSLog(@"loop %@ activity %@ info %@", CFRunLoopGetCurrent(),runloopActivity, info);
+    NSLog(@"activity %@ info %@", runloopActivity, info);
+}
 @end

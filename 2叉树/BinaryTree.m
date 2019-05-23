@@ -7,6 +7,7 @@
 //
 
 #import "BinaryTree.h"
+#import "Queue.h"
 
 @implementation BinaryTree
 
@@ -37,30 +38,87 @@
     if (self.rootNode == nil) {
         self.rootNode = aNode;
     }
+    [datas removeObjectAtIndex:0];
     
-    [datas removeObjectAtIndex:0];
-    if (datas.count > 0 && [datas[0] integerValue] != NSIntegerMax) {
+    if (aNode != nil) {
         [self createTree:datas toParent:aNode andChild:left];
-    }
-    if (datas.count == 0) {
-        return;
-    }
-    [datas removeObjectAtIndex:0];
-    if (datas.count > 0 && [datas[0] integerValue] != NSIntegerMax) {
         [self createTree:datas toParent:aNode andChild:right];
     }
-    if (datas.count == 0) return;
-    [datas removeObjectAtIndex:0];
-//    _index++;
-//    if (_index < datas.count)
-//        [self addNode:[datas[_index] integerValue] toParent:aNode andChild:left];;
-//    _index++;
-//    if (_index < datas.count)
-//        [self addNode:[datas[_index] integerValue] toParent:aNode andChild:right];
 }
 
 - (void)createTree:(NSMutableArray *)datas {
     [self createTree:datas toParent:nil andChild:root];
+}
+
++ (void)dlrTree:(BinaryTree *)aTree {
+    if (aTree == nil) return;
+    
+    [aTree _dlrTree:aTree.rootNode];
+}
++ (void)ldrTree:(BinaryTree *)aTree {
+    if (aTree == nil) return;
+    [aTree _ldrTree:aTree.rootNode];
+}
++ (void)lrdTree:(BinaryTree *)aTree {
+    if (aTree == nil) return;
+    [aTree _lrdTree:aTree.rootNode];
+}
++ (void)levelTree:(BinaryTree *)aTree {
+    [aTree _levelTree:aTree.rootNode];
+}
++ (NSArray *)levelOrderNodeAndLRnode:(BinaryTree *)aTree {
+    return [aTree _levelOrderNodeAndLRnode:aTree.rootNode];
+}
+//MARK: private methods
+- (void)_dlrTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return;
+    NSLog(@"%d", aNode.data);
+    [self _dlrTree:aNode.leftNode];
+    [self _dlrTree:aNode.rightNode];
+}
+- (void)_ldrTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return;
+    [self _ldrTree:aNode.leftNode];
+    NSLog(@"%d", aNode.data);
+    [self _ldrTree:aNode.rightNode];
+}
+- (void)_lrdTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return;
+    [self _lrdTree:aNode.leftNode];
+    [self _lrdTree:aNode.rightNode];
+    NSLog(@"%d", aNode.data);
+}
+- (void)_levelTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return;
+    Queue *aQueue = [Queue new];
+    [aQueue enqueue:aNode];
+    while (![aQueue isEmpty]) {
+        BinaryTreeNode *n = (BinaryTreeNode *)[aQueue dequeue];
+        NSLog(@"%d", n.data);
+        if (n.leftNode != nil)
+            [aQueue enqueue:n.leftNode];
+        if (n.rightNode != nil)
+            [aQueue enqueue:n.rightNode];
+    }
+}
+
+- (NSArray *)_levelOrderNodeAndLRnode:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return nil;
+    NSMutableArray *arr = [NSMutableArray new];
+    Queue *aQueue = [Queue new];
+    [aQueue enqueue:aNode];
+    while (![aQueue isEmpty]) {
+        BinaryTreeNode *n = (BinaryTreeNode *)[aQueue dequeue];
+        [arr addObject:[NSString stringWithFormat:@"%d->%@,%@", n.data,n.leftNode?[NSString stringWithFormat:@"%d",n.leftNode.data]:@"#",n.rightNode?[NSString stringWithFormat:@"%d",n.rightNode.data]:@"#"]];
+        if (n.leftNode) {
+            [aQueue enqueue:n.leftNode];
+        }
+        if (n.rightNode) {
+            [aQueue enqueue:n.rightNode];
+        }
+    }
+    
+    return arr;
 }
 
 @end
