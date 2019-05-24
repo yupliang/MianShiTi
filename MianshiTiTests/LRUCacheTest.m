@@ -19,7 +19,8 @@
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    cache = [[LRUCache alloc] initWithCapacity:4];
+    cache = [[LRUCache alloc] initWithCapacity:2];
+//    objs
 }
 
 - (void)tearDown {
@@ -37,7 +38,7 @@
     [cache setItem:@(5) forKey:@"f"];
     id v = [cache getItemForKey:@"f"];
     XCTAssertEqualObjects(@(5), v);
-    XCTAssertNil([cache getItemForKey:@"a"]);
+    XCTAssertEqualObjects(@(-1), [cache getItemForKey:@"a"]);
     [cache setItem:@(7) forKey:@"ff"];
     [cache setItem:@(7) forKey:@"fff"];
     [cache setItem:@(7) forKey:@"ffff"];
@@ -45,6 +46,16 @@
     [cache setItem:@(7) forKey:@"fffff"];
     XCTAssertLessThanOrEqual([cache count], 4);
     XCTAssertNotNil([cache getItemForKey:@"ff"]);
+}
+
+- (void)testLogic {
+    [cache setItem:@(1) forKey:@"1"];
+    [cache setItem:@(2) forKey:@"2"];
+    XCTAssertEqualObjects(@(1), [cache getItemForKey:@"1"]);
+    [cache setItem:@(3) forKey:@"3"];
+    XCTAssertNil([cache getItemForKey:@"2"]);
+    [cache setItem:@(4) forKey:@"4"];
+    xct
 }
 
 - (void)testPerformanceExample {

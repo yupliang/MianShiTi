@@ -12,19 +12,29 @@
 
 - (id)initWithCapacity:(NSInteger)capacity {
     self = [super init];
-    _capacity = capacity;
     dic = [[NSMutableDictionary alloc] initWithCapacity:capacity];
+    objs = [[NSMutableArray alloc] initWithCapacity:capacity];
     return self;
 }
 
 - (void)setItem:(id)item forKey:(NSString *)key {
-    if (dic.count == _capacity) {
-        [dic setValue:nil forKey:dic.allKeys[0]];
+    if ([objs containsObject:key]) {
+        [objs removeObject:key];
+        [objs insertObject:key atIndex:0];
+        [dic setValue:item forKey:key];
+    } else {
+        if (objs.count == 2) {
+            [dic setValue:nil forKey:[objs lastObject]];
+        }
+        [objs insertObject:key atIndex:0];
+        [dic setValue:item forKey:key];
     }
-    [dic setValue:item forKey:key];
 }
 
 - (id)getItemForKey:(NSString *)key {
+    if (![objs containsObject:key]) return @(-1);
+    [objs removeObject:key];
+    [objs insertObject:key atIndex:0];
     return dic[key];
 }
 
