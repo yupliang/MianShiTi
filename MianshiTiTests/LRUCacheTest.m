@@ -41,8 +41,10 @@
     [cache setItem:@(7) forKey:@"ff"];
     [cache setItem:@(7) forKey:@"fff"];
     [cache setItem:@(7) forKey:@"ffff"];
+    [cache getItemForKey:@"ff"];
     [cache setItem:@(7) forKey:@"fffff"];
     XCTAssertLessThanOrEqual([cache count], 4);
+    XCTAssertNotNil([cache getItemForKey:@"ff"]);
 }
 
 - (void)testPerformanceExample {

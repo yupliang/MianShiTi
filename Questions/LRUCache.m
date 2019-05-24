@@ -12,11 +12,15 @@
 
 - (id)initWithCapacity:(NSInteger)capacity {
     self = [super init];
+    _capacity = capacity;
     dic = [[NSMutableDictionary alloc] initWithCapacity:capacity];
     return self;
 }
 
 - (void)setItem:(id)item forKey:(NSString *)key {
+    if (dic.count == _capacity) {
+        [dic setValue:nil forKey:dic.allKeys[0]];
+    }
     [dic setValue:item forKey:key];
 }
 

@@ -13,6 +13,8 @@
 @interface MianshiTiTests : XCTestCase
 
 @property (nonatomic,strong) BigData *bdata;
+@property (nonatomic, strong) NSMutableData *data;
+
 
 @end
 
@@ -60,6 +62,47 @@
     XCTAssertEqualObjects([self.bdata outPutBigData:result], @"199999998");
     result = [self.bdata addData:@[@9999,@9999,@9999,@9999,@9999,@9999,@9999] AndData2:@[@9999,@9999,@9999,@9999,@9999,@9999,@9999]];
     XCTAssertEqualObjects([self.bdata outPutBigData:result], @"19999999999999999999999999998");
+}
+
+- (void)testMainThread {
+    NSString *queueBaseLabel = [NSString stringWithFormat:@"com.ioschengxuyuan.%@", NSStringFromClass([self class])];
+    const char *queueName = [[NSString stringWithFormat:@"%@.ForTest",queueBaseLabel] UTF8String];
+    dispatch_queue_t _queue = dispatch_queue_create(queueName, NULL);
+    dispatch_sync(_queue, ^{
+        NSLog(@"current thread is %@",[NSThread currentThread]);
+    });
+}
+
+- (void)testSwitchToMainThread {
+    //为了证明，switchToMainThread 中 if 和else是不等价的。我们做如下实现：
+    //同样都是在主线程操作，队列不同，结果截然不同。
+    // 请猜测结果1和结果2的差异
+    
+    NSString *queueBaseLabel = [NSString stringWithFormat:@"com.ioschengxuyuan.%@", NSStringFromClass([self class])];
+    const char *queueName = [[NSString stringWithFormat:@"%@.ForTest",queueBaseLabel] UTF8String];
+    dispatch_queue_t _queue1 = dispatch_queue_create(queueName, DISPATCH_QUEUE_CONCURRENT);//DISPATCH_QUEUE_CONCURRENT);
+    for (int i = 0; i < 1000000; i++) {
+        dispatch_async(_queue1, ^(void) {
+            self.data = [NSMutableData new];
+        });
+        NSString *queueBaseLabel2 = [NSString stringWithFormat:@"com.ioschengxuyuan.%@.%@", NSStringFromClass([self class]), @(i)];
+        const char *queueName2 = [[NSString stringWithFormat:@"%@.ForTest",queueBaseLabel2] UTF8String];
+        dispatch_queue_t _queue2 = dispatch_queue_create(queueName2, NULL);
+         dispatch_sync(_queue1,^{      //注释本行，出现结果1
+//        dispatch_sync(_queue2,^{      //注释本行，出现结果2
+            [self switchToMainThread];
+        });
+    }
+}
+
+- (void)switchToMainThread {
+    if ([NSThread isMainThread]) {
+        self.data = [NSMutableData new];
+    } else {
+        dispatch_sync(dispatch_get_main_queue(), ^(void) {
+            self.data = [NSMutableData new];
+        });
+    }
 }
 
 - (void)testPerformanceExample {
