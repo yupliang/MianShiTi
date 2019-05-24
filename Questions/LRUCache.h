@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LRUCache : NSObject {
     NSMutableDictionary *dic;
+    NSMutableArray *objs;//0，1，2...最近、次近、、、
 }
 
 - (id)initWithCapacity:(NSInteger)capacity;
