@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DoubleLinkedList.h"
+#define O1
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LRUCache : NSObject {
     NSMutableDictionary *dic;
     NSMutableArray *objs;//0，1，2...最近、次近、、、
+    DoubleLinkedList *list;
+    int _capacity;
 }
 
 - (id)initWithCapacity:(NSInteger)capacity;

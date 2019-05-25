@@ -53,9 +53,16 @@
     [cache setItem:@(2) forKey:@"2"];
     XCTAssertEqualObjects(@(1), [cache getItemForKey:@"1"]);
     [cache setItem:@(3) forKey:@"3"];
-    XCTAssertNil([cache getItemForKey:@"2"]);
+    XCTAssertEqualObjects(@(-1), ([cache getItemForKey:@"2"]));
     [cache setItem:@(4) forKey:@"4"];
-    xct
+    XCTAssertEqualObjects(@(-1), [cache getItemForKey:@"1"]);
+    XCTAssertEqualObjects(@(3), [cache getItemForKey:@"3"]);
+    XCTAssertEqualObjects(@(4), [cache getItemForKey:@"4"]);
+}
+
+- (void)testTimeComplexity {
+    int n = 5;
+    XCTAssertEqual(1, n);//数组的插入操作需要将插入位置后的元素都后移一位 需要O(n)， 无序数组的查找是O（n）
 }
 
 - (void)testPerformanceExample {
