@@ -105,6 +105,12 @@
     }
 }
 
+- (void)testObjType{
+    NSArray *arr = @[@1,[NSObject new]];
+    XCTAssertEqual(2, arr.count);
+    NSLog(@"encod 1 %s 2 %s", @encode(typeof(arr[0])),@encode(NSObject *));
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
