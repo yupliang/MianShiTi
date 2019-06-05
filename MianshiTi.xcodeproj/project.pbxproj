@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD05CDD322A6BBF0009D8B6C /* HashMap.m in Sources */ = {isa = PBXBuildFile; fileRef = FD05CDD222A6BBF0009D8B6C /* HashMap.m */; };
+		FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */; };
 		FD18944322748237003EA507 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944222748237003EA507 /* AppDelegate.m */; };
 		FD18944622748237003EA507 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944522748237003EA507 /* ViewController.m */; };
 		FD18944922748237003EA507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD18944722748237003EA507 /* Main.storyboard */; };
@@ -55,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD05CDD122A6BBF0009D8B6C /* HashMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
+		FD05CDD222A6BBF0009D8B6C /* HashMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashMap.m; sourceTree = "<group>"; };
+		FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashMapTest.m; sourceTree = "<group>"; };
 		FD18943E22748237003EA507 /* MianshiTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MianshiTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD18944122748237003EA507 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD18944222748237003EA507 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +188,7 @@
 				FD18945A2274823C003EA507 /* MianshiTiTests.m */,
 				FD18945C2274823C003EA507 /* Info.plist */,
 				FDE3F2732298EAF8001448E2 /* DoubleListTests.m */,
+				FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -205,6 +211,8 @@
 				FD2FC89F2296CD5500C8B432 /* LRUCache.m */,
 				FDE3F26F22983729001448E2 /* DLLNode.h */,
 				FDE3F27022983729001448E2 /* DLLNode.m */,
+				FD05CDD122A6BBF0009D8B6C /* HashMap.h */,
+				FD05CDD222A6BBF0009D8B6C /* HashMap.m */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -384,6 +392,7 @@
 				FD1894512274823C003EA507 /* main.m in Sources */,
 				FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */,
 				FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */,
+				FD05CDD322A6BBF0009D8B6C /* HashMap.m in Sources */,
 				FDE3F27122983729001448E2 /* DLLNode.m in Sources */,
 				FD18944322748237003EA507 /* AppDelegate.m in Sources */,
 				FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */,
@@ -406,6 +415,7 @@
 				FDE3F27222983729001448E2 /* DLLNode.m in Sources */,
 				FDE7FBF022969088001BD1CE /* aa.m in Sources */,
 				FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */,
+				FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */,
 				FD938C0422795EAB0058F557 /* Queue.m in Sources */,
 				FDE3F2742298EAF8001448E2 /* DoubleListTests.m in Sources */,
 				FD18945B2274823C003EA507 /* MianshiTiTests.m in Sources */,

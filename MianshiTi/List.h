@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) Node *head;
 @property (nonatomic,strong) Node *tail;
 
+- (void)tailAppendO:(NSObject *)data;
 - (void)tailAppend:(NSInteger)value;
 - (void)headInsert:(NSInteger)value;
 - (void)changeListByValue:(NSInteger)value;

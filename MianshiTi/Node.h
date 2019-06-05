@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong) Node *next;
 @property(nonatomic,assign) NSInteger value;
+@property(nonatomic,strong) NSObject *data;
 
 @end
 
