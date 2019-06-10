@@ -42,6 +42,20 @@
     XCTAssertEqualObjects(r, @"1->2->3->4->5");
 }
 
+- (void)testRemoveNode {
+    [_list tailAppend:1];
+    [_list tailAppend:2];
+    [_list tailAppend:6];
+    [_list tailAppend:3];
+    [_list tailAppend:4];
+    [_list tailAppend:5];
+    [_list tailAppend:6];
+    [_list removeNode:_list.head];
+    NSString *r = [_list logFullList];
+    
+    XCTAssertEqualObjects(r, @"2->6->3->4->5->6");
+}
+
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.

@@ -23,6 +23,8 @@
 		FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
 		FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */; };
 		FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD415B4A2292FC3C0034AA87 /* BigData.m */; };
+		FD60B2A422AE495700D0ABF9 /* LFUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60B2A222AE495700D0ABF9 /* LFUCache.m */; };
+		FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60B2A222AE495700D0ABF9 /* LFUCache.m */; };
 		FD73FA11227482EA0027C89D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73FA10227482EA0027C89D /* List.m */; };
 		FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFA22773C030058F557 /* BinaryTreeNode.m */; };
 		FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFD22773CC50058F557 /* BinaryTree.m */; };
@@ -38,6 +40,7 @@
 		FDE7FBF022969088001BD1CE /* aa.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBEE22969088001BD1CE /* aa.m */; };
 		FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */; };
 		FDEFF90B22AE0C7C00498B36 /* ListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF90A22AE0C7C00498B36 /* ListTest.m */; };
+		FDEFF91022AE104B00498B36 /* LFUCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF90F22AE104B00498B36 /* LFUCacheTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,8 @@
 		FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUCacheTest.m; sourceTree = "<group>"; };
 		FD415B492292FC3C0034AA87 /* BigData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigData.h; sourceTree = "<group>"; };
 		FD415B4A2292FC3C0034AA87 /* BigData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigData.m; sourceTree = "<group>"; };
+		FD60B2A222AE495700D0ABF9 /* LFUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFUCache.m; sourceTree = "<group>"; };
+		FD60B2A322AE495700D0ABF9 /* LFUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFUCache.h; sourceTree = "<group>"; };
 		FD73FA0F227482EA0027C89D /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		FD73FA10227482EA0027C89D /* List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		FD938BF922773C030058F557 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		FDE7FBEE22969088001BD1CE /* aa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aa.m; sourceTree = "<group>"; };
 		FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
 		FDEFF90A22AE0C7C00498B36 /* ListTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTest.m; sourceTree = "<group>"; };
+		FDEFF90F22AE104B00498B36 /* LFUCacheTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFUCacheTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,7 @@
 				FD18945C2274823C003EA507 /* Info.plist */,
 				FDE3F2732298EAF8001448E2 /* DoubleListTests.m */,
 				FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */,
+				FDEFF90F22AE104B00498B36 /* LFUCacheTest.m */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -208,6 +215,8 @@
 		FD2FC8972296CB6A00C8B432 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				FD60B2A322AE495700D0ABF9 /* LFUCache.h */,
+				FD60B2A222AE495700D0ABF9 /* LFUCache.m */,
 				FDE3F2752298EB60001448E2 /* DoubleLinkedList.h */,
 				FDE3F2762298EB60001448E2 /* DoubleLinkedList.m */,
 				FD2FC89E2296CD5500C8B432 /* LRUCache.h */,
@@ -400,6 +409,7 @@
 				FD18944322748237003EA507 /* AppDelegate.m in Sources */,
 				FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */,
+				FD60B2A422AE495700D0ABF9 /* LFUCache.m in Sources */,
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
 				FD1894752274825D003EA507 /* Node.m in Sources */,
 				FDE7FBEF22969088001BD1CE /* aa.m in Sources */,
@@ -414,6 +424,8 @@
 			files = (
 				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
 				FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */,
+				FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */,
+				FDEFF91022AE104B00498B36 /* LFUCacheTest.m in Sources */,
 				FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FDEFF90B22AE0C7C00498B36 /* ListTest.m in Sources */,
 				FDE3F27222983729001448E2 /* DLLNode.m in Sources */,

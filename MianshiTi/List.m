@@ -94,4 +94,15 @@
     }
     self.head = r;
 }
+- (void)removeNode:(Node *)n {
+    if (n==self.head) {
+        self.head = n.next;
+    }
+    if (n==self.tail) {
+        self.tail = nil;
+    }
+    n.data = n.next.data;
+    n.value = n.next.value;
+    n.next = n.next.next;
+}
 @end
