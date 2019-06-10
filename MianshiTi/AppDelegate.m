@@ -6,9 +6,15 @@
 //  Copyright © 2019 QiQiuZhe. All rights reserved.
 //
 
+
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+
+
+
+@interface AppDelegate () {
+     
+}
 
 @end
 
@@ -17,10 +23,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    ABC *b = [ABC new];
+//    ABC *a = [ABC new];
+//    a.d = b;
+//    b.d = a;
     NSLog(@"didfinishlaunching finished");
     return YES;
 }
 
+- (void)xxx:(id)obj {
+    NSLog(@"thread %@ %@", [NSThread currentThread],obj);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -46,6 +60,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 

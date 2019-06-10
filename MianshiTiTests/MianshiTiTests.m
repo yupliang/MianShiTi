@@ -62,6 +62,45 @@
     XCTAssertEqualObjects([self.bdata outPutBigData:result], @"19999999999999999999999999998");
 }
 
+- (void)testisKindOfClass {
+    NSObject *obj = [NSObject new];
+    XCTAssertFalse([obj isKindOfClass:[NSString class]]);
+    NSString *str = @"hi";
+    XCTAssertTrue([str isKindOfClass:[NSObject class]]);
+    char *a = "abc";
+    char *b = "abc";
+    XCTAssertTrue(sizeof(a)==8);
+    XCTAssertTrue(!memcmp(a, b, 3));
+    XCTAssertTrue(-1);
+}
+
+- (void)testiSEqual {
+    NSString *str = [NSMutableString stringWithFormat:@"AA"];
+    NSString *str1 = @"AA";
+    
+    XCTAssertTrue([str isEqual:str1]);
+    XCTAssertTrue([str isEqualToString:str1]);
+    XCTAssertTrue(str == str1);
+}
+
+- (void)testHelloWorld {
+//    NSLog(@"Goodbye World"); //
+//    #define NSLog(x) NSLog(@"Goodbye World");
+    
+    NSString *a = @"Hello world";
+    NSString *b = @"bye";
+    memmove((void *)(@"Hello world"),(void *)(@"Goodbye world"),17);//此处17为随意填写，并无特定含义，请查看下文完整的取值计算方案。
+    NSString *c = @"ok";
+    
+    NSLog(@"Hello world");
+    NSLog(@"ok");
+    NSLog(@"bye");
+
+    char str[] = "memmove can be very useful......";
+    memmove (str+20,str+15,11);
+    NSLog(@"-- %s", str);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

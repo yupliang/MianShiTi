@@ -11,11 +11,14 @@
 #import "BinaryTree.h"
 #import "ViewController1.h"
 #import "Queue.h"
+#import "ABC.h"
 
 @interface ViewController () {
     BinaryTree *_tree;
     CFRunLoopObserverRef runLoopObserver;
 }
+
+@property (nonatomic,strong) ABC *a;
 
 @end
 
@@ -23,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"now create a list 1->5->3->2->4->2");
     List *aList = [List new];
@@ -92,8 +96,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    @autoreleasepool {
-        Queue *q = [Queue new];
-        [q autorelease];
+//        Queue *q = [Queue new];
+//        [q autorelease];
 //        NSLog(@"大括号下边界");
 //    }
     NSLog(@"toubegan end");

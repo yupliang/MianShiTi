@@ -53,7 +53,16 @@
     [cache setItem:@(3) forKey:@"3"];
     XCTAssertNil([cache getItemForKey:@"2"]);
     [cache setItem:@(4) forKey:@"4"];
-    xct
+}
+
+- (void)testCapacity {
+    NSMutableArray *arr = [NSMutableArray arrayWithCapacity:100000];
+    for (int i=0; i<100000; i++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+           NSLog(@"arr is %@ %d", arr,i);
+        });
+    }
+    
 }
 
 - (void)testPerformanceExample {

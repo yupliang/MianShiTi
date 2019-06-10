@@ -19,7 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)tailAppend:(NSInteger)value;
 - (void)headInsert:(NSInteger)value;
 - (void)changeListByValue:(NSInteger)value;
-- (void)logFullList;
+- (NSString *)logFullList;
+- (void)removeNodes:(NSInteger)value;
 
 @end
 

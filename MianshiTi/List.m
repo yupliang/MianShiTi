@@ -22,7 +22,7 @@
     }
 }
 
-- (void)logFullList {
+- (NSString *)logFullList {
     Node *aNode = self.head;
     NSString *result = @"";
     while (aNode != nil) {
@@ -34,6 +34,7 @@
         aNode = aNode.next;
     }
     NSLog(@"list is %@", result);
+    return result;
 }
 
 - (void)changeListByValue:(NSInteger)value {
@@ -60,5 +61,24 @@
     postNode.next = nil;
     preNode.next = dummyRight.next;
     self.head = dummyLeft.next;
+}
+- (void)removeNodes:(NSInteger)value {
+    Node *cur = nil;
+    Node *r = nil;
+    while (self.head) {
+        Node *t = self.head.next;
+        if (self.head.value != value) {
+            self.head.next = nil;
+            if (r == nil) {
+                cur = self.head;
+                r = self.head;
+            } else {
+                cur.next = self.head;
+                cur = self.head;
+            }
+        }
+        self.head = t;
+    }
+    self.head = r;
 }
 @end
