@@ -29,6 +29,14 @@
 //    a.d = b;
 //    b.d = a;
     NSLog(@"didfinishlaunching finished");
+//    int xx = -1;
+//    for (int i=0; i<300; i++) {
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            [[NSThread currentThread] setName:[NSString stringWithFormat:@"name %d",i]];
+//            [[NSRunLoop currentRunLoop] addPort:[NSMachPort port] forMode:NSRunLoopCommonModes];
+//            [[NSRunLoop currentRunLoop] run];
+//        });
+//    }
     return YES;
 }
 
@@ -62,6 +70,5 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
 }
-
 
 @end

@@ -11,14 +11,11 @@
 #import "BinaryTree.h"
 #import "ViewController1.h"
 #import "Queue.h"
-#import "ABC.h"
 
 @interface ViewController () {
     BinaryTree *_tree;
     CFRunLoopObserverRef runLoopObserver;
 }
-
-@property (nonatomic,strong) ABC *a;
 
 @end
 
@@ -26,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"now create a list 1->5->3->2->4->2");
     List *aList = [List new];
@@ -50,18 +46,18 @@
     
     NSBlockOperation *aop = [NSBlockOperation blockOperationWithBlock:^{
         [[NSRunLoop currentRunLoop] run];
-        while (true) {
-            NSLog(@"");
-        }
+//        while (true) {
+//            NSLog(@"");
+//        }
     }];
     NSOperationQueue *aq = [NSOperationQueue new];
     [aq addOperation:aop];
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[NSRunLoop currentRunLoop] run];
-        while (true) {
-            NSLog(@"");
-        }
+//        while (true) {
+//            NSLog(@"");
+//        }
     });
     NSLog(@"begin dlr a tree");
     [BinaryTree dlrTree:aTree];
@@ -95,13 +91,14 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    @autoreleasepool {
-//        Queue *q = [Queue new];
-//        [q autorelease];
-//        NSLog(@"大括号下边界");
-//    }
-    NSLog(@"toubegan end");
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"toouches began");
+    });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"toouches began from main queue");
+    });
 }
+
 
 void runLoopObserverCallBack (CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
     NSString *runloopActivity = @"";

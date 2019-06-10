@@ -42,8 +42,10 @@
     [cache setItem:@(7) forKey:@"ff"];
     [cache setItem:@(7) forKey:@"fff"];
     [cache setItem:@(7) forKey:@"ffff"];
+    [cache getItemForKey:@"ff"];
     [cache setItem:@(7) forKey:@"fffff"];
     XCTAssertLessThanOrEqual([cache count], 4);
+    XCTAssertNotNil([cache getItemForKey:@"ff"]);
 }
 
 - (void)testLogic {
@@ -51,18 +53,16 @@
     [cache setItem:@(2) forKey:@"2"];
     XCTAssertEqualObjects(@(1), [cache getItemForKey:@"1"]);
     [cache setItem:@(3) forKey:@"3"];
-    XCTAssertNil([cache getItemForKey:@"2"]);
+    XCTAssertEqualObjects(@(-1), ([cache getItemForKey:@"2"]));
     [cache setItem:@(4) forKey:@"4"];
+    XCTAssertEqualObjects(@(-1), [cache getItemForKey:@"1"]);
+    XCTAssertEqualObjects(@(3), [cache getItemForKey:@"3"]);
+    XCTAssertEqualObjects(@(4), [cache getItemForKey:@"4"]);
 }
 
-- (void)testCapacity {
-    NSMutableArray *arr = [NSMutableArray arrayWithCapacity:100000];
-    for (int i=0; i<100000; i++) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-           NSLog(@"arr is %@ %d", arr,i);
-        });
-    }
-    
+- (void)testTimeComplexity {
+    int n = 5;
+    XCTAssertEqual(1, n);//数组的插入操作需要将插入位置后的元素都后移一位 需要O(n)， 无序数组的查找是O（n）
 }
 
 - (void)testPerformanceExample {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD05CDD322A6BBF0009D8B6C /* HashMap.m in Sources */ = {isa = PBXBuildFile; fileRef = FD05CDD222A6BBF0009D8B6C /* HashMap.m */; };
+		FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */; };
 		FD18944322748237003EA507 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944222748237003EA507 /* AppDelegate.m */; };
 		FD18944622748237003EA507 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944522748237003EA507 /* ViewController.m */; };
 		FD18944922748237003EA507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD18944722748237003EA507 /* Main.storyboard */; };
@@ -21,15 +23,17 @@
 		FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
 		FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */; };
 		FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD415B4A2292FC3C0034AA87 /* BigData.m */; };
-		FD55977A22AE056200A79213 /* ListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD55977922AE056200A79213 /* ListTest.m */; };
-		FD5C9E65229C209100EF317A /* ABC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5C9E64229C209100EF317A /* ABC.m */; };
 		FD73FA11227482EA0027C89D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73FA10227482EA0027C89D /* List.m */; };
 		FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFA22773C030058F557 /* BinaryTreeNode.m */; };
 		FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFD22773CC50058F557 /* BinaryTree.m */; };
 		FD938C0222795B1B0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
 		FD938C0422795EAB0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
 		FD938C072279AE540058F557 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C062279AE540058F557 /* ViewController1.m */; };
-		FDB6A372229D372000FFAF08 /* EqualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB6A371229D372000FFAF08 /* EqualObject.m */; };
+		FDE3F27122983729001448E2 /* DLLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F27022983729001448E2 /* DLLNode.m */; };
+		FDE3F27222983729001448E2 /* DLLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F27022983729001448E2 /* DLLNode.m */; };
+		FDE3F2742298EAF8001448E2 /* DoubleListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F2732298EAF8001448E2 /* DoubleListTests.m */; };
+		FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F2762298EB60001448E2 /* DoubleLinkedList.m */; };
+		FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F2762298EB60001448E2 /* DoubleLinkedList.m */; };
 		FDE7FBEF22969088001BD1CE /* aa.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBEE22969088001BD1CE /* aa.m */; };
 		FDE7FBF022969088001BD1CE /* aa.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBEE22969088001BD1CE /* aa.m */; };
 		FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */; };
@@ -53,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD05CDD122A6BBF0009D8B6C /* HashMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
+		FD05CDD222A6BBF0009D8B6C /* HashMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashMap.m; sourceTree = "<group>"; };
+		FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashMapTest.m; sourceTree = "<group>"; };
 		FD18943E22748237003EA507 /* MianshiTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MianshiTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD18944122748237003EA507 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD18944222748237003EA507 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,9 +85,6 @@
 		FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUCacheTest.m; sourceTree = "<group>"; };
 		FD415B492292FC3C0034AA87 /* BigData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigData.h; sourceTree = "<group>"; };
 		FD415B4A2292FC3C0034AA87 /* BigData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigData.m; sourceTree = "<group>"; };
-		FD55977922AE056200A79213 /* ListTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTest.m; sourceTree = "<group>"; };
-		FD5C9E63229C209100EF317A /* ABC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABC.h; sourceTree = "<group>"; };
-		FD5C9E64229C209100EF317A /* ABC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABC.m; sourceTree = "<group>"; };
 		FD73FA0F227482EA0027C89D /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		FD73FA10227482EA0027C89D /* List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		FD938BF922773C030058F557 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
@@ -92,8 +96,11 @@
 		FD938C0322795B750058F557 /* QueueProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueProtocol.h; sourceTree = "<group>"; };
 		FD938C052279AE540058F557 /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
 		FD938C062279AE540058F557 /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
-		FDB6A370229D372000FFAF08 /* EqualObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EqualObject.h; sourceTree = "<group>"; };
-		FDB6A371229D372000FFAF08 /* EqualObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EqualObject.m; sourceTree = "<group>"; };
+		FDE3F26F22983729001448E2 /* DLLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLLNode.h; sourceTree = "<group>"; };
+		FDE3F27022983729001448E2 /* DLLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLLNode.m; sourceTree = "<group>"; };
+		FDE3F2732298EAF8001448E2 /* DoubleListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleListTests.m; sourceTree = "<group>"; };
+		FDE3F2752298EB60001448E2 /* DoubleLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleLinkedList.h; sourceTree = "<group>"; };
+		FDE3F2762298EB60001448E2 /* DoubleLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkedList.m; sourceTree = "<group>"; };
 		FDE7FBED22969088001BD1CE /* aa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aa.h; sourceTree = "<group>"; };
 		FDE7FBEE22969088001BD1CE /* aa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aa.m; sourceTree = "<group>"; };
 		FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
@@ -180,7 +187,8 @@
 				FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */,
 				FD18945A2274823C003EA507 /* MianshiTiTests.m */,
 				FD18945C2274823C003EA507 /* Info.plist */,
-				FD55977922AE056200A79213 /* ListTest.m */,
+				FDE3F2732298EAF8001448E2 /* DoubleListTests.m */,
+				FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -197,12 +205,14 @@
 		FD2FC8972296CB6A00C8B432 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				FDE3F2752298EB60001448E2 /* DoubleLinkedList.h */,
+				FDE3F2762298EB60001448E2 /* DoubleLinkedList.m */,
 				FD2FC89E2296CD5500C8B432 /* LRUCache.h */,
 				FD2FC89F2296CD5500C8B432 /* LRUCache.m */,
-				FD5C9E63229C209100EF317A /* ABC.h */,
-				FD5C9E64229C209100EF317A /* ABC.m */,
-				FDB6A370229D372000FFAF08 /* EqualObject.h */,
-				FDB6A371229D372000FFAF08 /* EqualObject.m */,
+				FDE3F26F22983729001448E2 /* DLLNode.h */,
+				FDE3F27022983729001448E2 /* DLLNode.m */,
+				FD05CDD122A6BBF0009D8B6C /* HashMap.h */,
+				FD05CDD222A6BBF0009D8B6C /* HashMap.m */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -380,13 +390,14 @@
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
 				FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */,
 				FD1894512274823C003EA507 /* main.m in Sources */,
-				FD5C9E65229C209100EF317A /* ABC.m in Sources */,
 				FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */,
 				FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */,
+				FD05CDD322A6BBF0009D8B6C /* HashMap.m in Sources */,
+				FDE3F27122983729001448E2 /* DLLNode.m in Sources */,
 				FD18944322748237003EA507 /* AppDelegate.m in Sources */,
+				FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */,
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
-				FDB6A372229D372000FFAF08 /* EqualObject.m in Sources */,
 				FD1894752274825D003EA507 /* Node.m in Sources */,
 				FDE7FBEF22969088001BD1CE /* aa.m in Sources */,
 				FD938C0222795B1B0058F557 /* Queue.m in Sources */,
@@ -400,10 +411,13 @@
 			files = (
 				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
 				FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */,
+				FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */,
+				FDE3F27222983729001448E2 /* DLLNode.m in Sources */,
 				FDE7FBF022969088001BD1CE /* aa.m in Sources */,
 				FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */,
+				FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */,
 				FD938C0422795EAB0058F557 /* Queue.m in Sources */,
-				FD55977A22AE056200A79213 /* ListTest.m in Sources */,
+				FDE3F2742298EAF8001448E2 /* DoubleListTests.m in Sources */,
 				FD18945B2274823C003EA507 /* MianshiTiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,7 +581,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Y5LDVCJBFV;
 				INFOPLIST_FILE = MianshiTi/Info.plist;
@@ -586,7 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MianshiTi/Info.plist;

@@ -10,6 +10,19 @@
 
 @implementation List
 
+- (void)tailAppendO:(NSObject *)data {
+    Node *aNode = [Node new];
+    aNode.data = data;
+    if (self.tail == nil) {
+        self.head = aNode;
+        self.tail = aNode;
+    } else {
+        self.tail.next = aNode;
+        self.tail = aNode;
+    }
+
+}
+
 - (void)tailAppend:(NSInteger)value {
     Node *aNode = [Node new];
     aNode.value = value;
