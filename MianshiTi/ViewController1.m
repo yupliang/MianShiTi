@@ -7,11 +7,11 @@
 //
 
 #import "ViewController1.h"
-#import "ABC.h"
+//#import "ABC.h"
 
 @interface ViewController1 ()
 
-@property (weak) ABC *a;
+//@property (weak) ABC *a;
 @end
 
 @implementation ViewController1
@@ -19,9 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.a = [ABC new];
-    self.a.d = self;
-    [self.a performSelector:@selector(test)];
+//    self.a = [ABC new];
+//    self.a.d = self;
+//    [self.a performSelector:@selector(test)];
 }
 
 /*

@@ -37,6 +37,7 @@
 		FDE7FBEF22969088001BD1CE /* aa.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBEE22969088001BD1CE /* aa.m */; };
 		FDE7FBF022969088001BD1CE /* aa.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBEE22969088001BD1CE /* aa.m */; };
 		FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */; };
+		FDEFF90B22AE0C7C00498B36 /* ListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF90A22AE0C7C00498B36 /* ListTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		FDE7FBED22969088001BD1CE /* aa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aa.h; sourceTree = "<group>"; };
 		FDE7FBEE22969088001BD1CE /* aa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aa.m; sourceTree = "<group>"; };
 		FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
+		FDEFF90A22AE0C7C00498B36 /* ListTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		FD1894592274823C003EA507 /* MianshiTiTests */ = {
 			isa = PBXGroup;
 			children = (
+				FDEFF90A22AE0C7C00498B36 /* ListTest.m */,
 				FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */,
 				FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */,
 				FD18945A2274823C003EA507 /* MianshiTiTests.m */,
@@ -412,6 +415,7 @@
 				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
 				FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */,
 				FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */,
+				FDEFF90B22AE0C7C00498B36 /* ListTest.m in Sources */,
 				FDE3F27222983729001448E2 /* DLLNode.m in Sources */,
 				FDE7FBF022969088001BD1CE /* aa.m in Sources */,
 				FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */,
