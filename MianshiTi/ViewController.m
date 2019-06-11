@@ -11,6 +11,8 @@
 #import "BinaryTree.h"
 #import "ViewController1.h"
 #import "Queue.h"
+#import "XView.h"
+#import "CView.h"
 
 @interface ViewController () {
     BinaryTree *_tree;
@@ -23,6 +25,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    XView *xv = [[XView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    xv.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:xv];
+    
+    CView *cv = [[CView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    cv.backgroundColor = [UIColor redColor];
+    [self.view addSubview:cv];
+    
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"now create a list 1->5->3->2->4->2");
     List *aList = [List new];
@@ -133,4 +144,5 @@ void runLoopObserverCallBack (CFRunLoopObserverRef observer, CFRunLoopActivity a
 //    NSLog(@"loop %@ activity %@ info %@", CFRunLoopGetCurrent(),runloopActivity, info);
     NSLog(@"activity %@ info %@", runloopActivity, info);
 }
+
 @end

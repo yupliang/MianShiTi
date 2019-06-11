@@ -105,4 +105,24 @@
     n.value = n.next.value;
     n.next = n.next.next;
 }
+- (void)revertList {
+    List *l = [List new];
+    while (self.head) {
+        [l headInsert:self.head.value];
+        self.head = self.head.next;
+    }
+    self.head = l.head;
+    self.tail = l.tail;
+}
+- (void)headInsert:(NSInteger)value {
+    Node *n = [[Node alloc] init];
+    n.value = value;
+    if (self.head == nil) {
+        self.head = n;
+        self.tail = n;
+    } else {
+        n.next = self.head;
+        self.head = n;
+    }
+}
 @end

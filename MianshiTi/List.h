@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)logFullList;
 - (void)removeNodes:(NSInteger)value;
 - (void)removeNode:(Node *)n;
+- (void)revertList;
 
 @end
 
