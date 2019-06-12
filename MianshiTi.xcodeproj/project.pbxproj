@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FD05CDD322A6BBF0009D8B6C /* HashMap.m in Sources */ = {isa = PBXBuildFile; fileRef = FD05CDD222A6BBF0009D8B6C /* HashMap.m */; };
 		FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */; };
+		FD05CE1822B16003009D8B6C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE1722B16003009D8B6C /* Utility.swift */; };
+		FD05CE1922B16003009D8B6C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE1722B16003009D8B6C /* Utility.swift */; };
+		FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE1A22B16041009D8B6C /* UtilityTest.swift */; };
 		FD18944322748237003EA507 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944222748237003EA507 /* AppDelegate.m */; };
 		FD18944622748237003EA507 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944522748237003EA507 /* ViewController.m */; };
 		FD18944922748237003EA507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD18944722748237003EA507 /* Main.storyboard */; };
@@ -66,6 +69,10 @@
 		FD05CDD122A6BBF0009D8B6C /* HashMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
 		FD05CDD222A6BBF0009D8B6C /* HashMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashMap.m; sourceTree = "<group>"; };
 		FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashMapTest.m; sourceTree = "<group>"; };
+		FD05CE1522B16003009D8B6C /* MianshiTi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MianshiTi-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD05CE1622B16003009D8B6C /* MianshiTiTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MianshiTiTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD05CE1722B16003009D8B6C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		FD05CE1A22B16041009D8B6C /* UtilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTest.swift; sourceTree = "<group>"; };
 		FD18943E22748237003EA507 /* MianshiTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MianshiTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD18944122748237003EA507 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD18944222748237003EA507 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -209,6 +216,7 @@
 				FDE3F2732298EAF8001448E2 /* DoubleListTests.m */,
 				FD05CDD422A6BC8F009D8B6C /* HashMapTest.m */,
 				FDEFF90F22AE104B00498B36 /* LFUCacheTest.m */,
+				FD05CE1A22B16041009D8B6C /* UtilityTest.swift */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -235,6 +243,9 @@
 				FDE3F27022983729001448E2 /* DLLNode.m */,
 				FD05CDD122A6BBF0009D8B6C /* HashMap.h */,
 				FD05CDD222A6BBF0009D8B6C /* HashMap.m */,
+				FD05CE1722B16003009D8B6C /* Utility.swift */,
+				FD05CE1522B16003009D8B6C /* MianshiTi-Bridging-Header.h */,
+				FD05CE1622B16003009D8B6C /* MianshiTiTests-Bridging-Header.h */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -345,9 +356,11 @@
 				TargetAttributes = {
 					FD18943D22748237003EA507 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					FD1894552274823C003EA507 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = FD18943D22748237003EA507;
 					};
 					FD1894602274823C003EA507 = {
@@ -408,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD05CE1822B16003009D8B6C /* Utility.swift in Sources */,
 				FD73FA11227482EA0027C89D /* List.m in Sources */,
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
 				FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */,
@@ -434,9 +448,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD05CE1922B16003009D8B6C /* Utility.swift in Sources */,
 				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
 				FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */,
 				FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */,
+				FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */,
 				FDEFF91022AE104B00498B36 /* LFUCacheTest.m in Sources */,
 				FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FDEFF90B22AE0C7C00498B36 /* ListTest.m in Sources */,
@@ -609,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Y5LDVCJBFV;
@@ -620,6 +637,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MianshiTi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = WildcardDevProvision;
+				SWIFT_OBJC_BRIDGING_HEADER = "Questions/MianshiTi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -628,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -639,6 +660,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MianshiTi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Questions/MianshiTi-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -646,7 +669,9 @@
 		FD18946E2274823C003EA507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MianshiTiTests/Info.plist;
@@ -657,6 +682,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MianshiTiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Questions/MianshiTiTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MianshiTi.app/MianshiTi";
 			};
@@ -665,7 +693,9 @@
 		FD18946F2274823C003EA507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MianshiTiTests/Info.plist;
@@ -676,6 +706,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MianshiTiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Questions/MianshiTiTests-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MianshiTi.app/MianshiTi";
 			};
@@ -684,6 +716,7 @@
 		FD1894712274823C003EA507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MianshiTiUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,6 +734,7 @@
 		FD1894722274823C003EA507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MianshiTiUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
