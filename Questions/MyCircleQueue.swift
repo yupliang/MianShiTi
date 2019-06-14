@@ -43,8 +43,11 @@ class MyCircularQueue {
     /** Delete an element from the circular queue. Return true if the operation is successful. */
     func deQueue() -> Bool {
         if !isEmpty() {
-            head = head+1
             data[head] = -1
+            head = (head+1)%size
+            if head == tail {
+                empty = true
+            }
             return true
         } else {
             return false
