@@ -73,8 +73,8 @@
                   symbolName = "-[ViewController touchesBegan:withEvent:]"
                   moduleName = "MianshiTi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yupeiliang/MianShiTi/MianshiTi/ViewController.m"
-                  timestampString = "582055426.352109"
+                  urlString = "file:///Users/zhangzhongliang/Desktop/test/MianShiTi/MianshiTi/ViewController.m"
+                  timestampString = "582188878.624388"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
@@ -88,8 +88,8 @@
                   symbolName = "__41-[ViewController touchesBegan:withEvent:]_block_invoke"
                   moduleName = "MianshiTi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yupeiliang/MianShiTi/MianshiTi/ViewController.m"
-                  timestampString = "582055426.3545949"
+                  urlString = "file:///Users/zhangzhongliang/Desktop/test/MianShiTi/MianshiTi/ViewController.m"
+                  timestampString = "582188878.627319"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "106"
@@ -208,38 +208,6 @@
             startingLineNumber = "27"
             endingLineNumber = "27"
             landmarkName = "-hitTest:withEvent:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MianshiTiTests/UtilityTest.swift"
-            timestampString = "582055426.315529"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "testValidateIpv6()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MianshiTiTests/UtilityTest.swift"
-            timestampString = "582055426.315606"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "testValidateIpv6()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
