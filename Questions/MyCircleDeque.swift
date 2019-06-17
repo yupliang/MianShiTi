@@ -42,6 +42,7 @@ class MyCircularDeque {
     /** Adds an item at the rear of Deque. Return true if the operation is successful. */
     func insertLast(_ value: Int) -> Bool {
         if !isFull() {
+            empty = false
             data[tail] = value
             tail = (tail+1)%size
             return true
