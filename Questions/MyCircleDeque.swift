@@ -10,49 +10,90 @@ import Foundation
 
 class MyCircularDeque {
     
+    var data:[Int]!
+    var size:Int!
+    var head:Int!
+    var tail:Int!
+    var empty:Bool!
     /** Initialize your data structure here. Set the size of the deque to be k. */
     init(_ k: Int) {
-        
+        size = k
+        data = Array()
+        head = 0
+        tail = 0
+        empty = true
+        for i in 0...k {
+            data[i] = -1
+        }
     }
     
     /** Adds an item at the front of Deque. Return true if the operation is successful. */
     func insertFront(_ value: Int) -> Bool {
-        return false
+        if !isFull() {
+            empty = false
+            data[head] = value
+            head = (head-1+size)%size
+            return true
+        } else {
+            return false
+        }
     }
     
     /** Adds an item at the rear of Deque. Return true if the operation is successful. */
     func insertLast(_ value: Int) -> Bool {
-        return false
+        if !isFull() {
+            data[tail] = value
+            tail = (tail+1)%size
+            return true
+        } else {
+            return false
+        }
     }
     
     /** Deletes an item from the front of Deque. Return true if the operation is successful. */
     func deleteFront() -> Bool {
-        return false
+        if !isEmpty() {
+            data[head] = -1
+            head = (head+1)%size
+            if (head == tail) {
+                empty = true
+            }
+            return true
+        } else {
+            return false
+        }
     }
     
     /** Deletes an item from the rear of Deque. Return true if the operation is successful. */
     func deleteLast() -> Bool {
+        if !isEmpty() {
+            data[tail] = -1
+            tail = (tail-1+size)%size
+            if (head == tail) {
+                empty = true
+            }
+        }
         return false
     }
     
     /** Get the front item from the deque. */
     func getFront() -> Int {
-        return -1
+        return data[head]
     }
     
     /** Get the last item from the deque. */
     func getRear() -> Int {
-        return -1
+        return data[tail]
     }
     
     /** Checks whether the circular deque is empty or not. */
     func isEmpty() -> Bool {
-        return true
+        return empty
     }
     
     /** Checks whether the circular deque is full or not. */
     func isFull() -> Bool {
-        return false
+        return !empty && head == tail
     }
 }
 
