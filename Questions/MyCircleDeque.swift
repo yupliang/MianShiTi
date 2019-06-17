@@ -18,12 +18,12 @@ class MyCircularDeque {
     /** Initialize your data structure here. Set the size of the deque to be k. */
     init(_ k: Int) {
         size = k
-        data = Array()
+        data = Array<Int>()
         head = 0
         tail = 0
         empty = true
-        for i in 0...k {
-            data[i] = -1
+        for _ in 0...k-1 {
+            data.append(-1)
         }
     }
     
@@ -31,7 +31,7 @@ class MyCircularDeque {
     func insertFront(_ value: Int) -> Bool {
         if !isFull() {
             empty = false
-            data[head] = value
+            data[(head-1+size)%size] = value
             head = (head-1+size)%size
             return true
         } else {
@@ -67,11 +67,12 @@ class MyCircularDeque {
     /** Deletes an item from the rear of Deque. Return true if the operation is successful. */
     func deleteLast() -> Bool {
         if !isEmpty() {
-            data[tail] = -1
+            data[(tail-1+size)%size] = -1
             tail = (tail-1+size)%size
             if (head == tail) {
                 empty = true
             }
+            return true
         }
         return false
     }
@@ -83,7 +84,7 @@ class MyCircularDeque {
     
     /** Get the last item from the deque. */
     func getRear() -> Int {
-        return data[tail]
+        return data[(tail-1+size)%size]
     }
     
     /** Checks whether the circular deque is empty or not. */
