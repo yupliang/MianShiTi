@@ -8,7 +8,7 @@
 
 
 #import "AppDelegate.h"
-
+@import UserNotifications;
 
 
 
@@ -37,6 +37,9 @@
 //            [[NSRunLoop currentRunLoop] run];
 //        });
 //    }
+    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:UNAuthorizationOptionAlert|UNAuthorizationOptionBadge|UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        NSLog(@"notification granted %d error %@", granted,error);
+    }];
     return YES;
 }
 
