@@ -12,6 +12,10 @@
 		FD05CE1822B16003009D8B6C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE1722B16003009D8B6C /* Utility.swift */; };
 		FD05CE1922B16003009D8B6C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE1722B16003009D8B6C /* Utility.swift */; };
 		FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE1A22B16041009D8B6C /* UtilityTest.swift */; };
+		FD05CE2622C04E0F009D8B6C /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE2522C04E0F009D8B6C /* MinStack.swift */; };
+		FD05CE2722C04E0F009D8B6C /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE2522C04E0F009D8B6C /* MinStack.swift */; };
+		FD05CE2922C04E1F009D8B6C /* MinStackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE2822C04E1F009D8B6C /* MinStackTest.swift */; };
+		FD05CE2A22C04E1F009D8B6C /* MinStackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE2822C04E1F009D8B6C /* MinStackTest.swift */; };
 		FD18944322748237003EA507 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944222748237003EA507 /* AppDelegate.m */; };
 		FD18944622748237003EA507 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944522748237003EA507 /* ViewController.m */; };
 		FD18944922748237003EA507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD18944722748237003EA507 /* Main.storyboard */; };
@@ -79,6 +83,8 @@
 		FD05CE1622B16003009D8B6C /* MianshiTiTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MianshiTiTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD05CE1722B16003009D8B6C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		FD05CE1A22B16041009D8B6C /* UtilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTest.swift; sourceTree = "<group>"; };
+		FD05CE2522C04E0F009D8B6C /* MinStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
+		FD05CE2822C04E1F009D8B6C /* MinStackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinStackTest.swift; sourceTree = "<group>"; };
 		FD18943E22748237003EA507 /* MianshiTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MianshiTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD18944122748237003EA507 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD18944222748237003EA507 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -218,6 +224,7 @@
 		FD1894592274823C003EA507 /* MianshiTiTests */ = {
 			isa = PBXGroup;
 			children = (
+				FD05CE2822C04E1F009D8B6C /* MinStackTest.swift */,
 				FDEFF90A22AE0C7C00498B36 /* ListTest.m */,
 				FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */,
 				FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */,
@@ -245,6 +252,7 @@
 		FD2FC8972296CB6A00C8B432 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				FD05CE2522C04E0F009D8B6C /* MinStack.swift */,
 				FD60B2A322AE495700D0ABF9 /* LFUCache.h */,
 				FD60B2A222AE495700D0ABF9 /* LFUCache.m */,
 				FDE3F2752298EB60001448E2 /* DoubleLinkedList.h */,
@@ -440,6 +448,7 @@
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
 				FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */,
 				FD1894512274823C003EA507 /* main.m in Sources */,
+				FD05CE2622C04E0F009D8B6C /* MinStack.swift in Sources */,
 				FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */,
 				FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */,
 				FD05CDD322A6BBF0009D8B6C /* HashMap.m in Sources */,
@@ -449,6 +458,7 @@
 				FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FD938BFB22773C030058F557 /* BinaryTreeNode.m in Sources */,
 				FD60B2A422AE495700D0ABF9 /* LFUCache.m in Sources */,
+				FD05CE2922C04E1F009D8B6C /* MinStackTest.swift in Sources */,
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
 				FD23014422AF810300273390 /* CView.m in Sources */,
 				FD1894752274825D003EA507 /* Node.m in Sources */,
@@ -470,6 +480,7 @@
 				FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */,
 				FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */,
 				FDEFF91022AE104B00498B36 /* LFUCacheTest.m in Sources */,
+				FD05CE2A22C04E1F009D8B6C /* MinStackTest.swift in Sources */,
 				FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FDEFF90B22AE0C7C00498B36 /* ListTest.m in Sources */,
 				FDE3F27222983729001448E2 /* DLLNode.m in Sources */,
@@ -479,6 +490,7 @@
 				FDC580C522B351E100CE41EB /* MyCircleQueue.swift in Sources */,
 				FDC580CC22B3AF7900CE41EB /* MyCircleDequeTest.swift in Sources */,
 				FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */,
+				FD05CE2722C04E0F009D8B6C /* MinStack.swift in Sources */,
 				FDC580CA22B3AF1600CE41EB /* MyCircleDeque.swift in Sources */,
 				FD938C0422795EAB0058F557 /* Queue.m in Sources */,
 				FDE3F2742298EAF8001448E2 /* DoubleListTests.m in Sources */,
