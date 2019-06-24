@@ -13,6 +13,7 @@
 #import "Queue.h"
 #import "XView.h"
 #import "CView.h"
+@import UserNotifications;
 
 @interface ViewController () {
     BinaryTree *_tree;
@@ -143,6 +144,22 @@ void runLoopObserverCallBack (CFRunLoopObserverRef observer, CFRunLoopActivity a
     }
 //    NSLog(@"loop %@ activity %@ info %@", CFRunLoopGetCurrent(),runloopActivity, info);
     NSLog(@"activity %@ info %@", runloopActivity, info);
+}
+
+- (IBAction)sameReqLocalNoti:(id)sender {
+    static NSString *const reqId = @"local.game.score";
+    __block int a = 0;
+    for (int i=0; i<100; i++) {
+        UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+        content.body = [NSString stringWithFormat:@"score: 0:%d",a];
+        UNTimeIntervalNotificationTrigger *t = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
+        UNNotificationRequest *req = [UNNotificationRequest requestWithIdentifier:reqId content:content trigger:t];
+        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:req withCompletionHandler:^(NSError * _Nullable error) {
+            NSLog(@"add complete error is %@", error);
+        }];
+        a++;
+        sleep(2);
+    }
 }
 
 @end
