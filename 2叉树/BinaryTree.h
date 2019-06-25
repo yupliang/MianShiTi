@@ -28,10 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) BinaryTreeNode *rootNode;
 
 - (void)createTree:(NSMutableArray *)datas;
+- (void)createHeapTree:(NSMutableArray *)datas;
 + (void)dlrTree:(BinaryTree *)aTree;
 + (void)ldrTree:(BinaryTree *)aTree;
 + (void)lrdTree:(BinaryTree *)aTree;
-+ (void)levelTree:(BinaryTree *)aTree;
++ (NSString *)levelTree:(BinaryTree *)aTree;
 + (nullable NSArray *)levelOrderNodeAndLRnode:(BinaryTree *)aTree;
 
 @end

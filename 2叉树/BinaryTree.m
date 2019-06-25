@@ -46,8 +46,51 @@
     }
 }
 
+- (void)createHeapTree:(NSMutableArray *)datas toParent:(nullable BinaryTreeNode *)aParent andChild:(NodeType)aside {
+    if (datas.count == 0) return;
+    BinaryTreeNode *aNode = [self addNode:[datas[0] integerValue] toParent:aParent andChild:aside];
+    if (self.rootNode == nil) {
+        self.rootNode = aNode;
+    }
+    [datas removeObjectAtIndex:0];
+    
+    if (aNode != nil) {
+        [self createTree:datas toParent:aNode andChild:left];
+        [self createTree:datas toParent:aNode andChild:right];
+    }
+
+}
+
+- (void)heapifyWithDatas:(NSMutableArray *)datas parentIndex:(NSInteger)pIndex {
+    if (pIndex > datas.count) return;
+    NSInteger lIndex = pIndex*2 +1;
+    NSInteger rIndex = pIndex*2+2;
+    NSInteger max = pIndex;
+    if (lIndex<datas.count && [datas[max] integerValue] < [datas[lIndex] integerValue]) {
+        max = lIndex;
+    }
+    if (rIndex<datas.count && [datas[max] integerValue] < [datas[rIndex] integerValue]) {
+        max = rIndex;
+    }
+    if (max != pIndex) {
+        id temp = datas[pIndex];
+        datas[pIndex] = datas[max];
+        datas[max] = temp;
+        [self heapifyWithDatas:datas parentIndex:max];
+    }
+}
+
 - (void)createTree:(NSMutableArray *)datas {
     [self createTree:datas toParent:nil andChild:root];
+}
+
+- (void)createHeapTree:(NSMutableArray *)datas {
+    int pIndex = (datas.count-1)/2;
+    for (int i=pIndex; i>=0; i--) {
+        [self heapifyWithDatas:datas parentIndex:i];
+    }
+    
+    [self createHeapTree:datas toParent:nil andChild:root];
 }
 
 + (void)dlrTree:(BinaryTree *)aTree {
@@ -63,8 +106,8 @@
     if (aTree == nil) return;
     [aTree _lrdTree:aTree.rootNode];
 }
-+ (void)levelTree:(BinaryTree *)aTree {
-    [aTree _levelTree:aTree.rootNode];
++ (NSString *)levelTree:(BinaryTree *)aTree {
+    return [aTree _levelTree:aTree.rootNode];
 }
 + (NSArray *)levelOrderNodeAndLRnode:(BinaryTree *)aTree {
     return [aTree _levelOrderNodeAndLRnode:aTree.rootNode];
@@ -88,18 +131,27 @@
     [self _lrdTree:aNode.rightNode];
     NSLog(@"%d", aNode.data);
 }
-- (void)_levelTree:(BinaryTreeNode *)aNode {
-    if (aNode == nil) return;
+- (NSString *)_levelTree:(BinaryTreeNode *)aNode {
+    if (aNode == nil) return nil;
     Queue *aQueue = [Queue new];
     [aQueue enqueue:aNode];
+    NSString *r = nil;
+    int i=0;
     while (![aQueue isEmpty]) {
         BinaryTreeNode *n = (BinaryTreeNode *)[aQueue dequeue];
         NSLog(@"%d", n.data);
+        if (i == 0) {
+            i++;
+            r = [NSString stringWithFormat:@"%d", n.data];
+        } else {
+            r = [NSString stringWithFormat:@"%@->%d", r,n.data];
+        }
         if (n.leftNode != nil)
             [aQueue enqueue:n.leftNode];
         if (n.rightNode != nil)
             [aQueue enqueue:n.rightNode];
     }
+    return r;
 }
 
 - (NSArray *)_levelOrderNodeAndLRnode:(BinaryTreeNode *)aNode {
