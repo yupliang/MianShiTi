@@ -11,6 +11,15 @@
 
 @implementation BinaryTree
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _q = [Queue new];
+    }
+    return self;
+}
+
 - (BinaryTreeNode *)addNode:(NSInteger)data toParent:(BinaryTreeNode *)aParent andChild:(NodeType)aside {
     if (data == NSIntegerMax) return nil;
     BinaryTreeNode *aNode = [BinaryTreeNode new];
@@ -51,14 +60,21 @@
     BinaryTreeNode *aNode = [self addNode:[datas[0] integerValue] toParent:aParent andChild:aside];
     if (self.rootNode == nil) {
         self.rootNode = aNode;
+        [_q enqueue:self.rootNode];
     }
     [datas removeObjectAtIndex:0];
     
-    if (aNode != nil) {
-        [self createTree:datas toParent:aNode andChild:left];
-        [self createTree:datas toParent:aNode andChild:right];
+    while (datas.count > 0) {
+        aParent = (BinaryTreeNode *)[_q dequeue];
+        aNode = [self addNode:[datas[0] integerValue] toParent:aParent andChild:left];
+        [_q enqueue:aNode];
+        [datas removeObjectAtIndex:0];
+        if (datas.count > 0) {
+            aNode = [self addNode:[datas[0] integerValue] toParent:aParent andChild:right];
+            [_q enqueue:aNode];
+            [datas removeObjectAtIndex:0];
+        }
     }
-
 }
 
 - (void)heapifyWithDatas:(NSMutableArray *)datas parentIndex:(NSInteger)pIndex {

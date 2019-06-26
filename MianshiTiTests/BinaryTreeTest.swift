@@ -27,7 +27,8 @@ class BinaryTreeTest: XCTestCase {
         btree.createHeap(arr)
         var r = BinaryTree.level(btree)
         print("arr is \(arr)")
-        XCTAssertEqual(r, "15->14-12-11->13->7->9->8->10->1->2->3")
+//        XCTAssertEqual("1-2-3", "1-2-3")
+        XCTAssertEqual(r, "15->14->12->11->13->7->9->8->10->1->2->3")
     }
     
     func testArrayExchange() -> Void {

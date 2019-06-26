@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BinaryTreeNode.h"
+#import "Queue.h"
 
 typedef enum : NSUInteger {
     root,
@@ -23,7 +24,9 @@ typedef enum : NSUInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BinaryTree : NSObject
+@interface BinaryTree : NSObject {
+    Queue *_q;
+}
 
 @property (nonatomic,strong) BinaryTreeNode *rootNode;
 
