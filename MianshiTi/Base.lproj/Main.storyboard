@@ -34,6 +34,14 @@
                                     <action selector="sameReqLocalNoti:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJQ-bh-hUP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccB-9Y-gZ6">
+                                <rect key="frame" x="114" y="560" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ScrollView Layout"/>
+                                <connections>
+                                    <segue destination="zIb-Bu-5F0" kind="show" id="oEg-c1-LWR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -96,7 +104,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jib-3U-A8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1901.5999999999999" y="649.92503748125944"/>
+            <point key="canvasLocation" x="1839" y="705"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GJn-lj-Lat">
+            <objects>
+                <viewController id="zIb-Bu-5F0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gEu-aR-yED">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syL-2E-sFu">
+                                <rect key="frame" x="16" y="136" width="343" height="457"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sha-bn-gmP" userLabel="Label1">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="243.5"/>
+                                        <mutableString key="text">Label1UIScrollView 新手教程 - GitHub
+https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
+这份 UIScrollView 教程教给你的第一件事是，如何设置一个滚动视图，允许用户缩放、移动图片。 首先，你需要添加一个滚动视图。打开Main.storyboard ，从Object Library 拖动一个Scroll View ，放到Zoomed .... 在Container View 中的图片下方添加一个Label 。 ..... 如果你想再进一步，这里有一个21 个视频的集合，专门介绍滚动视图。</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JN-qn-CfE" userLabel="Label2">
+                                        <rect key="frame" x="0.0" y="243.5" width="343" height="243.5"/>
+                                        <mutableString key="text">Label2UIScrollView 新手教程 - GitHub
+https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
+这份 UIScrollView 教程教给你的第一件事是，如何设置一个滚动视图，允许用户缩放、移动图片。 首先，你需要添加一个滚动视图。打开Main.storyboard ，从Object Library 拖动一个Scroll View ，放到Zoomed .... 在Container View 中的图片下方添加一个Label 。 ..... 如果你想再进一步，这里有一个21 个视频的集合，专门介绍滚动视图。</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5W-WH-8P0" userLabel="Label3">
+                                        <rect key="frame" x="0.0" y="487" width="343" height="243.5"/>
+                                        <mutableString key="text">Label3UIScrollView 新手教程 - GitHub
+https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
+这份 UIScrollView 教程教给你的第一件事是，如何设置一个滚动视图，允许用户缩放、移动图片。 首先，你需要添加一个滚动视图。打开Main.storyboard ，从Object Library 拖动一个Scroll View ，放到Zoomed .... 在Container View 中的图片下方添加一个Label 。 ..... 如果你想再进一步，这里有一个21 个视频的集合，专门介绍滚动视图。</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sha-bn-gmP" firstAttribute="width" secondItem="syL-2E-sFu" secondAttribute="width" id="1je-Vh-fnW"/>
+                                    <constraint firstItem="k5W-WH-8P0" firstAttribute="top" secondItem="0JN-qn-CfE" secondAttribute="bottom" id="2aM-Jf-4jh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sha-bn-gmP" secondAttribute="trailing" id="2ka-to-yMd"/>
+                                    <constraint firstAttribute="trailing" secondItem="0JN-qn-CfE" secondAttribute="trailing" id="MRF-It-lZl"/>
+                                    <constraint firstItem="Sha-bn-gmP" firstAttribute="top" secondItem="syL-2E-sFu" secondAttribute="top" id="Si7-dl-jVn"/>
+                                    <constraint firstItem="0JN-qn-CfE" firstAttribute="top" secondItem="Sha-bn-gmP" secondAttribute="bottom" id="UyD-BU-RAO"/>
+                                    <constraint firstAttribute="trailing" secondItem="k5W-WH-8P0" secondAttribute="trailing" id="d8y-ug-tWG"/>
+                                    <constraint firstItem="0JN-qn-CfE" firstAttribute="leading" secondItem="syL-2E-sFu" secondAttribute="leading" id="oAN-gQ-31Y"/>
+                                    <constraint firstItem="Sha-bn-gmP" firstAttribute="leading" secondItem="syL-2E-sFu" secondAttribute="leading" id="oix-yw-5f6"/>
+                                    <constraint firstItem="k5W-WH-8P0" firstAttribute="leading" secondItem="syL-2E-sFu" secondAttribute="leading" id="sXc-9n-8bX"/>
+                                    <constraint firstAttribute="bottom" secondItem="k5W-WH-8P0" secondAttribute="bottom" id="zRv-tW-l4h"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="syL-2E-sFu" firstAttribute="leading" secondItem="o2D-Hk-bte" secondAttribute="leading" constant="16" id="8UF-qD-qeW"/>
+                            <constraint firstItem="o2D-Hk-bte" firstAttribute="trailing" secondItem="syL-2E-sFu" secondAttribute="trailing" constant="16" id="eUO-OS-wLI"/>
+                            <constraint firstItem="o2D-Hk-bte" firstAttribute="bottom" secondItem="syL-2E-sFu" secondAttribute="bottom" constant="74" id="mqO-TX-9bJ"/>
+                            <constraint firstItem="syL-2E-sFu" firstAttribute="top" secondItem="o2D-Hk-bte" secondAttribute="top" constant="72" id="t89-MF-Bay"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o2D-Hk-bte"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qiK-rG-hJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2541.5999999999999" y="704.79760119940033"/>
         </scene>
     </scenes>
 </document>
