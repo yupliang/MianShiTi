@@ -77,22 +77,22 @@
     }
 }
 
-- (void)heapifyWithDatas:(NSMutableArray *)datas parentIndex:(NSInteger)pIndex {
-    if (pIndex > datas.count) return;
+- (void)heapifyWithDatas:(NSMutableArray *)datas datasCount:(int)n parentIndex:(NSInteger)pIndex {
+    if (pIndex >= n) return;
     NSInteger lIndex = pIndex*2 +1;
     NSInteger rIndex = pIndex*2+2;
     NSInteger max = pIndex;
-    if (lIndex<datas.count && [datas[max] integerValue] < [datas[lIndex] integerValue]) {
+    if (lIndex<n && [datas[max] integerValue] < [datas[lIndex] integerValue]) {
         max = lIndex;
     }
-    if (rIndex<datas.count && [datas[max] integerValue] < [datas[rIndex] integerValue]) {
+    if (rIndex<n && [datas[max] integerValue] < [datas[rIndex] integerValue]) {
         max = rIndex;
     }
     if (max != pIndex) {
         id temp = datas[pIndex];
         datas[pIndex] = datas[max];
         datas[max] = temp;
-        [self heapifyWithDatas:datas parentIndex:max];
+        [self heapifyWithDatas:datas datasCount:n parentIndex:max];
     }
 }
 
@@ -101,12 +101,21 @@
 }
 
 - (void)createHeapTree:(NSMutableArray *)datas {
-    int pIndex = (datas.count-1)/2;
-    for (int i=pIndex; i>=0; i--) {
-        [self heapifyWithDatas:datas parentIndex:i];
-    }
     
+    int pIndex = (datas.count-1-1)/2;
+    for (int i=pIndex; i>=0; i--) {
+        [self heapifyWithDatas:datas datasCount:datas.count parentIndex:i];
+    }
+    NSMutableArray *copyDatas = [datas mutableCopy];
     [self createHeapTree:datas toParent:nil andChild:root];
+    
+    for (int i=copyDatas.count-1; i>=0; i--) {
+        id temp = copyDatas[0];
+        copyDatas[0] = copyDatas[i];
+        copyDatas[i] = temp;
+        [self heapifyWithDatas:copyDatas datasCount:i parentIndex:0];
+    }
+    NSLog(@"heap sort datas %@", copyDatas);
 }
 
 + (void)dlrTree:(BinaryTree *)aTree {
