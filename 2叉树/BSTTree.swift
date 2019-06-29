@@ -48,7 +48,7 @@ class BSTTree<Key:Comparable, Value> {
                     return node.left
                 }
                 let minMaxNode = getMinValue(node: node.right)!
-                minMaxNode.right = removeMin(node: minMaxNode)
+                minMaxNode.right = removeMin(node: node.right)
                 minMaxNode.left = node.left
                 return minMaxNode
             }
@@ -56,10 +56,24 @@ class BSTTree<Key:Comparable, Value> {
         return nil
     }
     private func getMinValue(node:BSTNode<Key,Value>?) -> BSTNode<Key,Value>? {
+        if let node = node {
+            if let lNode = node.left {
+                return getMinValue(node: lNode)
+            }
+            return node
+        }
         return nil
     }
     private func removeMin(node:BSTNode<Key,Value>?) -> BSTNode<Key,Value>? {
-        return node?.right
+        if let node = node {
+            if let lNode = node.left {
+                node.left = removeMin(node: lNode)
+                return node
+            } else {
+                return node.right
+            }
+        }
+        return nil
     }
     private func getNode(node: BSTNode<Key,Value>?, key:Key) -> BSTNode<Key,Value>? {
         if let node = node {
