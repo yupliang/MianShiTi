@@ -26,11 +26,32 @@ class BSTTreeTest: XCTestCase {
         XCTAssertNotNil(bst)
     }
     
+    func testRemove() -> Void {
+        bst.add(key: 20, value: 200)
+        bst.add(key: 10, value: 100)
+        bst.add(key: 24, value: 240)
+        bst.add(key: 8, value: 80)
+        bst.add(key: 13, value: 130)
+        bst.add(key: 30, value: 300)
+        bst.add(key: 12, value: 120)
+        var r = bst.levelTree(node: bst.root)
+        XCTAssertEqual("20->10->24->8->13->30->12", r)
+        bst.remove(key: 10)
+        XCTAssertFalse(bst.containes(key: 10))
+        r = bst.levelTree(node: bst.root)
+        XCTAssertEqual("20->12->24->8->13->30", r)
+    }
+    
     func testLogic() -> Void {
+        let a = BSTNode(key: 10, value: 11)
+        print("xx -- \(a.key!)")
         bst.add(key: 20, value: 200)
         bst.add(key: 10, value: 100)
         bst.add(key: 24, value: 240)
         bst.add(key: 13, value: 130)
+        let s = bst.levelTree(node: bst.root)!
+        print(s)
+        XCTAssertEqual("20->10->24->13", s)
         if bst.containes(key: 10) {
             print("10 exists")
         }

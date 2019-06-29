@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BSTNode<Key:Comparable, Value> {
+class BSTNode<Key:Comparable, Value> : NSObject {
     var key:Key!
     var value:Value!
     

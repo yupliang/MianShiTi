@@ -32,6 +32,31 @@ class BSTTree<Key:Comparable, Value> {
         }
         return nil
     }
+    public func levelTree(node: BSTNode<Key, Value>?) -> String? {
+        if let node = node {
+            var r = ""
+            let queue = Queue()
+            queue.enqueue(node)
+            var i = 0
+            while queue.isEmpty() == false {
+                let n:BSTNode<Key,Value> = queue.dequeue() as! BSTNode<Key, Value>
+                if i==0 {
+                    r = "\(n.key!)"
+                } else {
+                    r = "\(r)->\(n.key!)"
+                }
+                if let l = n.left {
+                    queue.enqueue(l)
+                }
+                if let r = n.right {
+                    queue.enqueue(r)
+                }
+                i += 1
+            }
+            return r
+        }
+        return nil
+    }
     private func remove(node: BSTNode<Key,Value>?, key: Key) -> BSTNode<Key,Value>? {
         if let node = node {
             if node.key > key {
