@@ -12,7 +12,7 @@
 
 
 
-@interface AppDelegate () {
+@interface AppDelegate ()<UNUserNotificationCenterDelegate> {
      
 }
 
@@ -37,9 +37,11 @@
 //            [[NSRunLoop currentRunLoop] run];
 //        });
 //    }
-    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:UNAuthorizationOptionAlert|UNAuthorizationOptionBadge|UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:UNAuthorizationOptionAlert|UNAuthorizationOptionBadge|UNAuthorizationOptionSound|UNAuthorizationOptionProvidesAppNotificationSettings completionHandler:^(BOOL granted, NSError * _Nullable error) {
         NSLog(@"notification granted %d error %@", granted,error);
     }];
+    
+    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
     return YES;
 }
 
@@ -72,6 +74,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification {
+    NSLog(@"notification %@--%@", notification.request.identifier,notification);
 }
 
 @end
