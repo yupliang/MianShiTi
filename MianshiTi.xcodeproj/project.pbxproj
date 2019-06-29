@@ -41,6 +41,11 @@
 		FDB664B122C112C800FAC14E /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB664B022C112C800FAC14E /* BinaryTreeNode.m */; };
 		FDB664B222C112C800FAC14E /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB664B022C112C800FAC14E /* BinaryTreeNode.m */; };
 		FDB664B422C113F200FAC14E /* MinStackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB664B322C113F200FAC14E /* MinStackTest.swift */; };
+		FDB664B622C660FA00FAC14E /* BSTTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB664B522C660FA00FAC14E /* BSTTree.swift */; };
+		FDB664B722C660FA00FAC14E /* BSTTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB664B522C660FA00FAC14E /* BSTTree.swift */; };
+		FDB664B922C665E700FAC14E /* BSTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB664B822C665E700FAC14E /* BSTNode.swift */; };
+		FDB664BA22C665E700FAC14E /* BSTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB664B822C665E700FAC14E /* BSTNode.swift */; };
+		FDB664BC22C763AD00FAC14E /* BSTTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB664BB22C763AD00FAC14E /* BSTTreeTest.swift */; };
 		FDC580C422B351E100CE41EB /* MyCircleQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC580C322B351E100CE41EB /* MyCircleQueue.swift */; };
 		FDC580C522B351E100CE41EB /* MyCircleQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC580C322B351E100CE41EB /* MyCircleQueue.swift */; };
 		FDC580C722B3532700CE41EB /* MyCircleQueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC580C622B3532700CE41EB /* MyCircleQueueTest.swift */; };
@@ -129,6 +134,9 @@
 		FDB664AF22C112C800FAC14E /* BinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
 		FDB664B022C112C800FAC14E /* BinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 		FDB664B322C113F200FAC14E /* MinStackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinStackTest.swift; sourceTree = "<group>"; };
+		FDB664B522C660FA00FAC14E /* BSTTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTTree.swift; sourceTree = "<group>"; };
+		FDB664B822C665E700FAC14E /* BSTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTNode.swift; sourceTree = "<group>"; };
+		FDB664BB22C763AD00FAC14E /* BSTTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTTreeTest.swift; sourceTree = "<group>"; };
 		FDC580C322B351E100CE41EB /* MyCircleQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleQueue.swift; sourceTree = "<group>"; };
 		FDC580C622B3532700CE41EB /* MyCircleQueueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleQueueTest.swift; sourceTree = "<group>"; };
 		FDC580C822B3AF1600CE41EB /* MyCircleDeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleDeque.swift; sourceTree = "<group>"; };
@@ -239,6 +247,7 @@
 				FDC580C622B3532700CE41EB /* MyCircleQueueTest.swift */,
 				FDC580CB22B3AF7900CE41EB /* MyCircleDequeTest.swift */,
 				FDB664AD22C1129F00FAC14E /* BinaryTreeTest.swift */,
+				FDB664BB22C763AD00FAC14E /* BSTTreeTest.swift */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -291,6 +300,8 @@
 				FDB664B022C112C800FAC14E /* BinaryTreeNode.m */,
 				FD938BFC22773CC50058F557 /* BinaryTree.h */,
 				FD938BFD22773CC50058F557 /* BinaryTree.m */,
+				FDB664B522C660FA00FAC14E /* BSTTree.swift */,
+				FDB664B822C665E700FAC14E /* BSTNode.swift */,
 			);
 			path = "2叉树";
 			sourceTree = "<group>";
@@ -447,9 +458,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD05CE1822B16003009D8B6C /* Utility.swift in Sources */,
+				FDB664B622C660FA00FAC14E /* BSTTree.swift in Sources */,
 				FD73FA11227482EA0027C89D /* List.m in Sources */,
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
 				FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */,
+				FDB664B922C665E700FAC14E /* BSTNode.swift in Sources */,
 				FD1894512274823C003EA507 /* main.m in Sources */,
 				FD05CE2622C04E0F009D8B6C /* MinStack.swift in Sources */,
 				FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */,
@@ -477,9 +490,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB664B222C112C800FAC14E /* BinaryTreeNode.m in Sources */,
+				FDB664B722C660FA00FAC14E /* BSTTree.swift in Sources */,
 				FD05CE1922B16003009D8B6C /* Utility.swift in Sources */,
+				FDB664BC22C763AD00FAC14E /* BSTTreeTest.swift in Sources */,
 				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
 				FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */,
+				FDB664BA22C665E700FAC14E /* BSTNode.swift in Sources */,
 				FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */,
 				FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */,
 				FDEFF91022AE104B00498B36 /* LFUCacheTest.m in Sources */,
@@ -666,6 +682,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Y5LDVCJBFV;
 				INFOPLIST_FILE = MianshiTi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,6 +706,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MianshiTi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

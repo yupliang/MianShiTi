@@ -149,7 +149,7 @@ void runLoopObserverCallBack (CFRunLoopObserverRef observer, CFRunLoopActivity a
 - (IBAction)sameReqLocalNoti:(id)sender {
     static NSString *const reqId = @"local.game.score";
     __block int a = 0;
-    for (int i=0; i<100; i++) {
+    for (int i=0; i<1; i++) {
         UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
         content.body = [NSString stringWithFormat:@"score: 0:%d",a];
         UNTimeIntervalNotificationTrigger *t = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
