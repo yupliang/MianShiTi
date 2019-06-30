@@ -20,6 +20,12 @@ class MaxHeapTests: XCTestCase {
         maxHeap = nil
     }
     
+    func testArraySort() -> Void {
+        let arr = [3,2,1,5,6,4]
+        print(arr.sorted(by: >))
+        XCTAssertEqual(5, arr.sorted(by: >)[1])
+    }
+    
     func testLogic() -> Void {
         XCTAssertNil(maxHeap.popMax())
         XCTAssertNil(maxHeap.getMax())
