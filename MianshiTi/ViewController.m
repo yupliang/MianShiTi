@@ -152,13 +152,13 @@ void runLoopObserverCallBack (CFRunLoopObserverRef observer, CFRunLoopActivity a
     for (int i=0; i<1; i++) {
         UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
         content.body = [NSString stringWithFormat:@"score: 0:%d",a];
-        UNTimeIntervalNotificationTrigger *t = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
+        UNTimeIntervalNotificationTrigger *t = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:3 repeats:NO];
         UNNotificationRequest *req = [UNNotificationRequest requestWithIdentifier:reqId content:content trigger:t];
         [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:req withCompletionHandler:^(NSError * _Nullable error) {
             NSLog(@"add complete error is %@", error);
         }];
         a++;
-        sleep(2);
+//        sleep(2);
     }
 }
 
