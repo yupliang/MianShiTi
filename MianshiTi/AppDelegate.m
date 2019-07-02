@@ -22,6 +22,32 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    dispatch_queue_t q = dispatch_queue_create("com.concurrent.queue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_sync(q, ^{
+            int i = 0;
+            while (i<10) {
+                NSLog(@"任务1 --- %d", i);
+                i++;
+            }
+        });
+        
+    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_sync(q, ^{
+            int i = 0;
+            while (i<10) {
+                NSLog(@"任务2 --- %d", i);
+                i++;
+            }
+        });
+    });
+    
+    
+    if (launchOptions != nil) {
+        [[UIPasteboard generalPasteboard] setString:[launchOptions description]];
+    }
     // Override point for customization after application launch.
     
 //    ABC *b = [ABC new];
