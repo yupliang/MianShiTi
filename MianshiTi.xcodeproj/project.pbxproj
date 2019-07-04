@@ -55,6 +55,11 @@
 		FDC580C922B3AF1600CE41EB /* MyCircleDeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC580C822B3AF1600CE41EB /* MyCircleDeque.swift */; };
 		FDC580CA22B3AF1600CE41EB /* MyCircleDeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC580C822B3AF1600CE41EB /* MyCircleDeque.swift */; };
 		FDC580CC22B3AF7900CE41EB /* MyCircleDequeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC580CB22B3AF7900CE41EB /* MyCircleDequeTest.swift */; };
+		FDC5C08822CE35F1004DC34C /* AVLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5C08722CE35F1004DC34C /* AVLNode.swift */; };
+		FDC5C08922CE35F1004DC34C /* AVLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5C08722CE35F1004DC34C /* AVLNode.swift */; };
+		FDC5C08B22CE3701004DC34C /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5C08A22CE3701004DC34C /* AVLTree.swift */; };
+		FDC5C08C22CE3701004DC34C /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5C08A22CE3701004DC34C /* AVLTree.swift */; };
+		FDC5C08E22CE4491004DC34C /* AVLTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5C08D22CE4491004DC34C /* AVLTreeTest.swift */; };
 		FDE3F27122983729001448E2 /* DLLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F27022983729001448E2 /* DLLNode.m */; };
 		FDE3F27222983729001448E2 /* DLLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F27022983729001448E2 /* DLLNode.m */; };
 		FDE3F2742298EAF8001448E2 /* DoubleListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F2732298EAF8001448E2 /* DoubleListTests.m */; };
@@ -146,6 +151,9 @@
 		FDC580C622B3532700CE41EB /* MyCircleQueueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleQueueTest.swift; sourceTree = "<group>"; };
 		FDC580C822B3AF1600CE41EB /* MyCircleDeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleDeque.swift; sourceTree = "<group>"; };
 		FDC580CB22B3AF7900CE41EB /* MyCircleDequeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleDequeTest.swift; sourceTree = "<group>"; };
+		FDC5C08722CE35F1004DC34C /* AVLNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLNode.swift; sourceTree = "<group>"; };
+		FDC5C08A22CE3701004DC34C /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
+		FDC5C08D22CE4491004DC34C /* AVLTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTreeTest.swift; sourceTree = "<group>"; };
 		FDE3F26F22983729001448E2 /* DLLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLLNode.h; sourceTree = "<group>"; };
 		FDE3F27022983729001448E2 /* DLLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLLNode.m; sourceTree = "<group>"; };
 		FDE3F2732298EAF8001448E2 /* DoubleListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleListTests.m; sourceTree = "<group>"; };
@@ -254,6 +262,7 @@
 				FDB664AD22C1129F00FAC14E /* BinaryTreeTest.swift */,
 				FDB664BB22C763AD00FAC14E /* BSTTreeTest.swift */,
 				FD70174722C89C68007AF46F /* MaxHeapTests.swift */,
+				FDC5C08D22CE4491004DC34C /* AVLTreeTest.swift */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -309,6 +318,8 @@
 				FD938BFD22773CC50058F557 /* BinaryTree.m */,
 				FDB664B522C660FA00FAC14E /* BSTTree.swift */,
 				FDB664B822C665E700FAC14E /* BSTNode.swift */,
+				FDC5C08722CE35F1004DC34C /* AVLNode.swift */,
+				FDC5C08A22CE3701004DC34C /* AVLTree.swift */,
 			);
 			path = "2叉树";
 			sourceTree = "<group>";
@@ -479,12 +490,14 @@
 				FDE3F27122983729001448E2 /* DLLNode.m in Sources */,
 				FD18944322748237003EA507 /* AppDelegate.m in Sources */,
 				FD70174522C89B28007AF46F /* MaxHeap.swift in Sources */,
+				FDC5C08B22CE3701004DC34C /* AVLTree.swift in Sources */,
 				FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FD60B2A422AE495700D0ABF9 /* LFUCache.m in Sources */,
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
 				FD23014422AF810300273390 /* CView.m in Sources */,
 				FD1894752274825D003EA507 /* Node.m in Sources */,
 				FDE7FBEF22969088001BD1CE /* aa.m in Sources */,
+				FDC5C08822CE35F1004DC34C /* AVLNode.swift in Sources */,
 				FD60B2A822AF7E6900D0ABF9 /* XView.m in Sources */,
 				FDC580C422B351E100CE41EB /* MyCircleQueue.swift in Sources */,
 				FD938C0222795B1B0058F557 /* Queue.m in Sources */,
@@ -506,10 +519,12 @@
 				FDB664BA22C665E700FAC14E /* BSTNode.swift in Sources */,
 				FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */,
 				FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */,
+				FDC5C08C22CE3701004DC34C /* AVLTree.swift in Sources */,
 				FDEFF91022AE104B00498B36 /* LFUCacheTest.m in Sources */,
 				FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FD70174622C89B28007AF46F /* MaxHeap.swift in Sources */,
 				FDEFF90B22AE0C7C00498B36 /* ListTest.m in Sources */,
+				FDC5C08E22CE4491004DC34C /* AVLTreeTest.swift in Sources */,
 				FDE3F27222983729001448E2 /* DLLNode.m in Sources */,
 				FDB664B422C113F200FAC14E /* MinStackTest.swift in Sources */,
 				FDC580C722B3532700CE41EB /* MyCircleQueueTest.swift in Sources */,
@@ -518,6 +533,7 @@
 				FDC580C522B351E100CE41EB /* MyCircleQueue.swift in Sources */,
 				FDC580CC22B3AF7900CE41EB /* MyCircleDequeTest.swift in Sources */,
 				FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */,
+				FDC5C08922CE35F1004DC34C /* AVLNode.swift in Sources */,
 				FD05CE2722C04E0F009D8B6C /* MinStack.swift in Sources */,
 				FDC580CA22B3AF1600CE41EB /* MyCircleDeque.swift in Sources */,
 				FDB664AE22C1129F00FAC14E /* BinaryTreeTest.swift in Sources */,
