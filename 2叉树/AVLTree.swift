@@ -34,14 +34,42 @@ class AVLTree<Key:Comparable, Value> {
     }
     
     func add(key:Key, value:Value) -> Void {
-        
+        root = add(root: root, key: key, value: value)
     }
     
-    private func inOrder(result: inout [Key], root: AVLNode<Key,Value>?) {
+    func isBalance() -> Bool {
+        return false
+    }
+    
+    private func isBalance(root: AVLNode<Key,Value>?) -> Bool {
+        return false
+    }
+    
+    private func add(root:AVLNode<Key,Value>?, key:Key,value:Value) -> AVLNode<Key,Value>? {
+        if let aRoot = root {
+            if key == aRoot.key {
+                aRoot.value = value
+            }
+            return aRoot
+        } else {
+            let node = AVLNode(key: key, value: value)
+            size += 1
+            return node
+        }
+    }
+    
+    func inOrder(result: inout [Key], root: AVLNode<Key,Value>?) {
         if let aRoot = root {
             inOrder(result: &result, root: root?.left)
             result.append(aRoot.key)
             inOrder(result: &result, root: root?.right)
         }
+    }
+    
+    private func getHeight(node:AVLNode<Key,Value>?) -> Int {
+        return node?.height ?? 0
+    }
+    private func getBalanceFactor(node:AVLNode<Key,Value>?) -> Int {
+        return getHeight(node: node?.left) - getHeight(node: node?.right)
     }
 }

@@ -29,7 +29,17 @@ class AVLTreeTest: XCTestCase {
 
     func testLogic() -> Void {
         tree.add(key:20, value:20)
+        tree.add(key: 10, value: 100)
+        tree.add(key: 9, value: 90)
+        tree.add(key: 8, value: 80)
+        tree.add(key: 7, value: 70)
+        tree.add(key: 6, value: 60)
+        XCTAssertTrue(tree.isBalance())
+        XCTAssertEqual(6, tree.getSize())
         XCTAssertTrue(tree.isBST())
+        var arr = Array<Int>()
+        tree.inOrder(result: &arr, root: tree.root)
+        XCTAssertEqual([6,7,8,9,10,20], arr)
     }
     
     func testPerformanceExample() {
