@@ -75,10 +75,50 @@ class AVLTree<Key:Comparable, Value> {
         if abs(balanceFactor) <= 1 {
             return node
         }
-        if balanceFactor > 1 {
+        // LL 添加的节点是左孩子的左孩子
+        /**
+         10
+         /
+         8         进行右旋转
+         /
+         5
+         */
+        if balanceFactor > 1 && getBalanceFactor(node: node?.left) >= 0{
             return rightRotate(Y: node)
         }
-        if balanceFactor < -1 {
+        // LR 添加的节点是左孩子的右孩子，先进行左旋转，然后再右旋转
+        /**
+         10
+         /
+         8         进行右旋转
+         \
+         9
+         */
+        if balanceFactor > 1 && getBalanceFactor(node: node?.left) < 0 {
+            node?.left = leftRotate(Y: node?.left)
+            return rightRotate(Y: node)
+        }
+        // RR 添加节点是右孩子的右孩子
+        /**
+         10
+         \
+         20
+         \
+         21
+         */
+        if balanceFactor < -1 && getBalanceFactor(node: node?.right) <= 0 {
+            return leftRotate(Y: node)
+        }
+        // RL 添加的节点是右孩子的左孩子，先进性右旋转，然后再左旋转
+        /**
+         10
+         \
+         20
+         /
+         14
+         */
+        if balanceFactor < -1 && getBalanceFactor(node: node?.right) > 0 {
+            node?.right = rightRotate(Y: node?.right)
             return leftRotate(Y: node)
         }
         return nil

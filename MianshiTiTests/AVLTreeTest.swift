@@ -57,6 +57,42 @@ class AVLTreeTest: XCTestCase {
         XCTAssertEqual(3, tree.root?.height)
     }
     
+    //MARK: 先左旋后右旋
+    func testLeftRotateThenRightRotate() -> Void {
+        tree.add(key: 10, value: 100)
+        tree.add(key: 8, value: 80)
+        tree.add(key: 9, value: 90)
+        
+        XCTAssertTrue(tree.isBST())
+        
+        var node = tree.get(key: 10)
+        XCTAssertEqual(1, node?.height)
+        node = tree.get(key: 9)
+        XCTAssertEqual(2, node?.height)
+        node = tree.get(key: 8)
+        XCTAssertEqual(1, node?.height)
+        
+        XCTAssertTrue(tree.isBalance())
+    }
+    
+    //MARK: 先右旋后左旋
+    func testRightRotateThenLeftRotate() -> Void {
+        tree.add(key: 10, value: 100)
+        tree.add(key: 20, value: 200)
+        tree.add(key: 14, value: 140)
+        
+        XCTAssertTrue(tree.isBST())
+        
+        var node = tree.get(key: 10)
+        XCTAssertEqual(1, node?.height)
+        node = tree.get(key: 20)
+        XCTAssertEqual(1, node?.height)
+        node = tree.get(key: 14)
+        XCTAssertEqual(2, node?.height)
+        
+        XCTAssertTrue(tree.isBalance())
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
