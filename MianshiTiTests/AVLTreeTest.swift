@@ -40,6 +40,7 @@ class AVLTreeTest: XCTestCase {
         var arr = Array<Int>()
         tree.inOrder(result: &arr, root: tree.root)
         XCTAssertEqual([6,7,8,9,10,20], arr)
+        XCTAssertEqual(3, tree.root?.height)
     }
     
     func testPerformanceExample() {
