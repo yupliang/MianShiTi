@@ -55,6 +55,13 @@ class AVLTreeTest: XCTestCase {
         tree.inOrder(result: &arr, root: tree.root)
         XCTAssertEqual([6,7,8,9,10,20], arr)
         XCTAssertEqual(3, tree.root?.height)
+        
+        var value = tree.remove(key: 6)
+        XCTAssertEqual(value, 60)
+        node = tree.get(key: 6)
+        XCTAssertNil(node)
+        node = tree.get(key: 7)
+        XCTAssertEqual(2, node?.height)
     }
     
     //MARK: 先左旋后右旋

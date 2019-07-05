@@ -71,6 +71,41 @@ class AVLTree<Key:Comparable, Value> {
         }
     }
     
+    //MARK:删除元素
+    func remove(key:Key) -> Value? {
+        if let dNode = get(key: key) {
+            root = remove(node: root, key: key)
+            return dNode.value
+        }
+        return nil
+    }
+    
+    //删除节点为key的节点，返回删除后的根节点
+    private func remove(node: AVLNode<Key,Value>?, key:Key) -> AVLNode<Key,Value>? {
+        
+        if let node = node {
+            if node.key == key {
+                /**
+                 5
+                / \
+               4   7
+              /     \
+             1      10
+            */
+                //删除的节点无左子树，比如删除7这个节点，只需把7的右子树返回即可
+                if node.left == nil {
+                    return node.right
+                }
+                //
+                if node.right == nil {
+                    return node.left
+                }
+            }
+        }
+        
+        return nil
+    }
+    
     private func changeBalance(node:AVLNode<Key,Value>?, balanceFactor: Int) -> AVLNode<Key, Value>? {
         if abs(balanceFactor) <= 1 {
             return node
