@@ -84,6 +84,8 @@ class AVLTree<Key:Comparable, Value> {
     private func remove(node: AVLNode<Key,Value>?, key:Key) -> AVLNode<Key,Value>? {
         
         if let node = node {
+            var retNode:AVLNode<Key,Value>?
+            
             if node.key == key {
                 /**
                  5
@@ -100,6 +102,23 @@ class AVLTree<Key:Comparable, Value> {
                 if node.right == nil {
                     return node.left
                 }
+                //删除节点既有左子树，又有右子树，比如删除5
+                let mNode = minNode(node: node.right)!
+                mNode.right = remove(node: node.right, key: key)
+                mNode.left = node.left
+                retNode = mNode
+            } else if key < node.key {
+                let dNode = remove(node: node.left, key: key)
+                node.left = dNode
+                retNode = node
+            } else if key > node.key {
+                let dNode = remove(node: node.right, key: key)
+                node.right = dNode
+                retNode = node
+            }
+            if let retNode = retNode {
+                let balanceFactor = getBalanceFactor(node: retNode)
+                return changeBalance(node: retNode, balanceFactor: balanceFactor)
             }
         }
         
@@ -233,5 +252,15 @@ class AVLTree<Key:Comparable, Value> {
     }
     func getBalanceFactor(node:AVLNode<Key,Value>?) -> Int {
         return getHeight(node: node?.left) - getHeight(node: node?.right)
+    }
+    private func minNode(node:AVLNode<Key,Value>?) -> AVLNode<Key,Value>?{
+        if let node = node {
+            if node.left != nil {
+                return minNode(node: node.left)
+            } else {
+                return node
+            }
+        }
+        return node
     }
 }

@@ -61,7 +61,10 @@ class AVLTreeTest: XCTestCase {
         node = tree.get(key: 6)
         XCTAssertNil(node)
         node = tree.get(key: 7)
-        XCTAssertEqual(2, node?.height)
+        XCTAssertEqual(1, node?.height)
+        value = tree.remove(key: 7)
+        XCTAssertEqual(70, value)
+        XCTAssertEqual(100, tree.root?.value)
     }
     
     //MARK: 先左旋后右旋
