@@ -104,7 +104,8 @@ class AVLTree<Key:Comparable, Value> {
                 }
                 //删除节点既有左子树，又有右子树，比如删除5
                 let mNode = minNode(node: node.right)!
-                mNode.right = remove(node: node.right, key: key)
+                mNode.right = remove(node: node.right, key: mNode
+                .key)
                 mNode.left = node.left
                 retNode = mNode
             } else if key < node.key {
@@ -117,6 +118,8 @@ class AVLTree<Key:Comparable, Value> {
                 retNode = node
             }
             if let retNode = retNode {
+                retNode.height = 1 + max(getHeight(node: retNode.left), getHeight(node: retNode.right))
+                //平衡因子
                 let balanceFactor = getBalanceFactor(node: retNode)
                 return changeBalance(node: retNode, balanceFactor: balanceFactor)
             }
@@ -126,7 +129,7 @@ class AVLTree<Key:Comparable, Value> {
     }
     
     private func changeBalance(node:AVLNode<Key,Value>?, balanceFactor: Int) -> AVLNode<Key, Value>? {
-        if abs(balanceFactor) <= 1 {
+        if abs(balanceFactor) < 1 {
             return node
         }
         // LL 添加的节点是左孩子的左孩子
@@ -175,7 +178,7 @@ class AVLTree<Key:Comparable, Value> {
             node?.right = rightRotate(Y: node?.right)
             return leftRotate(Y: node)
         }
-        return nil
+        return node
     }
     
     func get(key:Key) -> AVLNode<Key,Value>? {
