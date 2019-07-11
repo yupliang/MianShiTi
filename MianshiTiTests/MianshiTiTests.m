@@ -152,9 +152,26 @@ int double_num_asm(int num) {
     return num;
 }
 
+int double_num_times(int num, int times) {
+    int ret;
+    __asm__ __volatile__(
+        "lsl x0,x0,x1\n"
+                         "mov %0,x0"
+                         :"=r"(ret)
+                         :
+                         :
+    );
+    return ret;
+}
+
 - (void)testAsm {
     int r = double_num_asm(2);
     XCTAssertEqual(4, r);
+}
+
+- (void)testTimesNum {
+    int r = double_num_times(4,2);
+    XCTAssertEqual(16, r);
 }
 
 @end
