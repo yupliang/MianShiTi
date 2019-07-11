@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Queue.h"
 #import "BigData.h"
+#import "Example.h"
 
 #define TESTDefine \
 "aa"\
@@ -152,7 +153,7 @@ int double_num_asm(int num) {
     return num;
 }
 
-int double_num_times(int num, int times) {
+int double_num_times1(int num, int times) {
     int ret;
     __asm__ __volatile__(
         "lsl x0,x0,x1\n"
@@ -170,8 +171,15 @@ int double_num_times(int num, int times) {
 }
 
 - (void)testTimesNum {
-    int r = double_num_times(4,2);
+    int r = double_num_times1(4,2);
     XCTAssertEqual(16, r);
+}
+
+- (void)testPureAsm {
+    __asm("nop");
+    int r = double_num_times_asm(5, 3);
+    __asm("nop");
+    XCTAssertEqual(40, r);
 }
 
 @end
