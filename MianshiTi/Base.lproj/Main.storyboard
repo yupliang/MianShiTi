@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tIr-rK-ZDy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zae-ct-jb5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -203,13 +203,13 @@ https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
                                         </constraints>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5t-nh-zOg">
-                                        <rect key="frame" x="87" y="87.5" width="35" height="21"/>
+                                        <rect key="frame" x="87" y="88" width="35" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜色" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eC-bM-hp6">
-                                        <rect key="frame" x="240" y="87.5" width="35" height="21"/>
+                                        <rect key="frame" x="240" y="88" width="35" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -229,7 +229,7 @@ https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我想重复此习惯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpw-4w-EIT">
-                                        <rect key="frame" x="126.5" y="136" width="122" height="21"/>
+                                        <rect key="frame" x="127" y="136.5" width="121.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.49803921568627452" green="0.50196078431372548" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -263,7 +263,7 @@ https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这些天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giu-2S-CZz">
-                                        <rect key="frame" x="161.5" y="237" width="52" height="21"/>
+                                        <rect key="frame" x="161.5" y="237" width="52" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.50196078430000002" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -276,88 +276,94 @@ https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzH-Cf-277">
-                                        <rect key="frame" x="25" y="279" width="30" height="30"/>
+                                        <rect key="frame" x="25" y="278.5" width="30" height="30"/>
                                         <state key="normal" title="日">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejc-ZR-dro">
-                                        <rect key="frame" x="65" y="279" width="30" height="30"/>
+                                        <rect key="frame" x="65" y="278.5" width="30" height="30"/>
                                         <state key="normal" title="一">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLi-o0-e9u">
-                                        <rect key="frame" x="105" y="279" width="30" height="30"/>
+                                        <rect key="frame" x="105" y="278.5" width="30" height="30"/>
                                         <state key="normal" title="二">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-LJ-JOR">
-                                        <rect key="frame" x="145" y="279" width="30" height="30"/>
+                                        <rect key="frame" x="145" y="278.5" width="30" height="30"/>
                                         <state key="normal" title="三">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGT-KF-3gR">
-                                        <rect key="frame" x="185" y="279" width="30" height="30"/>
+                                        <rect key="frame" x="185" y="278.5" width="30" height="30"/>
                                         <state key="normal" title="四">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEV-lX-ajM">
-                                        <rect key="frame" x="225" y="279" width="30" height="30"/>
+                                        <rect key="frame" x="225" y="278.5" width="30" height="30"/>
                                         <state key="normal" title="五">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ry9-0N-tuM">
-                                        <rect key="frame" x="265" y="279" width="30" height="30"/>
+                                        <rect key="frame" x="265" y="278.5" width="30" height="30"/>
                                         <state key="normal" title="六">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTT-dD-GDd">
-                                        <rect key="frame" x="25" y="317" width="325" height="30"/>
+                                        <rect key="frame" x="25" y="316.5" width="325" height="30"/>
                                         <color key="backgroundColor" red="0.8901960784313725" green="0.74117647058823533" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="每天">
                                             <color key="titleColor" red="0.10196078431372549" green="0.11764705882352941" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我会在这些时间做一次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffJ-zF-83J">
-                                        <rect key="frame" x="116" y="364" width="143" height="17"/>
+                                        <rect key="frame" x="116" y="363.5" width="143" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.50196078430000002" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhg-Gx-FEO">
-                                        <rect key="frame" x="10" y="372" width="355" height="1"/>
+                                        <rect key="frame" x="10" y="371.5" width="355" height="1"/>
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.2666666667" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="pye-UR-5eN"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-tg-0nF">
-                                        <rect key="frame" x="33" y="388" width="31" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="上午"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJT-t0-qCX">
-                                        <rect key="frame" x="118" y="389" width="31" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="下午"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkM-bq-J1Z">
-                                        <rect key="frame" x="242" y="388" width="31" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="晚间"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0C8-F9-2Yc">
+                                        <rect key="frame" x="0.0" y="400.5" width="375" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-tg-0nF">
+                                                <rect key="frame" x="0.0" y="35" width="276" height="30"/>
+                                                <state key="normal" title="上午上午上午上午上午上午上午上午上午"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJT-t0-qCX">
+                                                <rect key="frame" x="294.5" y="35" width="31" height="30"/>
+                                                <state key="normal" title="下午"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkM-bq-J1Z">
+                                                <rect key="frame" x="344" y="35" width="31" height="30"/>
+                                                <state key="normal" title="晚间"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="yMN-l3-ocQ"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="giu-2S-CZz" firstAttribute="centerX" secondItem="pR3-6A-Q0I" secondAttribute="centerX" id="0fb-oy-kEm"/>
                                     <constraint firstItem="F2s-B4-zHD" firstAttribute="centerX" secondItem="hjh-Uw-Njr" secondAttribute="centerX" id="0pB-28-LBK"/>
                                     <constraint firstAttribute="trailing" secondItem="NTT-dD-GDd" secondAttribute="trailing" constant="25" id="28b-K3-kxb"/>
                                     <constraint firstItem="rEo-5w-CGG" firstAttribute="centerY" secondItem="F2s-B4-zHD" secondAttribute="centerY" id="3xV-hm-8ip"/>
+                                    <constraint firstItem="0C8-F9-2Yc" firstAttribute="top" secondItem="ffJ-zF-83J" secondAttribute="bottom" constant="20" id="5a5-ea-SI5"/>
                                     <constraint firstItem="Iuo-sE-hgT" firstAttribute="trailing" secondItem="hjh-Uw-Njr" secondAttribute="trailingMargin" id="5b9-PE-cp4"/>
                                     <constraint firstItem="zEV-lX-ajM" firstAttribute="leading" secondItem="xGT-KF-3gR" secondAttribute="trailing" constant="10" id="5h6-qW-UQS"/>
                                     <constraint firstItem="0eC-bM-hp6" firstAttribute="centerY" secondItem="Yfd-4Y-dQg" secondAttribute="centerY" id="6VH-ra-BhD"/>
@@ -411,9 +417,12 @@ https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
                         </subviews>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.1764705882352941" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2sv-gn-6e2" firstAttribute="trailing" secondItem="0C8-F9-2Yc" secondAttribute="trailing" id="DWS-Hr-YEp"/>
                             <constraint firstItem="2sv-gn-6e2" firstAttribute="bottom" secondItem="hjh-Uw-Njr" secondAttribute="bottom" id="K6n-1m-6oB"/>
                             <constraint firstItem="hjh-Uw-Njr" firstAttribute="leading" secondItem="2sv-gn-6e2" secondAttribute="leading" id="X0b-Pb-Tsp"/>
+                            <constraint firstItem="hjh-Uw-Njr" firstAttribute="width" secondItem="LaH-8Q-Kar" secondAttribute="width" id="bqc-T4-KFU"/>
                             <constraint firstItem="2sv-gn-6e2" firstAttribute="trailing" secondItem="hjh-Uw-Njr" secondAttribute="trailing" id="dlt-Ln-dCC"/>
+                            <constraint firstItem="0C8-F9-2Yc" firstAttribute="leading" secondItem="2sv-gn-6e2" secondAttribute="leading" id="laB-gU-V3r"/>
                             <constraint firstItem="hjh-Uw-Njr" firstAttribute="top" secondItem="2sv-gn-6e2" secondAttribute="top" id="yx6-8d-SOs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2sv-gn-6e2"/>
@@ -422,6 +431,73 @@ https://github.com/xitu/gold-miner/blob/master/TODO/uiscrollview-tutorial.md
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dR-lH-9FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3325.5999999999999" y="704.79760119940033"/>
+        </scene>
+        <!--Test Stack View Controller-->
+        <scene sceneID="Jh3-9G-THS">
+            <objects>
+                <viewController id="zae-ct-jb5" customClass="TestStackViewController" customModule="MianshiTi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R54-tE-bUU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fPP-dg-5HP">
+                                <rect key="frame" x="0.0" y="40" width="375" height="91.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="IaR-qf-fhz">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whether" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYi-ud-cFU">
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A sunny day. A sunny day A sunny dayA sunny day. A sunny day A sunny dayA sunny day. A sunny day A sunny day" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7c-Nr-CGL">
+                                        <rect key="frame" x="0.0" y="30.5" width="375" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to see from here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgz-m7-Atf">
+                                <rect key="frame" x="0.0" y="141.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.89019607840000003" green="0.0" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHk-zc-HOF">
+                                <rect key="frame" x="166" y="35.5" width="74" height="30"/>
+                                <state key="normal" title="Show Hide">
+                                    <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="act:" destination="zae-ct-jb5" eventType="touchUpInside" id="NpC-0K-GaX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qgz-m7-Atf" firstAttribute="top" secondItem="fPP-dg-5HP" secondAttribute="bottom" constant="10" id="1JT-EM-ZeC"/>
+                            <constraint firstItem="fPP-dg-5HP" firstAttribute="leading" secondItem="Ch6-1x-wiv" secondAttribute="leading" id="AFD-Sr-fJi"/>
+                            <constraint firstItem="Ch6-1x-wiv" firstAttribute="trailing" secondItem="fPP-dg-5HP" secondAttribute="trailing" id="H4H-h6-eBD"/>
+                            <constraint firstItem="sHk-zc-HOF" firstAttribute="centerY" secondItem="oYi-ud-cFU" secondAttribute="centerY" id="cbH-88-hWq"/>
+                            <constraint firstItem="sHk-zc-HOF" firstAttribute="leading" secondItem="oYi-ud-cFU" secondAttribute="trailing" constant="100" id="dIH-m2-4A9"/>
+                            <constraint firstItem="Ch6-1x-wiv" firstAttribute="trailing" secondItem="qgz-m7-Atf" secondAttribute="trailing" id="dme-FH-Udt"/>
+                            <constraint firstItem="fPP-dg-5HP" firstAttribute="top" secondItem="Ch6-1x-wiv" secondAttribute="top" constant="20" id="xgv-gS-nmo"/>
+                            <constraint firstItem="qgz-m7-Atf" firstAttribute="leading" secondItem="Ch6-1x-wiv" secondAttribute="leading" id="zpL-FU-IRr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ch6-1x-wiv"/>
+                    </view>
+                    <connections>
+                        <outlet property="weatherInfo" destination="b7c-Nr-CGL" id="aLR-J4-trD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5a7-mF-4Dp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3998" y="552"/>
         </scene>
     </scenes>
 </document>
