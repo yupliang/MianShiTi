@@ -19,7 +19,9 @@ class TestStackViewController: UIViewController {
     
 
     @IBAction func act(_ sender: Any) {
-        weatherInfo.isHidden = !weatherInfo.isHidden;
+        UIView.animate(withDuration: 0.3) {
+            self.weatherInfo.isHidden = !self.weatherInfo.isHidden;
+        }
     }
     /*
     // MARK: - Navigation
