@@ -33,6 +33,10 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    XCUIElement *showHideButton = [[XCUIApplication alloc] init].buttons[@"Show Hide"];
+    [showHideButton tap];
+    XCTAssertEqual(showHideButton.exists, false);
 }
 
 @end

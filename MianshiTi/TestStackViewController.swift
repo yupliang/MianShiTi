@@ -18,9 +18,14 @@ class TestStackViewController: UIViewController {
     }
     
 
-    @IBAction func act(_ sender: Any) {
+    @IBAction func act(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3) {
             self.weatherInfo.isHidden = !self.weatherInfo.isHidden;
+            if self.weatherInfo.isHidden {
+                sender.setTitle("show", for: UIControl.State.normal)
+            } else {
+                sender.setTitle("Show Hide", for: UIControl.State.normal)
+            }
         }
     }
     /*
