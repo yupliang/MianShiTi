@@ -121,6 +121,8 @@
     NSLog(@"encod 1 %s 2 %s", @encode(typeof(arr[0])),@encode(NSObject *));
 }
 
+#if defined (__arm64__)
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
@@ -181,5 +183,6 @@ int double_num_times1(int num, int times) {
     __asm("nop");
     XCTAssertEqual(40, r);
 }
+#endif
 
 @end

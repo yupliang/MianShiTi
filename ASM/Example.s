@@ -5,6 +5,7 @@
 //  Created by yupeiliang on 2019/7/11.
 //  Copyright © 2019 QiQiuZhe. All rights reserved.
 //
+#if defined (__arm64__)
 ;Example.s
 .section __TEXT,__text,regular,pure_instructions
 .ios_version_min 11,2
@@ -13,3 +14,4 @@
 _double_num_times_asm:
     lsl x0,x0,x1
     ret
+#endif
