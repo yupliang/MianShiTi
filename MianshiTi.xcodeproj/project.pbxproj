@@ -133,6 +133,7 @@
 		FD3B3C8E22D8B77800B81A83 /* TestStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStackViewController.swift; sourceTree = "<group>"; };
 		FD415B492292FC3C0034AA87 /* BigData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigData.h; sourceTree = "<group>"; };
 		FD415B4A2292FC3C0034AA87 /* BigData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigData.m; sourceTree = "<group>"; };
+		FD4650EF22D8D77E00FDD48B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FD60B2A222AE495700D0ABF9 /* LFUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFUCache.m; sourceTree = "<group>"; };
 		FD60B2A322AE495700D0ABF9 /* LFUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFUCache.h; sourceTree = "<group>"; };
 		FD60B2A622AF7E6900D0ABF9 /* XView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XView.h; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 				FD1894592274823C003EA507 /* MianshiTiTests */,
 				FD1894642274823C003EA507 /* MianshiTiUITests */,
 				FD18943F22748237003EA507 /* Products */,
+				FD4650EE22D8D77E00FDD48B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -327,6 +329,14 @@
 				FD415B4A2292FC3C0034AA87 /* BigData.m */,
 			);
 			path = BigDataCalculate;
+			sourceTree = "<group>";
+		};
+		FD4650EE22D8D77E00FDD48B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD4650EF22D8D77E00FDD48B /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FD938BF822773B990058F557 /* 2叉树 */ = {
@@ -662,7 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -715,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -780,8 +790,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = G266G4297P;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MianshiTiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -807,7 +817,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MianshiTiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
