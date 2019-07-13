@@ -9,11 +9,12 @@
 import Foundation
 
 class NetUtility {
-    func loadData(searchWord word:String?, callback action:@escaping (()->())) {
+    func loadData(_ session:URLSession?, searchWord word:String?, callback action:@escaping (()->())) {
+        let s = session ?? URLSession.shared
         let request = try? makeRequest(1, searchWord: word)
-        let task = URLSession.shared.dataTask(with: request!) { (data, response, error) in
+        let task = s.dataTask(with: request!) { (data, response, error) in
             guard let data = data else { return }
-            print("data is \(data)")
+            print("data is \(String(data: data, encoding: .utf8)!)")
             action()
         }
         task.resume()

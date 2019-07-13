@@ -29,7 +29,7 @@ class NetWorkUtilityTest: XCTestCase {
     
     func testLoadData() -> Void {
         let expectation = XCTestExpectation(description: "response")
-        nu.loadData(searchWord: "urlprotocol") {
+        nu.loadData(nil, searchWord: "urlprotocol") {
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 1)
@@ -43,9 +43,19 @@ class NetWorkUtilityTest: XCTestCase {
     }
     
     func testLoadSuccess() -> Void {
+        let mockData = "xx0".data(using: .utf8)!
+        MockURLProtocol.requestHandler = { request in
+            XCTAssertEqual(request.url?.host, "www.baidu.com")
+            return (HTTPURLResponse(), mockData)
+        }
+        let expectation = XCTestExpectation(description: "response")
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession(configuration: configuration)
+        nu.loadData(urlSession, searchWord: "urlprotocol") {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 1)
     }
     
     func testPerformanceExample() {
