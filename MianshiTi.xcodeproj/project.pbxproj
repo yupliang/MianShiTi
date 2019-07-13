@@ -28,6 +28,13 @@
 		FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
 		FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
 		FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */; };
+		FD30A83522D9986300945137 /* NetUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30A83422D9986300945137 /* NetUtility.swift */; };
+		FD30A83622D9986300945137 /* NetUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30A83422D9986300945137 /* NetUtility.swift */; };
+		FD30A83722D9986300945137 /* NetUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30A83422D9986300945137 /* NetUtility.swift */; };
+		FD30A83922D99B4600945137 /* NetWorkUtilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30A83822D99B4600945137 /* NetWorkUtilityTest.swift */; };
+		FD30A83B22DA2B9E00945137 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30A83A22DA2B9E00945137 /* MockURLProtocol.swift */; };
+		FD30A83C22DA2B9E00945137 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30A83A22DA2B9E00945137 /* MockURLProtocol.swift */; };
+		FD30A83D22DA2B9E00945137 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30A83A22DA2B9E00945137 /* MockURLProtocol.swift */; };
 		FD3B3C8822D7680200B81A83 /* Example.s in Sources */ = {isa = PBXBuildFile; fileRef = FD3B3C8722D7680200B81A83 /* Example.s */; };
 		FD3B3C8922D7680200B81A83 /* Example.s in Sources */ = {isa = PBXBuildFile; fileRef = FD3B3C8722D7680200B81A83 /* Example.s */; };
 		FD3B3C8D22D8606F00B81A83 /* Test.c in Sources */ = {isa = PBXBuildFile; fileRef = FD3B3C8C22D8606F00B81A83 /* Test.c */; };
@@ -127,6 +134,10 @@
 		FD2FC89E2296CD5500C8B432 /* LRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUCache.h; sourceTree = "<group>"; };
 		FD2FC89F2296CD5500C8B432 /* LRUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUCache.m; sourceTree = "<group>"; };
 		FD2FC8A52296CE1900C8B432 /* LRUCacheTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUCacheTest.m; sourceTree = "<group>"; };
+		FD30A83322D9986300945137 /* MianshiTiUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MianshiTiUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD30A83422D9986300945137 /* NetUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetUtility.swift; sourceTree = "<group>"; };
+		FD30A83822D99B4600945137 /* NetWorkUtilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkUtilityTest.swift; sourceTree = "<group>"; };
+		FD30A83A22DA2B9E00945137 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		FD3B3C8722D7680200B81A83 /* Example.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = Example.s; sourceTree = "<group>"; };
 		FD3B3C8B22D7696A00B81A83 /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
 		FD3B3C8C22D8606F00B81A83 /* Test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Test.c; sourceTree = "<group>"; };
@@ -203,6 +214,7 @@
 		FD18943522748236003EA507 = {
 			isa = PBXGroup;
 			children = (
+				FD30A83222D9983200945137 /* NetWork */,
 				FD3B3C8622D767D100B81A83 /* ASM */,
 				FD2FC8972296CB6A00C8B432 /* Questions */,
 				FDE7FBEC22969088001BD1CE /* Runtime */,
@@ -276,6 +288,7 @@
 				FDB664BB22C763AD00FAC14E /* BSTTreeTest.swift */,
 				FD70174722C89C68007AF46F /* MaxHeapTests.swift */,
 				FDC5C08D22CE4491004DC34C /* AVLTreeTest.swift */,
+				FD30A83822D99B4600945137 /* NetWorkUtilityTest.swift */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -311,6 +324,16 @@
 				FD70174422C89B28007AF46F /* MaxHeap.swift */,
 			);
 			path = Questions;
+			sourceTree = "<group>";
+		};
+		FD30A83222D9983200945137 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				FD30A83422D9986300945137 /* NetUtility.swift */,
+				FD30A83322D9986300945137 /* MianshiTiUITests-Bridging-Header.h */,
+				FD30A83A22DA2B9E00945137 /* MockURLProtocol.swift */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		FD3B3C8622D767D100B81A83 /* ASM */ = {
@@ -449,6 +472,7 @@
 					};
 					FD1894602274823C003EA507 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = FD18943D22748237003EA507;
 					};
 				};
@@ -511,6 +535,7 @@
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
 				FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */,
 				FDB664B922C665E700FAC14E /* BSTNode.swift in Sources */,
+				FD30A83522D9986300945137 /* NetUtility.swift in Sources */,
 				FD1894512274823C003EA507 /* main.m in Sources */,
 				FD05CE2622C04E0F009D8B6C /* MinStack.swift in Sources */,
 				FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */,
@@ -528,6 +553,7 @@
 				FD1894752274825D003EA507 /* Node.m in Sources */,
 				FDE7FBEF22969088001BD1CE /* aa.m in Sources */,
 				FDC5C08822CE35F1004DC34C /* AVLNode.swift in Sources */,
+				FD30A83B22DA2B9E00945137 /* MockURLProtocol.swift in Sources */,
 				FD60B2A822AF7E6900D0ABF9 /* XView.m in Sources */,
 				FD3B3C8F22D8B77800B81A83 /* TestStackViewController.swift in Sources */,
 				FD3B3C8822D7680200B81A83 /* Example.s in Sources */,
@@ -544,11 +570,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB664B222C112C800FAC14E /* BinaryTreeNode.m in Sources */,
+				FD30A83922D99B4600945137 /* NetWorkUtilityTest.swift in Sources */,
 				FDB664B722C660FA00FAC14E /* BSTTree.swift in Sources */,
 				FD05CE1922B16003009D8B6C /* Utility.swift in Sources */,
 				FDB664BC22C763AD00FAC14E /* BSTTreeTest.swift in Sources */,
 				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
 				FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */,
+				FD30A83C22DA2B9E00945137 /* MockURLProtocol.swift in Sources */,
 				FDB664BA22C665E700FAC14E /* BSTNode.swift in Sources */,
 				FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */,
 				FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */,
@@ -564,6 +592,7 @@
 				FDE7FBF022969088001BD1CE /* aa.m in Sources */,
 				FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */,
 				FDC580C522B351E100CE41EB /* MyCircleQueue.swift in Sources */,
+				FD30A83622D9986300945137 /* NetUtility.swift in Sources */,
 				FDC580CC22B3AF7900CE41EB /* MyCircleDequeTest.swift in Sources */,
 				FD3B3C8922D7680200B81A83 /* Example.s in Sources */,
 				FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */,
@@ -582,6 +611,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD30A83D22DA2B9E00945137 /* MockURLProtocol.swift in Sources */,
+				FD30A83722D9986300945137 /* NetUtility.swift in Sources */,
 				FD1894662274823C003EA507 /* MianshiTiUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -839,6 +870,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G266G4297P;
 				INFOPLIST_FILE = MianshiTiUITests/Info.plist;
@@ -849,6 +881,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MianshiTiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetWork/MianshiTiUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MianshiTi;
 			};
@@ -858,6 +893,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G266G4297P;
 				INFOPLIST_FILE = MianshiTiUITests/Info.plist;
@@ -868,6 +904,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MianshiTiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetWork/MianshiTiUITests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MianshiTi;
 			};
