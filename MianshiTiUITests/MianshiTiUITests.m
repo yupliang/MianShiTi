@@ -37,6 +37,11 @@
     XCUIElement *showHideButton = [[XCUIApplication alloc] init].buttons[@"Show Hide"];
     [showHideButton tap];
     XCTAssertEqual(showHideButton.exists, false);
+    XCUIElement *showButton = [[XCUIApplication alloc] init].buttons[@"show"];
+    XCTAssertEqual(showButton.exists, true);
+    [showButton tap];
+    XCTAssertEqual(false, showButton.exists);
+    XCTAssertEqual(true, showHideButton.exists);
 }
 
 @end
