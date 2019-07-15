@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class TestStackViewController: UIViewController {
 
@@ -15,6 +16,20 @@ class TestStackViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let content = UNMutableNotificationContent()
+        content.body = "记住：吃一顿大餐"
+        
+        var date = DateComponents()
+        date.hour = 8
+        date.minute = 30
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: "01", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("add request error:\(error)")
+            }
+        }
     }
     
 
