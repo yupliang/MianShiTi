@@ -17,6 +17,7 @@ class TestStackViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let content = UNMutableNotificationContent()
+        content.categoryIdentifier = "handleActions"
         content.body = "记住：吃一顿大餐"
         
         var date = DateComponents()
@@ -30,6 +31,15 @@ class TestStackViewController: UIViewController {
                 print("add request error:\(error)")
             }
         }
+        
+        let handleActions: UNNotificationCategory = {
+            let doneAction = UNNotificationAction(identifier: "action.done", title: "完成", options: [.foreground])
+            let jumpAction = UNNotificationAction(identifier: "action.jump", title: "跳过", options: [.foreground])
+            let startTimer = UNNotificationAction(identifier: "action.startTimer", title: "启动定时器", options: [.foreground])
+            return UNNotificationCategory(identifier: "handleActions", actions: [doneAction,jumpAction,startTimer], intentIdentifiers: [], options: [.customDismissAction])
+        }()
+        UNUserNotificationCenter.current().setNotificationCategories([handleActions])
+        
     }
     
 

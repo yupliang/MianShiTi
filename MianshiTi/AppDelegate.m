@@ -107,6 +107,11 @@
 }
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
     NSLog(@"receiveNotification response %@", response.notification);
+    if ([response.notification.request.content.categoryIdentifier isEqualToString:@"handleActions"]) {
+        NSString *actionType = response.actionIdentifier;
+        NSLog(@"user select action %@", actionType);
+    }
+    completionHandler();
 }
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
     completionHandler(UNNotificationPresentationOptionAlert);
