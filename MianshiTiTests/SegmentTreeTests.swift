@@ -11,7 +11,7 @@ import XCTest
 class SegmentTreeTests: XCTestCase {
     
     var sumSeg:SegmentTree<Int>!
-    
+
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let datas = [8,10,20,7,40,32,12,3,19,26]
