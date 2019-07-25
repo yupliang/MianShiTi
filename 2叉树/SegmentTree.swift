@@ -17,7 +17,7 @@ class SegmentTree<T> {
         self.merger = merger
         self.datas = datas
         //trees 初始化，大小为源数据的4倍
-        trees = Array(repeating: defaltValue, count: datas.count * 4)
+        trees = Array(repeating: defaultValue, count: datas.count * 4)
         
     }
 }
