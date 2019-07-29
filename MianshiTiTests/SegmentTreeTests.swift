@@ -14,8 +14,7 @@ class SegmentTreeTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        let datas = [8,10,20,7,40,32,12,3,19,26]
-        sumSeg = SegmentTree<Int>(datas:datas, defaultValue:0, merger:{$0+$1})
+        
     }
 
     override func tearDown() {
@@ -26,6 +25,16 @@ class SegmentTreeTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
+        var datas = [8,10,20]
+        sumSeg = SegmentTree<Int>(datas: datas, defaultValue: 0, merger: {$0+$1})
+        XCTAssertEqual(38, sumSeg.trees[0])
+        
+        datas = [8,10,20,7,40,32,12,3,19,26]
+        sumSeg = SegmentTree<Int>(datas:datas, defaultValue:0, merger:{$0+$1})
+        XCTAssertGreaterThan(sumSeg.trees.count, 0)
+        XCTAssertEqual(177, sumSeg.trees[0])
+        let ret = sumSeg.query(ql:3,qr:5)
+        XCTAssertEqual(79, ret)
     }
 
     func testPerformanceExample() {
