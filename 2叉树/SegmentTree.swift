@@ -42,7 +42,32 @@ class SegmentTree<T> {
         return 2*index+2
     }
     
-    func query(ql:T, qr:T) -> T? {
+    func query(ql:Int, qr:Int) -> T? {
+        return query(tIndex:0,l:0,r:datas.count-1,ql:ql,qr:qr)
+    }
+    private func query(tIndex:Int,l:Int,r:Int,ql:Int,qr:Int) ->T? {
+        if l == ql && r == qr {
+            return trees[tIndex]
+        }
+        
+        let mid = (l+r)/2
+        let lchildIndex = leftChildIndex(index: tIndex)
+        let rchildIndex = rightChildIndex(index: tIndex)
+        if qr <= mid {
+            return query(tIndex: lchildIndex, l: l, r: mid, ql: ql, qr: qr)
+        }
+        if ql > mid {
+            return query(tIndex: rchildIndex, l: mid+1, r: qr, ql: ql, qr: qr)
+        }
+        
+        //既在left又在right, 分开查left 和right,查到结构后merger
+        let lresult = query(tIndex: lchildIndex, l: l, r: mid, ql: ql, qr: mid)
+        let rresult = query(tIndex: rchildIndex, l: mid+1, r: r, ql: mid+1, qr: qr)
+        if let lresult = lresult {
+            if let rresult = rresult {
+                return merger(lresult,rresult)
+            }
+        }
         return nil
     }
 }
