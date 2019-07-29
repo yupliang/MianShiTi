@@ -43,6 +43,9 @@ class SegmentTree<T> {
     }
     
     func query(ql:Int, qr:Int) -> T? {
+        if ql < 0 || qr >= datas.count || ql > qr || qr < 0{
+            return nil
+        }
         return query(tIndex:0,l:0,r:datas.count-1,ql:ql,qr:qr)
     }
     private func query(tIndex:Int,l:Int,r:Int,ql:Int,qr:Int) ->T? {
@@ -57,7 +60,7 @@ class SegmentTree<T> {
             return query(tIndex: lchildIndex, l: l, r: mid, ql: ql, qr: qr)
         }
         if ql > mid {
-            return query(tIndex: rchildIndex, l: mid+1, r: qr, ql: ql, qr: qr)
+            return query(tIndex: rchildIndex, l: mid+1, r: r, ql: ql, qr: qr)
         }
         
         //既在left又在right, 分开查left 和right,查到结构后merger

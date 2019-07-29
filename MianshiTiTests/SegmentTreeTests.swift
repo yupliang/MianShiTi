@@ -33,8 +33,14 @@ class SegmentTreeTests: XCTestCase {
         sumSeg = SegmentTree<Int>(datas:datas, defaultValue:0, merger:{$0+$1})
         XCTAssertGreaterThan(sumSeg.trees.count, 0)
         XCTAssertEqual(177, sumSeg.trees[0])
-        let ret = sumSeg.query(ql:3,qr:5)
+        var ret = sumSeg.query(ql:3,qr:5)
         XCTAssertEqual(79, ret)
+        ret = sumSeg.query(ql: -1, qr: 3)
+        XCTAssertNil(ret)
+        ret = sumSeg.query(ql: 3, qr: 200)
+        XCTAssertNil(ret)
+        ret = sumSeg.query(ql: 3, qr: 2)
+        XCTAssertNil(ret)
     }
 
     func testPerformanceExample() {
