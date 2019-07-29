@@ -41,6 +41,8 @@ class SegmentTreeTests: XCTestCase {
         XCTAssertNil(ret)
         ret = sumSeg.query(ql: 3, qr: 2)
         XCTAssertNil(ret)
+        sumSeg.set(index: 0,value: 9)
+        XCTAssertEqual(178, sumSeg.trees[0])
     }
 
     func testPerformanceExample() {

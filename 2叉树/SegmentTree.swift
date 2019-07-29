@@ -73,4 +73,29 @@ class SegmentTree<T> {
         }
         return nil
     }
+    
+    func set(index:Int, value:T) -> Void {
+        if index < 0 || index >= datas.count {
+            return
+        }
+        datas[index] = value
+        set(index: index, value: value, tIndex:0,l:0,r:datas.count)
+    }
+    
+    private func set(index:Int, value:T, tIndex:Int, l:Int, r:Int) {
+        if l == r {
+            trees[tIndex] = value
+            return
+        }
+        let mid = (l+r)/2
+        let lchildIndex = leftChildIndex(index: tIndex)
+        let rchildIndex = rightChildIndex(index: tIndex)
+        
+        if index<=mid {
+            set(index: index, value: value, tIndex: lchildIndex, l: l, r: mid)
+        } else {
+            set(index: index, value: value, tIndex: rchildIndex, l: mid+1, r: r)
+        }
+        trees[tIndex] = merger(trees[lchildIndex], trees[rchildIndex])
+    }
 }
