@@ -13,12 +13,16 @@
 #import "Queue.h"
 #import "XView.h"
 #import "CView.h"
+#import "MianshiTi-Bridging-Header.h"
+
 @import UserNotifications;
 
 @interface ViewController () {
     BinaryTree *_tree;
     CFRunLoopObserverRef runLoopObserver;
 }
+
+@property (nonatomic,strong) RLTest *rl;
 
 @end
 

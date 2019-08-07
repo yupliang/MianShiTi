@@ -24,6 +24,7 @@
 		FD1894662274823C003EA507 /* MianshiTiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1894652274823C003EA507 /* MianshiTiUITests.m */; };
 		FD1894752274825D003EA507 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1894742274825D003EA507 /* Node.m */; };
 		FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1EA06B228A48C20048359D /* UITouch+Test.m */; };
+		FD2097DD22FB00A2002AD227 /* RunLoopTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097DC22FB00A2002AD227 /* RunLoopTest.swift */; };
 		FD23014422AF810300273390 /* CView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23014322AF810300273390 /* CView.m */; };
 		FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
 		FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
@@ -130,6 +131,7 @@
 		FD1894742274825D003EA507 /* Node.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		FD1EA06A228A48C20048359D /* UITouch+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITouch+Test.h"; sourceTree = "<group>"; };
 		FD1EA06B228A48C20048359D /* UITouch+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITouch+Test.m"; sourceTree = "<group>"; };
+		FD2097DC22FB00A2002AD227 /* RunLoopTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopTest.swift; sourceTree = "<group>"; };
 		FD23014222AF810300273390 /* CView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CView.h; sourceTree = "<group>"; };
 		FD23014322AF810300273390 /* CView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CView.m; sourceTree = "<group>"; };
 		FD2FC89E2296CD5500C8B432 /* LRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUCache.h; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		FD18943522748236003EA507 = {
 			isa = PBXGroup;
 			children = (
+				FD2097DB22FB0059002AD227 /* Runloop */,
 				FD30A83222D9983200945137 /* NetWork */,
 				FD3B3C8622D767D100B81A83 /* ASM */,
 				FD2FC8972296CB6A00C8B432 /* Questions */,
@@ -305,6 +308,14 @@
 				FD1894672274823C003EA507 /* Info.plist */,
 			);
 			path = MianshiTiUITests;
+			sourceTree = "<group>";
+		};
+		FD2097DB22FB0059002AD227 /* Runloop */ = {
+			isa = PBXGroup;
+			children = (
+				FD2097DC22FB00A2002AD227 /* RunLoopTest.swift */,
+			);
+			path = Runloop;
 			sourceTree = "<group>";
 		};
 		FD2FC8972296CB6A00C8B432 /* Questions */ = {
@@ -537,6 +548,7 @@
 				FD05CE1822B16003009D8B6C /* Utility.swift in Sources */,
 				FDB664B622C660FA00FAC14E /* BSTTree.swift in Sources */,
 				FD73FA11227482EA0027C89D /* List.m in Sources */,
+				FD2097DD22FB00A2002AD227 /* RunLoopTest.swift in Sources */,
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
 				FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */,
 				FDB664B922C665E700FAC14E /* BSTNode.swift in Sources */,
