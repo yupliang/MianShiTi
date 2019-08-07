@@ -42,6 +42,7 @@
 		FD60B2A422AE495700D0ABF9 /* LFUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60B2A222AE495700D0ABF9 /* LFUCache.m */; };
 		FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60B2A222AE495700D0ABF9 /* LFUCache.m */; };
 		FD60B2A822AF7E6900D0ABF9 /* XView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60B2A722AF7E6900D0ABF9 /* XView.m */; };
+		FD68350D22FB152A00A3B327 /* TestRLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68350C22FB152A00A3B327 /* TestRLViewController.swift */; };
 		FD70174522C89B28007AF46F /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174422C89B28007AF46F /* MaxHeap.swift */; };
 		FD70174622C89B28007AF46F /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174422C89B28007AF46F /* MaxHeap.swift */; };
 		FD70174822C89C68007AF46F /* MaxHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174722C89C68007AF46F /* MaxHeapTests.swift */; };
@@ -152,6 +153,7 @@
 		FD60B2A322AE495700D0ABF9 /* LFUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFUCache.h; sourceTree = "<group>"; };
 		FD60B2A622AF7E6900D0ABF9 /* XView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XView.h; sourceTree = "<group>"; };
 		FD60B2A722AF7E6900D0ABF9 /* XView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XView.m; sourceTree = "<group>"; };
+		FD68350C22FB152A00A3B327 /* TestRLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRLViewController.swift; sourceTree = "<group>"; };
 		FD70174422C89B28007AF46F /* MaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
 		FD70174722C89C68007AF46F /* MaxHeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeapTests.swift; sourceTree = "<group>"; };
 		FD73FA0F227482EA0027C89D /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2097DC22FB00A2002AD227 /* RunLoopTest.swift */,
+				FD68350C22FB152A00A3B327 /* TestRLViewController.swift */,
 			);
 			path = Runloop;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				FD73FA11227482EA0027C89D /* List.m in Sources */,
 				FD2097DD22FB00A2002AD227 /* RunLoopTest.swift in Sources */,
 				FD18944622748237003EA507 /* ViewController.m in Sources */,
+				FD68350D22FB152A00A3B327 /* TestRLViewController.swift in Sources */,
 				FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */,
 				FDB664B922C665E700FAC14E /* BSTNode.swift in Sources */,
 				FD30A83522D9986300945137 /* NetUtility.swift in Sources */,
@@ -790,6 +794,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G266G4297P;
 				INFOPLIST_FILE = MianshiTi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -815,6 +820,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G266G4297P;
 				INFOPLIST_FILE = MianshiTi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

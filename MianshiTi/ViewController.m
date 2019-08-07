@@ -13,7 +13,7 @@
 #import "Queue.h"
 #import "XView.h"
 #import "CView.h"
-#import "MianshiTi-Bridging-Header.h"
+#import "MianshiTi-Swift.h"
 
 @import UserNotifications;
 
@@ -30,6 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.rl = [RLTest new];
+    NSLog(@"rl is %@", self.rl);
     
     XView *xv = [[XView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
     xv.backgroundColor = [UIColor greenColor];
