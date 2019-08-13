@@ -25,6 +25,9 @@
 		FD1894752274825D003EA507 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1894742274825D003EA507 /* Node.m */; };
 		FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1EA06B228A48C20048359D /* UITouch+Test.m */; };
 		FD2097DD22FB00A2002AD227 /* RunLoopTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097DC22FB00A2002AD227 /* RunLoopTest.swift */; };
+		FD2097E22302AF1C002AD227 /* FibProblemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097E12302AF1C002AD227 /* FibProblemTests.swift */; };
+		FD2097E42302AF51002AD227 /* FibProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097E32302AF51002AD227 /* FibProblem.swift */; };
+		FD2097E52302AF51002AD227 /* FibProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097E32302AF51002AD227 /* FibProblem.swift */; };
 		FD23014422AF810300273390 /* CView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23014322AF810300273390 /* CView.m */; };
 		FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
 		FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
@@ -133,6 +136,8 @@
 		FD1EA06A228A48C20048359D /* UITouch+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITouch+Test.h"; sourceTree = "<group>"; };
 		FD1EA06B228A48C20048359D /* UITouch+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITouch+Test.m"; sourceTree = "<group>"; };
 		FD2097DC22FB00A2002AD227 /* RunLoopTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopTest.swift; sourceTree = "<group>"; };
+		FD2097E12302AF1C002AD227 /* FibProblemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibProblemTests.swift; sourceTree = "<group>"; };
+		FD2097E32302AF51002AD227 /* FibProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibProblem.swift; sourceTree = "<group>"; };
 		FD23014222AF810300273390 /* CView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CView.h; sourceTree = "<group>"; };
 		FD23014322AF810300273390 /* CView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CView.m; sourceTree = "<group>"; };
 		FD2FC89E2296CD5500C8B432 /* LRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUCache.h; sourceTree = "<group>"; };
@@ -221,6 +226,7 @@
 		FD18943522748236003EA507 = {
 			isa = PBXGroup;
 			children = (
+				FD2097DE2302AEA0002AD227 /* ClassicProblem */,
 				FD2097DB22FB0059002AD227 /* Runloop */,
 				FD30A83222D9983200945137 /* NetWork */,
 				FD3B3C8622D767D100B81A83 /* ASM */,
@@ -299,6 +305,7 @@
 				FDC5C08D22CE4491004DC34C /* AVLTreeTest.swift */,
 				FD30A83822D99B4600945137 /* NetWorkUtilityTest.swift */,
 				FDFA958322E9466700B7C87C /* SegmentTreeTests.swift */,
+				FD2097E12302AF1C002AD227 /* FibProblemTests.swift */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -319,6 +326,14 @@
 				FD68350C22FB152A00A3B327 /* TestRLViewController.swift */,
 			);
 			path = Runloop;
+			sourceTree = "<group>";
+		};
+		FD2097DE2302AEA0002AD227 /* ClassicProblem */ = {
+			isa = PBXGroup;
+			children = (
+				FD2097E32302AF51002AD227 /* FibProblem.swift */,
+			);
+			path = ClassicProblem;
 			sourceTree = "<group>";
 		};
 		FD2FC8972296CB6A00C8B432 /* Questions */ = {
@@ -549,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD05CE1822B16003009D8B6C /* Utility.swift in Sources */,
+				FD2097E42302AF51002AD227 /* FibProblem.swift in Sources */,
 				FDB664B622C660FA00FAC14E /* BSTTree.swift in Sources */,
 				FD73FA11227482EA0027C89D /* List.m in Sources */,
 				FD2097DD22FB00A2002AD227 /* RunLoopTest.swift in Sources */,
@@ -597,6 +613,7 @@
 				FDB664BC22C763AD00FAC14E /* BSTTreeTest.swift in Sources */,
 				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
 				FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */,
+				FD2097E22302AF1C002AD227 /* FibProblemTests.swift in Sources */,
 				FD30A83F22DA326900945137 /* MockURLProtocol.swift in Sources */,
 				FDB664BA22C665E700FAC14E /* BSTNode.swift in Sources */,
 				FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */,
@@ -617,6 +634,7 @@
 				FDFA958222E9464100B7C87C /* SegmentTree.swift in Sources */,
 				FD30A83622D9986300945137 /* NetUtility.swift in Sources */,
 				FDC580CC22B3AF7900CE41EB /* MyCircleDequeTest.swift in Sources */,
+				FD2097E52302AF51002AD227 /* FibProblem.swift in Sources */,
 				FD3B3C8922D7680200B81A83 /* Example.s in Sources */,
 				FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */,
 				FDC5C08922CE35F1004DC34C /* AVLNode.swift in Sources */,
