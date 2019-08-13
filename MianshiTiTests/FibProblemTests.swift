@@ -23,6 +23,7 @@ class FibProblemTests: XCTestCase {
     }
     
     func testFib() -> Void {
+        fib.type = .nonRecusive
         let n1 = fib.Fib(1)
         XCTAssertEqual(n1, 1)
         XCTAssertEqual(fib.Fib(2), 1)
