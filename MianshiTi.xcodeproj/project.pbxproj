@@ -28,6 +28,8 @@
 		FD2097E22302AF1C002AD227 /* FibProblemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097E12302AF1C002AD227 /* FibProblemTests.swift */; };
 		FD2097E42302AF51002AD227 /* FibProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097E32302AF51002AD227 /* FibProblem.swift */; };
 		FD2097E52302AF51002AD227 /* FibProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097E32302AF51002AD227 /* FibProblem.swift */; };
+		FD2097E72302B1D5002AD227 /* AlgorithmConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097E62302B1D5002AD227 /* AlgorithmConst.swift */; };
+		FD2097E82302B1D5002AD227 /* AlgorithmConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2097E62302B1D5002AD227 /* AlgorithmConst.swift */; };
 		FD23014422AF810300273390 /* CView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23014322AF810300273390 /* CView.m */; };
 		FD2FC8A02296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
 		FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2FC89F2296CD5500C8B432 /* LRUCache.m */; };
@@ -138,6 +140,7 @@
 		FD2097DC22FB00A2002AD227 /* RunLoopTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopTest.swift; sourceTree = "<group>"; };
 		FD2097E12302AF1C002AD227 /* FibProblemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibProblemTests.swift; sourceTree = "<group>"; };
 		FD2097E32302AF51002AD227 /* FibProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibProblem.swift; sourceTree = "<group>"; };
+		FD2097E62302B1D5002AD227 /* AlgorithmConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmConst.swift; sourceTree = "<group>"; };
 		FD23014222AF810300273390 /* CView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CView.h; sourceTree = "<group>"; };
 		FD23014322AF810300273390 /* CView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CView.m; sourceTree = "<group>"; };
 		FD2FC89E2296CD5500C8B432 /* LRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUCache.h; sourceTree = "<group>"; };
@@ -332,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2097E32302AF51002AD227 /* FibProblem.swift */,
+				FD2097E62302B1D5002AD227 /* AlgorithmConst.swift */,
 			);
 			path = ClassicProblem;
 			sourceTree = "<group>";
@@ -582,6 +586,7 @@
 				FDE3F27122983729001448E2 /* DLLNode.m in Sources */,
 				FDFA958122E9464100B7C87C /* SegmentTree.swift in Sources */,
 				FD18944322748237003EA507 /* AppDelegate.m in Sources */,
+				FD2097E72302B1D5002AD227 /* AlgorithmConst.swift in Sources */,
 				FD70174522C89B28007AF46F /* MaxHeap.swift in Sources */,
 				FDC5C08B22CE3701004DC34C /* AVLTree.swift in Sources */,
 				FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */,
@@ -635,6 +640,7 @@
 				FD30A83622D9986300945137 /* NetUtility.swift in Sources */,
 				FDC580CC22B3AF7900CE41EB /* MyCircleDequeTest.swift in Sources */,
 				FD2097E52302AF51002AD227 /* FibProblem.swift in Sources */,
+				FD2097E82302B1D5002AD227 /* AlgorithmConst.swift in Sources */,
 				FD3B3C8922D7680200B81A83 /* Example.s in Sources */,
 				FD05CDD522A6BC8F009D8B6C /* HashMapTest.m in Sources */,
 				FDC5C08922CE35F1004DC34C /* AVLNode.swift in Sources */,

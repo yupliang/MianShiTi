@@ -26,6 +26,13 @@ class FibProblemTests: XCTestCase {
         let n1 = fib.Fib(1)
         XCTAssertEqual(n1, 1)
         XCTAssertEqual(fib.Fib(2), 1)
+        XCTAssertEqual(fib.Fib(3), 2)
+        XCTAssertEqual(fib.Fib(4), 3)
+        XCTAssertEqual(fib.Fib(5), 5)
+        XCTAssertEqual(fib.Fib(6), 8)
+        XCTAssertEqual(fib.Fib(7), 13)
+        XCTAssertEqual(fib.Fib(8), 21)
+        XCTAssertEqual(fib.Fib(9), 34)
     }
 
     func testExample() {
