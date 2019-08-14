@@ -9,7 +9,7 @@
 import Foundation
 
 class BTreeProblem {
-    func preorderNonrecursive() -> String {
+    func preorderNonrecursive(tree:BinaryTree) -> String {
         var result = ""
         return result
     }

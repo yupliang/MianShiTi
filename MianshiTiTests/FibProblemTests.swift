@@ -11,16 +11,18 @@ import XCTest
 class FibProblemTests: XCTestCase {
 
     var fib:FibProblem!
-//    var <#name#> = <#value#>
+    var bt: BTreeProblem!
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         fib = FibProblem()
+        bt = BTreeProblem()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         fib = nil
+        bt = nil
     }
     
     func testFib() -> Void {
@@ -35,6 +37,16 @@ class FibProblemTests: XCTestCase {
         XCTAssertEqual(fib.Fib(7), 13)
         XCTAssertEqual(fib.Fib(8), 21)
         XCTAssertEqual(fib.Fib(9), 34)
+    }
+    
+    func testBtree() -> Void {
+        let tree:BinaryTree = BinaryTree()
+        tree.createTree(NSMutableArray(array: [8,3,1,NSIntegerMax,NSIntegerMax,6,4,NSIntegerMax,7,NSIntegerMax,NSIntegerMax,10,NSIntegerMax,14,13,NSIntegerMax,NSIntegerMax,NSIntegerMax]))
+        XCTAssertNotNil(tree)
+        BinaryTree.dlrTree(tree)
+        let str = bt.preorderNonrecursive(tree: tree)
+        XCTAssertEqual(str, "8->3->1->6->4->7->10->14->13")
+        
     }
 
     func testExample() {
