@@ -11,6 +11,35 @@ import Foundation
 class BTreeProblem {
     func preorderNonrecursive(tree:BinaryTree) -> String {
         var result = ""
+        var stack = ObjectStack()
+        stack.push(tree.rootNode)
+        while stack.isEmpty == false {
+            while stack.isEmpty == false {
+                if let item = stack.peek as? BinaryTreeNode {
+                    if result.count > 0 {
+                        result = "\(result)->\(item.data)"
+                    } else {
+                        result = "\(item.data)"
+                    }
+                    if item.left != nil {
+                        stack.push(item.left)
+                    } else {
+                        break
+                    }
+                }
+            }
+            var right = stack.pop()
+            while right == nil && stack.isEmpty == false {
+                right = stack.pop()
+            }
+            if right == nil {
+                break
+            } else {
+                stack.push(right!)
+            }
+        }
         return result
     }
+    
+
 }
