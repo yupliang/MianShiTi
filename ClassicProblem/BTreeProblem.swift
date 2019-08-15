@@ -13,6 +13,9 @@ class BTreeProblem {
         var result = ""
         var stack = ObjectStack()
         stack.push(tree.rootNode)
+        print("xx \(stack.peek as Any)")
+        print("\(stack.peek is BinaryTreeNode)")
+        print("\(stack.peek! is BinaryTreeNode)")
         while stack.isEmpty == false {
             while stack.isEmpty == false {
                 if let item = stack.peek as? BinaryTreeNode {
@@ -27,6 +30,7 @@ class BTreeProblem {
                         break
                     }
                 }
+               
             }
             var right = stack.pop()
             while right == nil && stack.isEmpty == false {
