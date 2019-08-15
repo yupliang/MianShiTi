@@ -52,6 +52,11 @@
 		FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60B2A222AE495700D0ABF9 /* LFUCache.m */; };
 		FD60B2A822AF7E6900D0ABF9 /* XView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60B2A722AF7E6900D0ABF9 /* XView.m */; };
 		FD68350D22FB152A00A3B327 /* TestRLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68350C22FB152A00A3B327 /* TestRLViewController.swift */; };
+		FD6835102304E2D700A3B327 /* StackOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68350F2304E2D700A3B327 /* StackOC.m */; };
+		FD6835112304E2D700A3B327 /* StackOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD68350F2304E2D700A3B327 /* StackOC.m */; };
+		FD6835142304E3A700A3B327 /* BTreeProblemOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6835132304E3A700A3B327 /* BTreeProblemOC.m */; };
+		FD6835152304E3A700A3B327 /* BTreeProblemOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6835132304E3A700A3B327 /* BTreeProblemOC.m */; };
+		FD6835172304E42D00A3B327 /* ClassicProblemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6835162304E42D00A3B327 /* ClassicProblemTests.m */; };
 		FD70174522C89B28007AF46F /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174422C89B28007AF46F /* MaxHeap.swift */; };
 		FD70174622C89B28007AF46F /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174422C89B28007AF46F /* MaxHeap.swift */; };
 		FD70174822C89C68007AF46F /* MaxHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174722C89C68007AF46F /* MaxHeapTests.swift */; };
@@ -168,6 +173,11 @@
 		FD60B2A622AF7E6900D0ABF9 /* XView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XView.h; sourceTree = "<group>"; };
 		FD60B2A722AF7E6900D0ABF9 /* XView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XView.m; sourceTree = "<group>"; };
 		FD68350C22FB152A00A3B327 /* TestRLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRLViewController.swift; sourceTree = "<group>"; };
+		FD68350E2304E2D700A3B327 /* StackOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackOC.h; sourceTree = "<group>"; };
+		FD68350F2304E2D700A3B327 /* StackOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackOC.m; sourceTree = "<group>"; };
+		FD6835122304E3A700A3B327 /* BTreeProblemOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTreeProblemOC.h; sourceTree = "<group>"; };
+		FD6835132304E3A700A3B327 /* BTreeProblemOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTreeProblemOC.m; sourceTree = "<group>"; };
+		FD6835162304E42D00A3B327 /* ClassicProblemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassicProblemTests.m; sourceTree = "<group>"; };
 		FD70174422C89B28007AF46F /* MaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
 		FD70174722C89C68007AF46F /* MaxHeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeapTests.swift; sourceTree = "<group>"; };
 		FD73FA0F227482EA0027C89D /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
@@ -316,6 +326,7 @@
 				FD30A83822D99B4600945137 /* NetWorkUtilityTest.swift */,
 				FDFA958322E9466700B7C87C /* SegmentTreeTests.swift */,
 				FD2097E12302AF1C002AD227 /* FibProblemTests.swift */,
+				FD6835162304E42D00A3B327 /* ClassicProblemTests.m */,
 			);
 			path = MianshiTiTests;
 			sourceTree = "<group>";
@@ -344,6 +355,8 @@
 				FD2097E32302AF51002AD227 /* FibProblem.swift */,
 				FD2097E62302B1D5002AD227 /* AlgorithmConst.swift */,
 				FD2097F02302EB11002AD227 /* BTreeProblem.swift */,
+				FD6835122304E3A700A3B327 /* BTreeProblemOC.h */,
+				FD6835132304E3A700A3B327 /* BTreeProblemOC.m */,
 			);
 			path = ClassicProblem;
 			sourceTree = "<group>";
@@ -352,6 +365,8 @@
 			isa = PBXGroup;
 			children = (
 				FD2097ED2302E9E2002AD227 /* Stack.swift */,
+				FD68350E2304E2D700A3B327 /* StackOC.h */,
+				FD68350F2304E2D700A3B327 /* StackOC.m */,
 			);
 			path = Stack;
 			sourceTree = "<group>";
@@ -611,6 +626,7 @@
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
 				FD23014422AF810300273390 /* CView.m in Sources */,
 				FD1894752274825D003EA507 /* Node.m in Sources */,
+				FD6835102304E2D700A3B327 /* StackOC.m in Sources */,
 				FDE7FBEF22969088001BD1CE /* aa.m in Sources */,
 				FDC5C08822CE35F1004DC34C /* AVLNode.swift in Sources */,
 				FD60B2A822AF7E6900D0ABF9 /* XView.m in Sources */,
@@ -622,6 +638,7 @@
 				FDB664B122C112C800FAC14E /* BinaryTreeNode.m in Sources */,
 				FD2097EE2302E9E2002AD227 /* Stack.swift in Sources */,
 				FD938C072279AE540058F557 /* ViewController1.m in Sources */,
+				FD6835142304E3A700A3B327 /* BTreeProblemOC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,8 +647,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB664B222C112C800FAC14E /* BinaryTreeNode.m in Sources */,
+				FD6835112304E2D700A3B327 /* StackOC.m in Sources */,
 				FD30A83922D99B4600945137 /* NetWorkUtilityTest.swift in Sources */,
 				FDB664B722C660FA00FAC14E /* BSTTree.swift in Sources */,
+				FD6835152304E3A700A3B327 /* BTreeProblemOC.m in Sources */,
 				FD05CE1922B16003009D8B6C /* Utility.swift in Sources */,
 				FDB664BC22C763AD00FAC14E /* BSTTreeTest.swift in Sources */,
 				FD2FC8A62296CE1900C8B432 /* LRUCacheTest.m in Sources */,
@@ -667,6 +686,7 @@
 				FD05CE2722C04E0F009D8B6C /* MinStack.swift in Sources */,
 				FDC580CA22B3AF1600CE41EB /* MyCircleDeque.swift in Sources */,
 				FDB664AE22C1129F00FAC14E /* BinaryTreeTest.swift in Sources */,
+				FD6835172304E42D00A3B327 /* ClassicProblemTests.m in Sources */,
 				FD70174822C89C68007AF46F /* MaxHeapTests.swift in Sources */,
 				FD938C0422795EAB0058F557 /* Queue.m in Sources */,
 				FDE3F2742298EAF8001448E2 /* DoubleListTests.m in Sources */,
