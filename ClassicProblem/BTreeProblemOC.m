@@ -33,10 +33,9 @@
             }
         }
         
-        BinaryTreeNode *top = [stack topObj];
+        BinaryTreeNode *top = [stack popObj];
         while (top.rightNode == nil && stack.isEmpty==false) {
-            [stack popObj];
-            top = [stack topObj];
+            top = [stack popObj];
         }
         if (top.rightNode == nil) {
             break;
