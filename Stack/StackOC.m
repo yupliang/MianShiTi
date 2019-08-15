@@ -32,7 +32,9 @@
     if ([self isEmpty]) {
         return nil;
     } else {
-        return self.stackArray.lastObject;
+        id obj = [self.stackArray lastObject];
+        [self.stackArray removeLastObject];
+        return obj;
     }
 }
 

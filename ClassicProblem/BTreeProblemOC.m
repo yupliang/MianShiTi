@@ -12,11 +12,39 @@
 @implementation BTreeProblemOC
 
 - (NSString *)preorderNonrecursive:(BinaryTree *)tree {
+    
+    NSString *result = @"";
+    
     StackOC *stack = [StackOC new];
     [stack push:tree.rootNode];
     BinaryTreeNode *node = (BinaryTreeNode *)[stack topObj];
-    
-    return @"";
+    while (stack.isEmpty == false) {
+        while (stack.isEmpty == false) {
+            BinaryTreeNode *node = [stack topObj];
+            if (result.length > 0) {
+                result = [NSString stringWithFormat:@"%@->%d", result,node.data];
+            } else {
+                result = [NSString stringWithFormat:@"%d", node.data];
+            }
+            if (node.leftNode != nil) {
+                [stack push:node.leftNode];
+            } else {
+                break;
+            }
+        }
+        
+        BinaryTreeNode *top = [stack topObj];
+        while (top.rightNode == nil && stack.isEmpty==false) {
+            [stack popObj];
+            top = [stack topObj];
+        }
+        if (top.rightNode == nil) {
+            break;
+        } else {
+            [stack push:top.rightNode];
+        }
+    }
+    return result;
 }
 
 @end
