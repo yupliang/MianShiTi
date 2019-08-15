@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BTreeProblemOC : NSObject
 
 - (NSString *)preorderNonrecursive:(BinaryTree *)tree;
+- (NSString *)inorderNonrecursive:(BinaryTree *)tree;
 
 @end
 

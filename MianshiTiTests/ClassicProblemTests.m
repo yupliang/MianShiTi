@@ -33,6 +33,8 @@
     
     NSString *result = [self.btp preorderNonrecursive:aTree];
     XCTAssertEqualObjects(result, @"8->3->1->6->4->7->10->14->13");
+    result = [self.btp inorderNonrecursive:aTree];
+    XCTAssertEqualObjects(result, @"1->3->4->6->7->8->10->13->14");
 }
 
 - (void)testExample {
