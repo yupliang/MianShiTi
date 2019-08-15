@@ -48,6 +48,29 @@
 
 - (NSString *)inorderNonrecursive:(BinaryTree *)tree {
     NSString *result = @"";
+    StackOC *stack = [StackOC new];
+    
+    BinaryTreeNode *top = tree.rootNode;
+    [stack push:tree.rootNode];
+    while ([stack isEmpty] == false) {
+        while (top.leftNode != nil) {
+            [stack push:top.leftNode];
+            top = [stack topObj];
+        }
+        
+        if ([stack isEmpty] == false) {
+            top = [stack popObj];
+            if (result.length > 0) {
+                result = [NSString stringWithFormat:@"%@->%d", result,top.data];
+            } else {
+                result = [NSString stringWithFormat:@"%d", top.data];
+            }
+            if (top.rightNode != nil) {
+                [stack push:top.rightNode];
+            }
+        }
+    }
+    
     return result;
 }
 
