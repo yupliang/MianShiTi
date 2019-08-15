@@ -29,6 +29,10 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual([1,2,4], r)
         r = s.plusOne([4,3,2,1])
         XCTAssertEqual([4,3,2,2], r)
+        r = s.plusOne([9])
+        XCTAssertEqual([1,0], r)
+        r = s.plusOne([9,9])
+        XCTAssertEqual([1,0,0], r)
     }
 
     func testPerformanceExample() {

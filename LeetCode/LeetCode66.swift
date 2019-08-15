@@ -11,9 +11,22 @@ import Foundation
 class Solution66 {
     func plusOne(_ digits: [Int]) -> [Int] {
         var r = Array(digits)
-        let last = digits.last!
-        let lastIndex = digits.index(of: last)!
-        r[lastIndex] = last+1
+        var last = digits.last!
+        var lastIndex = digits.count-1
+        if last+1 >= 10 {
+            while last + 1 >= 10 {
+                r[lastIndex] = (last+1)%10
+                if lastIndex == 0 {
+                    r.insert(1, at: 0)
+                    break
+                }
+                last = r[lastIndex-1]
+                lastIndex = lastIndex - 1
+            }
+        } else {
+            r[lastIndex] = last+1
+        }
+        
         return r
     }
 }
