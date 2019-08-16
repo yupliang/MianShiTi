@@ -48,6 +48,7 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(r, 1024)
         r = s.superPow(1, [4,3,8,5,2])
         XCTAssertEqual(1, r)
+        r = s.superPow(2147483647, [2,0,0])
     }
 
     func testPerformanceExample() {
