@@ -33,4 +33,23 @@ class Solution66 {
         
         return r
     }
+    
+    func superPow(_ a: Int, _ b: [Int]) -> Int {
+        
+        var sum = 0
+        for i in 0 ... b.count-1 {
+            var n = Int(pow(Double(10), Double(i))) * b[b.count-1-i]
+            var base = 2
+            var r = 1
+            while n > 0 {
+                if (n & 1) > 0 {
+                    r = r*base
+                }
+                base = base * base
+                n = n >> 1
+            }
+            sum = sum + r
+        }
+        return sum % 1337
+    }
 }

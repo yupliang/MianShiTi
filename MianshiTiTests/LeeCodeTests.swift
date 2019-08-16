@@ -9,13 +9,17 @@
 import XCTest
 
 class LeeCodeTests: XCTestCase {
-
+    
+    var s:Solution66!
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        s = Solution66()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        s = nil
     }
 
     func testExample() {
@@ -24,7 +28,7 @@ class LeeCodeTests: XCTestCase {
     }
     
     func test66() -> Void {
-        let s = Solution66()
+        
         var r = s.plusOne([1,2,3])
         XCTAssertEqual([1,2,4], r)
         r = s.plusOne([4,3,2,1])
@@ -35,6 +39,13 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual([1,0,0], r)
         r = s.plusOne([8,9,9,9])
         XCTAssertEqual([9,0,0,0], r)
+    }
+    
+    func testSuperPow() -> Void {
+        var r = s.superPow(2, [3])
+        XCTAssertEqual(r, 8)
+        r = s.superPow(2, [1,0])
+        XCTAssertEqual(r, 1024)
     }
 
     func testPerformanceExample() {
