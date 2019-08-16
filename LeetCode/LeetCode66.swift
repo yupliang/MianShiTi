@@ -41,6 +41,9 @@ class Solution66 {
             var n = Int(pow(Double(10), Double(i))) * b[b.count-1-i]
             var base = 2
             var r = 1
+            if (n == 0) {
+                r = 0
+            }
             while n > 0 {
                 if (n & 1) > 0 {
                     r = r*base
