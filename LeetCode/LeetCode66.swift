@@ -39,9 +39,10 @@ class Solution66 {
     let mod = 1337
     func superPow(_ a: Int, _ b: [Int]) -> Int {
         var ret = 1
+        var modNumber = a
         for i in 0 ... b.count-1 {
-            ret = qpow(x: a, n: b[b.count-1-i])
-
+            ret = (ret * qpow(x: modNumber, n: b[b.count-1-i])) % mod
+            modNumber = qpow(x: modNumber%mod, n: 10) % mod
         }
         return ret
     }
@@ -49,12 +50,12 @@ class Solution66 {
     func qpow(x:Int, n:Int) -> Int {
         var r = 1
         var m = n
-        var base = x
+        var base = x%mod
         while m > 0 {
             if (m & 1) > 0 {
-                r = r*base
+                r = (r * base) % mod
             }
-            base = base * base
+            base = (base * base) % mod
             m = m >> 1
         }
         return r
