@@ -36,36 +36,25 @@ class Solution66 {
     
     //a^b %p = ((a%p)^b) % p
     //(a*b) %p = (a%p * b%p) %p
-    
     let mod = 1337
-    
     func superPow(_ a: Int, _ b: [Int]) -> Int {
-        var sum = 1
+        var ret = 1
         for i in 0 ... b.count-1 {
-            var n = Int(pow(Double(10), Double(i))) * b[b.count-1-i]
-            var base = a % mod
-            var r = 1
-            while n > 0 {
-                if (n & 1) > 0 {
-                    r = (r%mod * base)%mod
-                }
-                base = (base%mod * base%mod) % mod
-                n = n >> 1
-            }
-            sum = (sum%mod * r)%mod
+            ret = qpow(x: a, n: b[b.count-1-i])
+
         }
-        return sum
+        return ret
     }
     
     func qpow(x:Int, n:Int) -> Int {
         var r = 1
         var m = n
         var base = x
-        while n > 0 {
-            if (n & 1) > 0 {
-                r = (r%mod * base)%mod
+        while m > 0 {
+            if (m & 1) > 0 {
+                r = r*base
             }
-            base = (base%mod * base%mod) % mod
+            base = base * base
             m = m >> 1
         }
         return r
