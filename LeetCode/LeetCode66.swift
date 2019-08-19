@@ -60,4 +60,21 @@ class Solution66 {
         }
         return r
     }
+    
+    func myPow(_ x: Double, _ n: Int) -> Double {
+        var ret = 1.0
+        var m = abs(n)
+        var base = x
+        while m>0 {
+            if m&1 > 0 {
+                ret = ret*base
+            }
+            base = base*base
+            m = m>>1
+        }
+        if n < 0 {
+            ret = 1/ret
+        }
+        return ret
+    }
 }
