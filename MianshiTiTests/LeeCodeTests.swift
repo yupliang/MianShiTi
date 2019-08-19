@@ -59,6 +59,13 @@ class LeeCodeTests: XCTestCase {
 //            n = n >> 1
 //        }
 //    }
+    
+    func testFindSubsequences() {
+        var r = s.findSubsequences491([4,6])
+        XCTAssertEqual([[4,6]], r)
+        r = s.findSubsequences491([4,6,7,7])
+        XCTAssertEqual([[4, 6], [4, 7], [4, 6, 7], [4, 6, 7, 7], [6, 7], [6, 7, 7], [7,7], [4,7,7]], r)
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
