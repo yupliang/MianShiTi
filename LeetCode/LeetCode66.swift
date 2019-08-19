@@ -77,4 +77,28 @@ class Solution66 {
         }
         return ret
     }
+
+    func findSubsequences491(_ nums: [Int]) -> [[Int]] {
+        var r:[[Int]] = []
+        var index = 0
+        var nowIndex = index
+        
+        var subCount = 2
+        while index+subCount <= nums.count {
+            var newObj:[Int] = []
+            for _ in 0...subCount-1 {
+                newObj.append(nums[nowIndex])
+                nowIndex = nowIndex+1
+            }
+            r.append(newObj)
+            subCount = subCount+1
+            if (index+subCount > nums.count-1) {
+                subCount = 2
+                index = index+1
+            }
+            nowIndex = index
+        }
+        
+        return r
+    }
 }
