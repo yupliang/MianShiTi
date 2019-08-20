@@ -65,6 +65,12 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(-3, -7%4)
     }
     
+    func testEnum() {
+        for i in 0...3 {
+            print(i)
+        }
+    }
+    
 //    func testDouble() -> Void {
 //        var n:Double = 44.0
 //        while n>0 {
@@ -77,7 +83,11 @@ class LeeCodeTests: XCTestCase {
         var r = s.findSubsequences491([4,6])
         XCTAssertEqual([[4,6]], r)
         r = s.findSubsequences491([4,6,7,7])
-        XCTAssertEqual([[4, 6], [4, 7], [4, 6, 7], [4, 6, 7, 7], [6, 7], [6, 7, 7], [7,7], [4,7,7]], r)
+        XCTAssertEqual([[4, 6], [4, 7], [4, 6, 7], [4, 6, 7, 7], [6, 7], [6, 7, 7], [7,7], [4,7,7]].count, r.count)
+        r = s.findSubsequences491([4,3,2,1])
+        XCTAssertEqual([], r)
+        r = s.findSubsequences491([])
+        XCTAssertEqual([], r)
     }
 
     func testPerformanceExample() {
