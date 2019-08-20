@@ -82,6 +82,7 @@ class LeeCodeTests: XCTestCase {
     func testFindSubsequences() {
         var r = s.findSubsequences491([4,6])
         XCTAssertEqual([[4,6]], r)
+        r = s.findSubsequences491([1,2,3,4,5,6,7,8,9,10,1,1,1,1,1])
         r = s.findSubsequences491([4,6,7,7])
         XCTAssertEqual([[4, 6], [4, 7], [4, 6, 7], [4, 6, 7, 7], [6, 7], [6, 7, 7], [7,7], [4,7,7]].count, r.count)
         r = s.findSubsequences491([4,3,2,1])

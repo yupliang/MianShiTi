@@ -82,22 +82,18 @@ class Solution66 {
         if nums.count == 0 {
             return []
         }
-        var orderNums:[Int] = []
-        for i in 0...nums.count-1 {
-            if orderNums.count == 0 {
-                orderNums.append(nums[i])
-            } else if nums[i] >= orderNums.last! {
-                orderNums.append(nums[i])
-            }
-        }
+        
         var r:[[Int]] = []
         var dic:[[Int]:Int] = [:]
-        
-        for i in 0 ... (1<<orderNums.count) - 1 {
+        for i in 0 ... (1<<nums.count) - 1 {
             var newObj:[Int] = []
-            for j in 0...orderNums.count-1 {
+            for j in 0...nums.count-1 {
                 if (i & 1<<j) == (1<<j) {
-                    newObj.append(orderNums[j])
+                    if newObj.count == 0 {
+                        newObj.append(nums[j])
+                    } else if nums[j] >= newObj.last! {
+                        newObj.append(nums[j])
+                    }
                 }
             }
             if newObj.count >= 2 && dic[newObj] == nil {
