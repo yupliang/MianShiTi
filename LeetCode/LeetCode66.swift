@@ -186,10 +186,15 @@ class Solution66 {
     private func numBits(_ num:Int) -> Int {
         var n = 0
         var x = num
-        while x != 0 {
-            x = x/10
-            n = n+1
+        if x == 0 {
+            n = 1
+        } else {
+            while x != 0 {
+                x = x/10
+                n = n+1
+            }
         }
+        
         return n
     }
 }
