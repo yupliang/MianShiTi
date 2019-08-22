@@ -135,11 +135,12 @@ class Solution66 {
     }
     func splitIntoFibonacci842(_ S: String) -> [Int] {
         var arr:[Int] = []
+        var arrStr:[String] = []
         var usedNumCount = 0
-        helper842(S,answer: &arr,useCount: &usedNumCount)
+        helper842(S,answer: &arr,useCount: &usedNumCount, strArr: &arrStr)
         return arr
     }
-    func helper842(_ S:String, answer asArr: inout [Int], useCount uc: inout Int) {
+    func helper842(_ S:String, answer asArr: inout [Int], useCount uc: inout Int, strArr strs: inout [String]) {
         for i in 1...S.count {
             if i+uc > S.count {
                 break
@@ -153,49 +154,45 @@ class Solution66 {
                 }
                 uc = uc+i
                 asArr.append(strValue)
+                strs.append(String(str))
             } else {
                 break
             }
             
             if asArr.count >= 3 {
                 if asArr[asArr.count-1] - asArr[asArr.count-2] == asArr[asArr.count-3] {
-                    helper842(S, answer: &asArr, useCount: &uc)
+                    helper842(S, answer: &asArr, useCount: &uc, strArr: &strs)
                     if uc == S.count {
                         break
                     } else {
-                        uc = uc - numBits(asArr.removeLast())
+                        asArr.removeLast()
+                        uc = uc - numBits(strs.removeLast())
                     }
                 } else if asArr[asArr.count-1] - asArr[asArr.count-2] > asArr[asArr.count-3]  {
-                    uc = uc - numBits(asArr.removeLast())
+                    asArr.removeLast()
+                    uc = uc - numBits(strs.removeLast())
                     break
                 } else {
-                    uc = uc - numBits(asArr.removeLast())
+                    asArr.removeLast()
+                    uc = uc - numBits(strs.removeLast())
                 }
             } else {
-                helper842(S, answer: &asArr, useCount: &uc)
+                helper842(S, answer: &asArr, useCount: &uc, strArr: &strs)
                 if uc == S.count {
                     if (asArr.count < 3) {
-                        uc = uc - numBits(asArr.removeLast())
+                        asArr.removeLast()
+                        uc = uc - numBits(strs.removeLast())
                     }
                     break
                 } else {
-                    uc = uc - numBits(asArr.removeLast())
+                    asArr.removeLast()
+                    uc = uc - numBits(strs.removeLast())
                 }
             }
         }
     }
-    private func numBits(_ num:Int) -> Int {
-        var n = 0
-        var x = num
-        if x == 0 {
-            n = 1
-        } else {
-            while x != 0 {
-                x = x/10
-                n = n+1
-            }
-        }
+    private func numBits(_ num:String) -> Int {
         
-        return n
+        return num.count
     }
 }
