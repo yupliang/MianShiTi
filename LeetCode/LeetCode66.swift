@@ -148,7 +148,12 @@ class Solution66 {
             let idx2 = S.index(idx1, offsetBy: -i)
             let str = S[idx2..<idx1]
             uc = uc+i
-            asArr.append(Int(String(str))!)
+            if let strValue = Int(String(str)) {
+                asArr.append(strValue)
+            } else {
+                break
+            }
+            
             if asArr.count >= 3 {
                 if asArr[asArr.count-1] == asArr[asArr.count-2] + asArr[asArr.count-3] {
                     helper842(S, answer: &asArr, useCount: &uc)
@@ -158,17 +163,10 @@ class Solution66 {
                         uc = uc - numBits(asArr.removeLast())
                     }
                 } else if asArr[asArr.count-1] > asArr[asArr.count-2] + asArr[asArr.count-3]  {
-                    //移除两个数
                     uc = uc - numBits(asArr.removeLast())
                     break
                 } else {
-                    if 1 + uc > S.count {
-                        //移除两个数
-                        uc = uc - numBits(asArr.removeLast())
-                        break
-                    } else {
-                        uc = uc - numBits(asArr.removeLast())
-                    }
+                    uc = uc - numBits(asArr.removeLast())
                 }
             } else {
                 helper842(S, answer: &asArr, useCount: &uc)
