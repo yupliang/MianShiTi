@@ -147,22 +147,25 @@ class Solution66 {
             let idx1 = S.index(S.startIndex, offsetBy: i+uc)
             let idx2 = S.index(idx1, offsetBy: -i)
             let str = S[idx2..<idx1]
-            uc = uc+i
             if let strValue = Int(String(str)) {
+                if i > 1 && strValue > 0 && Int(String(S[idx2..<S.index(idx1, offsetBy: -i+1)])) == 0 {
+                    break
+                }
+                uc = uc+i
                 asArr.append(strValue)
             } else {
                 break
             }
             
             if asArr.count >= 3 {
-                if asArr[asArr.count-1] == asArr[asArr.count-2] + asArr[asArr.count-3] {
+                if asArr[asArr.count-1] - asArr[asArr.count-2] == asArr[asArr.count-3] {
                     helper842(S, answer: &asArr, useCount: &uc)
                     if uc == S.count {
                         break
                     } else {
                         uc = uc - numBits(asArr.removeLast())
                     }
-                } else if asArr[asArr.count-1] > asArr[asArr.count-2] + asArr[asArr.count-3]  {
+                } else if asArr[asArr.count-1] - asArr[asArr.count-2] > asArr[asArr.count-3]  {
                     uc = uc - numBits(asArr.removeLast())
                     break
                 } else {

@@ -92,8 +92,13 @@ class LeeCodeTests: XCTestCase {
     }
     
     func test842() {
-        var r = s.splitIntoFibonacci842("123456579")
+        var r = s.splitIntoFibonacci842("2820022842865610841740282445647388119521934031292")
+        XCTAssertEqual(r, [28,200,228,428,656,1084,1740,2824,4564,7388,11952,19340,31292])
+        r = s.splitIntoFibonacci842("74912134825162255812723932620170946950766784234934")
+        r = s.splitIntoFibonacci842("123456579")
         XCTAssertEqual(r, [123,456,579])
+        r = s.splitIntoFibonacci842("0123")
+        XCTAssertEqual(r, [])
         r = s.splitIntoFibonacci842("11235813")
         XCTAssertEqual(r, [1,1,2,3,5,8,13])
         r = s.splitIntoFibonacci842("112358130")
