@@ -144,7 +144,42 @@ class Solution66 {
             let idx1 = S.index(S.startIndex, offsetBy: i+uc)
             let idx2 = S.index(idx1, offsetBy: -i)
             let str = S[idx2..<idx1]
+            uc = uc+i
             asArr.append(Int(String(str))!)
+            if asArr.count >= 3 {
+                if asArr[asArr.count-1] == asArr[asArr.count-2] + asArr[asArr.count-3] {
+                    helper842(S, answer: &asArr, useCount: &uc)
+                    if uc == S.count {
+                        break
+                    } else {
+                        uc = uc - numBits(asArr.removeLast())
+                    }
+                } else {
+                    if i+1 + uc >= S.count {
+                        //移除两个数
+                        uc = uc - numBits(asArr.removeLast())
+                        uc = uc - numBits(asArr.removeLast())
+                    } else {
+                        uc = uc - numBits(asArr.removeLast())
+                    }
+                }
+            } else {
+                helper842(S, answer: &asArr, useCount: &uc)
+                if uc == S.count {
+                    break
+                } else {
+                    uc = uc - numBits(asArr.removeLast())
+                }
+            }
         }
+    }
+    private func numBits(_ num:Int) -> Int {
+        var n = 0
+        var x = num
+        while x != 0 {
+            x = x/10
+            n = n+1
+        }
+        return n
     }
 }
