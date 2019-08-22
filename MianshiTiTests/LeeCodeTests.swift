@@ -90,6 +90,15 @@ class LeeCodeTests: XCTestCase {
         r = s.findSubsequences491([])
         XCTAssertEqual([], r)
     }
+    
+    func test842() {
+        var r = s.splitIntoFibonacci842("123456579")
+        XCTAssertEqual(r, [123,456,579])
+        r = s.splitIntoFibonacci842("11235813")
+        XCTAssertEqual(r, [1,1,2,3,5,8,13])
+        r = s.splitIntoFibonacci842("112358130")
+        XCTAssertEqual(r, [])
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

@@ -133,4 +133,18 @@ class Solution66 {
             }
         }
     }
+    func splitIntoFibonacci842(_ S: String) -> [Int] {
+        var arr:[Int] = []
+        var usedNumCount = 0
+        helper842(S,answer: &arr,useCount: &usedNumCount)
+        return []
+    }
+    func helper842(_ S:String, answer asArr: inout [Int], useCount uc: inout Int) {
+        for i in 1...S.count {
+            let idx1 = S.index(S.startIndex, offsetBy: i+uc)
+            let idx2 = S.index(idx1, offsetBy: -i)
+            let str = S[idx2..<idx1]
+            asArr.append(Int(String(str))!)
+        }
+    }
 }
