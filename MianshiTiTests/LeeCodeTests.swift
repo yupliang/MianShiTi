@@ -98,6 +98,7 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(r, [1,1,2,3,5,8,13])
         r = s.splitIntoFibonacci842("112358130")
         XCTAssertEqual(r, [])
+        r =  s.splitIntoFibonacci842("214748364721474836422147483641")
     }
 
     func testPerformanceExample() {
