@@ -137,14 +137,59 @@ class Solution66 {
         var arr:[Int] = []
         var usedNumCount = 0
         helper842(S,answer: &arr,useCount: &usedNumCount)
-        return []
+        return arr
     }
     func helper842(_ S:String, answer asArr: inout [Int], useCount uc: inout Int) {
         for i in 1...S.count {
+            if i+uc > S.count {
+                break
+            }
             let idx1 = S.index(S.startIndex, offsetBy: i+uc)
             let idx2 = S.index(idx1, offsetBy: -i)
             let str = S[idx2..<idx1]
+            uc = uc+i
             asArr.append(Int(String(str))!)
+            if asArr.count >= 3 {
+                if asArr[asArr.count-1] == asArr[asArr.count-2] + asArr[asArr.count-3] {
+                    helper842(S, answer: &asArr, useCount: &uc)
+                    if uc == S.count {
+                        break
+                    } else {
+                        uc = uc - numBits(asArr.removeLast())
+                    }
+                } else if asArr[asArr.count-1] > asArr[asArr.count-2] + asArr[asArr.count-3]  {
+                    //移除两个数
+                    uc = uc - numBits(asArr.removeLast())
+                    break
+                } else {
+                    if 1 + uc > S.count {
+                        //移除两个数
+                        uc = uc - numBits(asArr.removeLast())
+                        break
+                    } else {
+                        uc = uc - numBits(asArr.removeLast())
+                    }
+                }
+            } else {
+                helper842(S, answer: &asArr, useCount: &uc)
+                if uc == S.count {
+                    if (asArr.count < 3) {
+                        uc = uc - numBits(asArr.removeLast())
+                    }
+                    break
+                } else {
+                    uc = uc - numBits(asArr.removeLast())
+                }
+            }
         }
+    }
+    private func numBits(_ num:Int) -> Int {
+        var n = 0
+        var x = num
+        while x != 0 {
+            x = x/10
+            n = n+1
+        }
+        return n
     }
 }
