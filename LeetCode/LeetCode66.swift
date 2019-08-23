@@ -253,4 +253,29 @@ class Solution66 {
         return Int(f)
     }
     
+    public func createTree(_ num: inout [Int]) -> TreeNode? {
+        var nodes:[TreeNode] = []
+        var rootNode:TreeNode?
+        while num.count > 0 {
+            if nodes.count == 0 {
+                let node = TreeNode(num.removeFirst())
+                rootNode = node
+                nodes.append(node)
+            } else {
+                let topNode = nodes.removeFirst()
+                var f = num.removeFirst()
+                
+                if f > 0 {
+                    topNode.left = TreeNode(f)
+                    nodes.append(topNode.left!)
+                }
+                f = num.removeFirst()
+                if f > 0 {
+                    topNode.right = TreeNode(f)
+                    nodes.append(topNode.right!)
+                }
+            }
+        }
+        return rootNode
+    }
 }

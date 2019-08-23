@@ -108,28 +108,7 @@ class LeeCodeTests: XCTestCase {
     
     func test662() {
         var arr:[Int] = [1,1,1,1,1,1,1,-1000,-1000,-1000,1,-1000,-1000,-1000,-1000,2,2,2,2,2,2,2,-1000,2,-1000,-1000,2,-1000,2]
-        var nodes:[TreeNode] = []
-        var rootNode:TreeNode?
-        while arr.count > 0 {
-            if nodes.count == 0 {
-                let node = TreeNode(arr.removeFirst())
-                rootNode = node
-                nodes.append(node)
-            } else {
-                let topNode = nodes.removeFirst()
-                var f = arr.removeFirst()
-    
-                if f > 0 {
-                    topNode.left = TreeNode(f)
-                    nodes.append(topNode.left!)
-                }
-                f = arr.removeFirst()
-                if f > 0 {
-                    topNode.right = TreeNode(f)
-                    nodes.append(topNode.right!)
-                }
-            }
-        }
+        var rootNode = s.createTree(&arr)
 //        let n1 = TreeNode(1)
 //        n1.left = TreeNode(3)
 //        n1.right = TreeNode(2)
@@ -138,6 +117,7 @@ class LeeCodeTests: XCTestCase {
 //        n1.right!.right = TreeNode(9)
         let r = s.widthOfBinaryTree662(rootNode)
         XCTAssertEqual(8, r)
+    
     }
 
     func testPerformanceExample() {
