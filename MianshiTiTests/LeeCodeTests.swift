@@ -105,6 +105,17 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(r, [])
         r =  s.splitIntoFibonacci842("214748364721474836422147483641")
     }
+    
+    func test662() {
+        let n1 = TreeNode(1)
+        n1.left = TreeNode(3)
+        n1.right = TreeNode(2)
+        n1.left!.left = TreeNode(5)
+        n1.left!.right = TreeNode(3)
+        n1.right!.right = TreeNode(9)
+        let r = s.widthOfBinaryTree662(n1)
+        XCTAssertEqual(4, r)
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

@@ -204,7 +204,8 @@ class Solution66 {
             nodes.append(r)
             var curDatas:[String] = []
             while nodes.count > 0 {
-                if nodes.removeFirst() != nil {
+                let topnode = nodes.removeFirst()
+                if topnode != nil {
                     curDatas.append("1")
                 } else {
                     curDatas.append("0")
@@ -229,15 +230,16 @@ class Solution66 {
                     level = level+1
                     curDatas = []
                 }
-                nodes.append(r.left)
-                nodes.append(r.right)
+                nodes.append(topnode?.left)
+                nodes.append(topnode?.right)
             }
         }
         
         return result
     }
     private func nodeNum(_ level:Int) -> Int {
-        let f = pow(2, level-1)
-        return Int(truncating: NSDecimalNumber(decimal: f))
+        let f = pow(2.0, Double(level-1))
+        return Int(f)
     }
+    
 }
