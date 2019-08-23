@@ -256,8 +256,13 @@ class Solution66 {
     public func createTree(_ num: inout [Int]) -> TreeNode? {
         var nodes:[TreeNode] = []
         var rootNode:TreeNode?
+        var emptyTree = true
         while num.count > 0 {
             if nodes.count == 0 {
+                if emptyTree == false {
+                    break
+                }
+                emptyTree = false
                 let node = TreeNode(num.removeFirst())
                 rootNode = node
                 nodes.append(node)
