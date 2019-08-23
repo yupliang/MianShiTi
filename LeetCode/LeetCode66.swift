@@ -223,6 +223,17 @@ class Solution66 {
                             break
                         }
                     }
+                    while true {
+                        if let l = curDatas.first {
+                            if l == "0" {
+                                curDatas.removeFirst()
+                            } else {
+                                break
+                            }
+                        } else {
+                            break
+                        }
+                    }
                     if curDatas.count == 0 {
                         break
                     }
