@@ -195,4 +195,49 @@ class Solution66 {
         
         return num.count
     }
+    func widthOfBinaryTree662(_ root: TreeNode?) -> Int {
+        
+        var result = 0
+        var level = 1
+        var nodes:[TreeNode?] = []
+        if let r = root {
+            nodes.append(r)
+            var curDatas:[String] = []
+            while nodes.count > 0 {
+                if nodes.removeFirst() != nil {
+                    curDatas.append("1")
+                } else {
+                    curDatas.append("0")
+                }
+                
+                if curDatas.count == nodeNum(level) {
+                    while true {
+                        if let l = curDatas.last {
+                            if l == "0" {
+                                curDatas.removeLast()
+                            } else {
+                                break
+                            }
+                        } else {
+                            break
+                        }
+                    }
+                    if curDatas.count == 0 {
+                        break
+                    }
+                    result = max(result, curDatas.count)
+                    level = level+1
+                    curDatas = []
+                }
+                nodes.append(r.left)
+                nodes.append(r.right)
+            }
+        }
+        
+        return result
+    }
+    private func nodeNum(_ level:Int) -> Int {
+        let f = pow(2, level-1)
+        return Int(truncating: NSDecimalNumber(decimal: f))
+    }
 }
