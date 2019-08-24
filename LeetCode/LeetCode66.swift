@@ -280,14 +280,20 @@ class Solution66 {
                 nodes.append(node)
             } else {
                 let topNode = nodes.removeFirst()
+                if num.isEmpty {
+                    break
+                }
                 var f = num.removeFirst()
                 
-                if f > 0 {
+                if f >= 0 {
                     topNode.left = TreeNode(f)
                     nodes.append(topNode.left!)
                 }
+                if num.isEmpty {
+                    break
+                }
                 f = num.removeFirst()
-                if f > 0 {
+                if f >= 0 {
                     topNode.right = TreeNode(f)
                     nodes.append(topNode.right!)
                 }
