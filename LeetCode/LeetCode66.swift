@@ -196,56 +196,68 @@ class Solution66 {
         return num.count
     }
     func widthOfBinaryTree662(_ root: TreeNode?) -> Int {
-        
         var result = 0
-        var level = 1
         var nodes:[TreeNode?] = []
+        var nodeLevelIndex:[Int] = []
+        var nodeIndexes:[Int] = []
+        var curLevelIndex:[Int] = []
+        var alllevels:[Int] = []
+        
         if let r = root {
             nodes.append(r)
-            var curDatas:[String] = []
+            nodeIndexes.append(0)
+            nodeLevelIndex.append(0)
+            curLevelIndex.append(1)
+            alllevels.append(1)
             while nodes.count > 0 {
                 let topnode = nodes.removeFirst()
-                if topnode != nil {
-                    curDatas.append("1")
-                } else {
-                    curDatas.append("0")
-                }
+                let topnodeIndex = nodeLevelIndex.removeFirst()
+                let l = curLevelIndex.removeFirst()
                 
-                if curDatas.count == nodeNum(level) {
-                    while true {
-                        if let l = curDatas.last {
-                            if l == "0" {
-                                curDatas.removeLast()
-                            } else {
-                                break
-                            }
-                        } else {
-                            break
-                        }
-                    }
-                    while true {
-                        if let l = curDatas.first {
-                            if l == "0" {
-                                curDatas.removeFirst()
-                            } else {
-                                break
-                            }
-                        } else {
-                            break
-                        }
-                    }
-                    if curDatas.count == 0 {
-                        break
-                    }
-                    result = max(result, curDatas.count)
-                    level = level+1
-                    curDatas = []
+                if let ln = topnode?.left {
+                    nodes.append(ln)
+                    nodeLevelIndex.append(2*topnodeIndex+1)
+                    nodeIndexes.append(2*topnodeIndex+1)
+                    
+                    curLevelIndex.append(l+1)
+                    alllevels.append(l+1)
                 }
-                nodes.append(topnode?.left)
-                nodes.append(topnode?.right)
+                if let rn = topnode?.right {
+                    nodes.append(rn)
+                    nodeLevelIndex.append(2*topnodeIndex+2)
+                    nodeIndexes.append(2*topnodeIndex+2)
+                    
+                    curLevelIndex.append(l+1)
+                    alllevels.append(l+1)
+                }
             }
         }
         
+        
+        var levelFirstHasValue = false
+        var levelFirst = 0
+        var levelSecond = 0
+        var idx = 0
+        var level = 1
+        for i in alllevels {
+            if levelFirstHasValue == false {
+                levelFirstHasValue = true
+                level = i
+                levelFirst = nodeIndexes[idx]
+                levelSecond = nodeIndexes[idx]
+            } else {
+                if i == level {
+                    levelSecond = nodeIndexes[idx]
+                } else {
+                    level = i
+                    levelFirst = nodeIndexes[idx]
+                    levelSecond = nodeIndexes[idx]
+                }
+                result = max(result, levelSecond - levelFirst + 1)
+            }
+            
+            idx = idx+1
+        }
         return result
     }
     private func nodeNum(_ level:Int) -> Int {
