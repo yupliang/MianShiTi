@@ -195,6 +195,32 @@ class Solution66 {
         
         return num.count
     }
+    func widthOfBinaryTree662_noIndex(_ root: TreeNode?) -> Int {
+        var result = 0
+        if root != nil {
+            var curLevelNodes:[TreeNode?] = []
+            curLevelNodes.append(root)
+            while curLevelNodes.count > 0 {
+                while curLevelNodes.isEmpty == false && curLevelNodes.first! == nil {
+                    curLevelNodes.removeFirst()
+                }
+                while curLevelNodes.isEmpty == false && curLevelNodes.last! == nil {
+                    curLevelNodes.removeLast()
+                }
+                let curNumber = curLevelNodes.count
+                if curNumber == 0 {
+                    break
+                }
+                result = max(result, curLevelNodes.count)
+                for _ in 0...curNumber-1 {
+                    let item = curLevelNodes.removeFirst()
+                    curLevelNodes.append(item?.left)
+                    curLevelNodes.append(item?.right)
+                }
+            }
+        }
+        return result
+    }
     func widthOfBinaryTree662(_ root: TreeNode?) -> Int {
         var result = 0
         var nodes:[TreeNode?] = []
