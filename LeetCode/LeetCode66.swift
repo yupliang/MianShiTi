@@ -200,23 +200,34 @@ class Solution66 {
         if root != nil {
             var curLevelNodes:[TreeNode?] = []
             curLevelNodes.append(root)
-            while curLevelNodes.count > 0 {
-                while curLevelNodes.isEmpty == false && curLevelNodes.first! == nil {
-                    curLevelNodes.removeFirst()
+            var leftIndex = 0
+            var rightIndex = 0
+            while true {
+                leftIndex = -1
+                rightIndex = -1
+                for i in 0...curLevelNodes.count-1 {
+                    if curLevelNodes[i] != nil {
+                        leftIndex = i
+                        break
+                    }
                 }
-                while curLevelNodes.isEmpty == false && curLevelNodes.last! == nil {
-                    curLevelNodes.removeLast()
+                for i in 0...curLevelNodes.count-1 {
+                    if curLevelNodes[curLevelNodes.count-1-i] != nil {
+                        rightIndex = curLevelNodes.count-1-i
+                        break
+                    }
                 }
-                let curNumber = curLevelNodes.count
-                if curNumber == 0 {
+                if leftIndex == rightIndex && leftIndex == -1 {
                     break
                 }
-                result = max(result, curLevelNodes.count)
-                for _ in 0...curNumber-1 {
-                    let item = curLevelNodes.removeFirst()
-                    curLevelNodes.append(item?.left)
-                    curLevelNodes.append(item?.right)
+                var cur:[TreeNode?] = []
+                result = max(result, rightIndex-leftIndex+1)
+                for i in leftIndex...rightIndex {
+                    let item = curLevelNodes[i]
+                    cur.append(item?.left)
+                    cur.append(item?.right)
                 }
+                curLevelNodes = cur
             }
         }
         return result
