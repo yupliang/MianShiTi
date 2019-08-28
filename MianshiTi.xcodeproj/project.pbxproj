@@ -66,6 +66,7 @@
 		FD70174622C89B28007AF46F /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174422C89B28007AF46F /* MaxHeap.swift */; };
 		FD70174822C89C68007AF46F /* MaxHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174722C89C68007AF46F /* MaxHeapTests.swift */; };
 		FD73FA11227482EA0027C89D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73FA10227482EA0027C89D /* List.m */; };
+		FD87C9D22316C0AE00C3BAFD /* mjmain.m in Sources */ = {isa = PBXBuildFile; fileRef = FD87C9D12316C0AE00C3BAFD /* mjmain.m */; };
 		FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFD22773CC50058F557 /* BinaryTree.m */; };
 		FD938C0222795B1B0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
 		FD938C0422795EAB0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
@@ -190,6 +191,7 @@
 		FD70174722C89C68007AF46F /* MaxHeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeapTests.swift; sourceTree = "<group>"; };
 		FD73FA0F227482EA0027C89D /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		FD73FA10227482EA0027C89D /* List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		FD87C9D12316C0AE00C3BAFD /* mjmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mjmain.m; sourceTree = "<group>"; };
 		FD938BFC22773CC50058F557 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		FD938BFD22773CC50058F557 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		FD938C0022795B1B0058F557 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		FD18943522748236003EA507 = {
 			isa = PBXGroup;
 			children = (
+				FD87C9BB2316BED600C3BAFD /* MJ */,
 				FD2097F32305304A002AD227 /* LeetCode */,
 				FD2097E92302E9B6002AD227 /* Stack */,
 				FD2097DE2302AEA0002AD227 /* ClassicProblem */,
@@ -447,6 +450,14 @@
 				FD4650EF22D8D77E00FDD48B /* XCTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD87C9BB2316BED600C3BAFD /* MJ */ = {
+			isa = PBXGroup;
+			children = (
+				FD87C9D12316C0AE00C3BAFD /* mjmain.m */,
+			);
+			path = MJ;
 			sourceTree = "<group>";
 		};
 		FD938BF822773B990058F557 /* 2叉树 */ = {
@@ -659,6 +670,7 @@
 				FDB664B122C112C800FAC14E /* BinaryTreeNode.m in Sources */,
 				FD2097EE2302E9E2002AD227 /* Stack.swift in Sources */,
 				FD938C072279AE540058F557 /* ViewController1.m in Sources */,
+				FD87C9D22316C0AE00C3BAFD /* mjmain.m in Sources */,
 				FD6835142304E3A700A3B327 /* BTreeProblemOC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
