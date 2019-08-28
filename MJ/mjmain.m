@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+struct NSObject_IMPL {
+    Class isa;
+};
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
