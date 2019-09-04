@@ -146,7 +146,25 @@ class LeeCodeTests: XCTestCase {
         r = s.widthOfBinaryTree662_noIndex(tree)
         print("last r is \(r)")
     }
+    
+    func test474() {
+        var arr = ["10","0001","111001","1","0"]
+        var r = s.findMaxForm474(arr, 5, 3)
+        XCTAssertEqual(r, 4)
+        arr = ["10","0","1"]
+        r = s.findMaxForm474(arr, 1, 1)
+        XCTAssertEqual(r, 2)
 
+    }
+
+    func testStrCharCount() {
+        let str = "001"
+        for item in str {
+            print(item)
+        }
+        XCTAssertEqual(3, str.count)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

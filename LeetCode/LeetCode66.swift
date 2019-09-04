@@ -338,4 +338,73 @@ class Solution66 {
         }
         return rootNode
     }
+    func findMaxForm474(_ strs: [String], _ m: Int, _ n: Int) -> Int {
+        var arr:[(Int,Int)] = []
+        for item in strs {
+            arr.append(helper474(item))
+        }
+        
+        var maxValue = 0
+        for i in 0...(1<<arr.count)-1 {
+            print(i)
+            var mm = m
+            var nn = n
+            var count = 0
+            for j in 0...arr.count-1 {
+                if i&(1<<j) == 1<<j {
+                    if mm >= arr[j].0 {
+                        mm = mm-arr[j].0
+                    } else {
+                        continue
+                    }
+                    if nn >= arr[j].1 {
+                        nn = nn-arr[j].1
+                    } else {
+                        continue
+                    }
+                    count = count+1
+                }
+            }
+            maxValue = max(maxValue, count)
+        }
+        
+        return maxValue
+    }
+    func h474(_ arr:[(Int,Int)], _ index:inout Int, _ count:inout Int, _ mm:inout Int, _ nn:inout Int, _ maxValue:inout Int) {
+        if index >= arr.count {
+            maxValue = max(maxValue, count)
+            return
+        }
+        let item = arr[index]
+        if mm >= item.0 {
+            mm = mm-item.0
+        } else {
+            index = index+1
+            h474(arr, &index, &count, &mm, &nn, &maxValue)
+            return
+        }
+        if nn >= item.1 {
+            nn = nn-item.1
+        } else {
+            index = index+1
+            h474(arr, &index, &count, &mm, &nn, &maxValue)
+            return
+        }
+        count = count+1
+        index = index+1
+        h474(arr, &index, &count, &mm, &nn, &maxValue)
+    }
+    func helper474(_ str:String) -> (Int,Int) {
+        var m = 0
+        var n = 0
+        for item in str {
+            if item == "0" {
+                m = m+1
+            }
+            if item == "1" {
+                n = n+1
+            }
+        }
+        return (m,n)
+    }
 }
