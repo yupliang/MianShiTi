@@ -154,7 +154,8 @@ class LeeCodeTests: XCTestCase {
         arr = ["10","0","1"]
         r = s.findMaxForm474(arr, 1, 1)
         XCTAssertEqual(r, 2)
-
+        arr = ["0","11","1000","01","0","101","1","1","1","0","0","0","0","1","0","0110101","0","11","01","00","01111","0011","1","1000","0","11101","1","0","10","0111"]
+        r = s.findMaxForm474(arr, 9, 80)
     }
 
     func testStrCharCount() {

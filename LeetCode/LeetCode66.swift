@@ -346,10 +346,18 @@ class Solution66 {
         
         var maxValue = 0
         for i in 0...(1<<arr.count)-1 {
-            print(i)
             var mm = m
             var nn = n
             var count = 0
+            var oneCount = 0
+            var originI = i
+            while originI != 0 {
+                oneCount = oneCount+1
+                originI = originI & (originI-1)
+            }
+            if oneCount < maxValue {
+                continue
+            }
             for j in 0...arr.count-1 {
                 if i&(1<<j) == 1<<j {
                     if mm >= arr[j].0 {
