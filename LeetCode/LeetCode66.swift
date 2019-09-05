@@ -350,7 +350,7 @@ class Solution66 {
             var nn = n
             var count = 0
 //            var oneCount = 0
-            let originI = (1<<arr.count)-1  - i
+            var originI = (1<<arr.count)-1  - i
             if originI <= (1<<maxValue)-1 {
                 break
             }
@@ -363,6 +363,10 @@ class Solution66 {
 //            }
 //            originI = i
             for j in 0...arr.count-1 {
+                if originI>>j <= (1<<(maxValue-count))-1 {
+                    break
+                }
+                
                 if originI&(1<<j) == 1<<j {
                     if mm >= arr[j].0 {
                         mm = mm-arr[j].0
