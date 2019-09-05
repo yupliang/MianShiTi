@@ -346,23 +346,22 @@ class Solution66 {
         
         var maxValue = 0
         for i in 0...(1<<arr.count)-1 {
-            if i <= (1<<maxValue)-1 {
-                continue
-            }
-            
             var mm = m
             var nn = n
             var count = 0
-            var oneCount = 0
-            var originI = (1<<arr.count)-1 - i
-            while originI != 0 {
-                oneCount = oneCount+1
-                originI = originI & (originI-1)
+//            var oneCount = 0
+            let originI = (1<<arr.count)-1  - i
+            if originI <= (1<<maxValue)-1 {
+                break
             }
-            if oneCount <= maxValue {
-                continue
-            }
-            originI = (1<<arr.count)-1 - i
+//            while originI != 0 {
+//                oneCount = oneCount+1
+//                originI = originI & (originI-1)
+//            }
+//            if oneCount <= maxValue {
+//                continue
+//            }
+//            originI = i
             for j in 0...arr.count-1 {
                 if originI&(1<<j) == 1<<j {
                     if mm >= arr[j].0 {
