@@ -340,29 +340,36 @@ class Solution66 {
     }
     func findMaxForm474(_ strs: [String], _ m: Int, _ n: Int) -> Int {
         var arr:[(Int,Int)] = []
+        var arrMemory:[String:Int] = [:]
         for item in strs {
             arr.append(helper474(item))
         }
         
-        let maxValue = h474(arr, 0, m, n)
+        let maxValue = h474(arr, 0, m, n,&arrMemory)
         return maxValue
     }
     
     /*
      从index开始选出 满足 m和n的最大个数
      */
-    func h474(_ arr:[(Int,Int)], _ index:Int, _ m:Int, _ n:Int) -> Int {
+    func h474(_ arr:[(Int,Int)], _ index:Int, _ m:Int, _ n:Int, _ arrMemory:inout [String:Int]) -> Int {
         var r = 0
-        if index == arr.count {//没有元素
+        let key = "\(index)_\(m)_\(n)"
+        if arrMemory[key] != nil {
+            r = arrMemory[key]!
             return r
+        }
+        if index == arr.count {//没有元素
+            r = 0
         } else {
             let item = arr[index]
             if m < item.0 || n < item.1 {
-                r = h474(arr, index+1, m, n)
+                r = h474(arr, index+1, m, n,&arrMemory)
             } else {
-                r = max(h474(arr, index+1, m, n), h474(arr, index+1, m-item.0, n-item.1)+1)
+                r = max(h474(arr, index+1, m, n,&arrMemory), h474(arr, index+1, m-item.0, n-item.1,&arrMemory)+1)
             }
         }
+        arrMemory[key] = r
         return r
     }
     func helper474(_ str:String) -> (Int,Int) {
