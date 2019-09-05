@@ -354,19 +354,8 @@ class Solution66 {
             if originI <= (1<<maxValue)-1 {
                 break
             }
-//            while originI != 0 {
-//                oneCount = oneCount+1
-//                originI = originI & (originI-1)
-//            }
-//            if oneCount <= maxValue {
-//                continue
-//            }
 //            originI = i
             for j in 0...arr.count-1 {
-                if originI>>j <= (1<<(maxValue-count))-1 {
-                    break
-                }
-                
                 if originI&(1<<j) == 1<<j {
                     if mm >= arr[j].0 {
                         mm = mm-arr[j].0
@@ -382,6 +371,10 @@ class Solution66 {
                     if mm == 0 && nn == 0 {
                         break
                     }
+                }
+                originI = originI & ~(1<<j)
+                if originI <= (1<<(maxValue-count))-1 {
+                    break
                 }
             }
             maxValue = max(maxValue, count)
