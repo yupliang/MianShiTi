@@ -344,67 +344,26 @@ class Solution66 {
             arr.append(helper474(item))
         }
         
-        var maxValue = 0
-        for i in 0...(1<<arr.count)-1 {
-            var mm = m
-            var nn = n
-            var count = 0
-//            var oneCount = 0
-            var originI = (1<<arr.count)-1  - i
-            if originI <= (1<<maxValue)-1 {
-                break
-            }
-//            originI = i
-            for j in 0...arr.count-1 {
-                if originI&(1<<j) == 1<<j {
-                    if mm >= arr[j].0 {
-                        mm = mm-arr[j].0
-                    } else {
-                        continue
-                    }
-                    if nn >= arr[j].1 {
-                        nn = nn-arr[j].1
-                    } else {
-                        continue
-                    }
-                    count = count+1
-                    if mm == 0 && nn == 0 {
-                        break
-                    }
-                }
-                originI = originI & ~(1<<j)
-                if originI <= (1<<(maxValue-count))-1 {
-                    break
-                }
-            }
-            maxValue = max(maxValue, count)
-        }
-        
+        let maxValue = h474(arr, 0, m, n)
         return maxValue
     }
-    func h474(_ arr:[(Int,Int)], _ index:inout Int, _ count:inout Int, _ mm:inout Int, _ nn:inout Int, _ maxValue:inout Int) {
-        if index >= arr.count {
-            maxValue = max(maxValue, count)
-            return
-        }
-        let item = arr[index]
-        if mm >= item.0 {
-            mm = mm-item.0
+    
+    /*
+     从index开始选出 满足 m和n的最大个数
+     */
+    func h474(_ arr:[(Int,Int)], _ index:Int, _ m:Int, _ n:Int) -> Int {
+        var r = 0
+        if index == arr.count {//没有元素
+            return r
         } else {
-            index = index+1
-            h474(arr, &index, &count, &mm, &nn, &maxValue)
-            return
+            let item = arr[index]
+            if m < item.0 || n < item.1 {
+                r = h474(arr, index+1, m, n)
+            } else {
+                r = max(h474(arr, index+1, m, n), h474(arr, index+1, m-item.0, n-item.1)+1)
+            }
         }
-        if nn >= item.1 {
-            nn = nn-item.1
-        } else {
-            index = index+1
-            h474(arr, &index, &count, &mm, &nn, &maxValue)
-            return
-        }
-        count = count+1
-        index = index+1
-        h474(arr, &index, &count, &mm, &nn, &maxValue)
+        return r
     }
     func helper474(_ str:String) -> (Int,Int) {
         var m = 0
