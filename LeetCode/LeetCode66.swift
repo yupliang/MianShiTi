@@ -346,20 +346,25 @@ class Solution66 {
         
         var maxValue = 0
         for i in 0...(1<<arr.count)-1 {
+            if i <= (1<<maxValue)-1 {
+                continue
+            }
+            
             var mm = m
             var nn = n
             var count = 0
             var oneCount = 0
-            var originI = i
+            var originI = (1<<arr.count)-1 - i
             while originI != 0 {
                 oneCount = oneCount+1
                 originI = originI & (originI-1)
             }
-            if oneCount < maxValue {
+            if oneCount <= maxValue {
                 continue
             }
+            originI = (1<<arr.count)-1 - i
             for j in 0...arr.count-1 {
-                if i&(1<<j) == 1<<j {
+                if originI&(1<<j) == 1<<j {
                     if mm >= arr[j].0 {
                         mm = mm-arr[j].0
                     } else {
@@ -371,6 +376,9 @@ class Solution66 {
                         continue
                     }
                     count = count+1
+                    if mm == 0 && nn == 0 {
+                        break
+                    }
                 }
             }
             maxValue = max(maxValue, count)
