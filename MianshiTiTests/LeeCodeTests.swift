@@ -176,6 +176,13 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(true, r)
     }
     
+    func test416() {
+        var r = s.canPartition([1,5,11,5])
+        XCTAssertEqual(true, r)
+        r = s.canPartition([1,2,3,5])
+        XCTAssertEqual(false, r)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

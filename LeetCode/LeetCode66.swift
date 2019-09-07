@@ -402,4 +402,30 @@ class Solution66 {
         calendars.append((start,end))
         return true
     }
+    func canPartition416(_ nums: [Int]) -> Bool {
+        var sum:Int = 0
+        for item in nums {
+            sum = sum+item
+        }
+        return helper416(0, sum, 0, nums)
+    }
+    /*
+     从下标index开始 找出sum与subSum相等
+     */
+    func helper416(_ index:Int,_ sum:Int, _ subSum:Int, _ nums:[Int]) -> Bool {
+        var r = false
+        if index == nums.count || subSum > sum {//没有元素了
+            r = false
+        } else {
+            if nums[index]+subSum == sum-nums[index] {//找到等和子集
+                r = true
+            } else {
+                r = helper416(index+1, sum-nums[index], subSum+nums[index], nums)//把当前元素插入到子集
+                if r == false {
+                    r = helper416(index+1, sum, subSum, nums)
+                }
+            }
+        }
+        return r
+    }
 }
