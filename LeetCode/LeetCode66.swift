@@ -392,7 +392,7 @@ class Solution66 {
             if start >= item.0 && start < item.1 {
                 return false
             }
-            if end >= item.0 && end < item.1 {
+            if end > item.0 && end < item.1 {
                 return false
             }
             if start < item.0 && end >= item.1 {
