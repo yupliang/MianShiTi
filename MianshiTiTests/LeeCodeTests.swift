@@ -177,9 +177,9 @@ class LeeCodeTests: XCTestCase {
     }
     
     func test416() {
-        var r = s.canPartition([1,5,11,5])
+        var r = s.canPartition416([1,5,11,5])
         XCTAssertEqual(true, r)
-        r = s.canPartition([1,2,3,5])
+        r = s.canPartition416([1,2,3,5])
         XCTAssertEqual(false, r)
     }
     
