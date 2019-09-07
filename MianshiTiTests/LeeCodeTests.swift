@@ -167,6 +167,15 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(3, str.count)
     }
     
+    func test729() {
+        var r = s.book729(10, 20)
+        XCTAssertEqual(true, r)
+        r = s.book729(15, 25)
+        XCTAssertEqual(false, r)
+        r = s.book729(20, 30)
+        XCTAssertEqual(true, r)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

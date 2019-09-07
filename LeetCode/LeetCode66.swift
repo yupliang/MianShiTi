@@ -385,4 +385,21 @@ class Solution66 {
         }
         return (m,n)
     }
+    
+    var calendars:[(Int,Int)] = []
+    func book729(_ start: Int, _ end: Int) -> Bool {
+        for item in calendars {
+            if start >= item.0 && start < item.1 {
+                return false
+            }
+            if end >= item.0 && end < item.1 {
+                return false
+            }
+            if start < item.0 && end >= item.1 {
+                return false
+            }
+        }
+        calendars.append((start,end))
+        return true
+    }
 }
