@@ -167,6 +167,15 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(3, str.count)
     }
     
+    func test307() {
+        let item = NumArray([1,3,5])
+        var r = item.sumRange(0, 2)
+        XCTAssertEqual(9, r)
+        item.update(1, 2)
+        r = item.sumRange(0, 2)
+        XCTAssertEqual(8, r)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
