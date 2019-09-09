@@ -21,6 +21,9 @@ class NumArray {
     }
     
     func build(_ l:Int, _ r:Int, _ tIndex:Int,_ nIndex:inout Int) {
+        if l > r {
+            return
+        }
         if l == r {
             tree[tIndex] = nums[nIndex]
             nIndex = nIndex+1
