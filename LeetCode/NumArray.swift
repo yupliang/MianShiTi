@@ -15,7 +15,7 @@ class NumArray {
     
     init(_ anums: [Int]) {
         nums = anums
-        tree = Array<Int>(repeating: 0, count: anums.count<<1)
+        tree = Array<Int>(repeating: 0, count: (anums.count<<1)<<1)
         var numIndex = 0
         build(0, nums.count-1, 0, &numIndex)
     }

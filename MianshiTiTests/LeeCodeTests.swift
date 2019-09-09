@@ -198,6 +198,8 @@ class LeeCodeTests: XCTestCase {
         r = item.sumRange(0, 1)
         item.update(1, -3)
         r = item.sumRange(0, 1)
+        
+        item = NumArray([-28,-39,53,65,11,-56,-65,-39,-43,97])
         print("")
     }
     
