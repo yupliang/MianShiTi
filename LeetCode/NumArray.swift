@@ -63,10 +63,10 @@ class NumArray {
         return query(i, j, 0, nums.count-1, 0)
     }
     func query(_ l:Int, _ r:Int, _ queryL:Int, _ queryR:Int, _ treeIndex:Int) -> Int {
-        if l <= queryL && r >= queryR {
+        if l == queryL && r == queryR {
             return tree[treeIndex]
         }
-        let middle = (l+r)>>1
+        let middle = (queryL+queryR)>>1
         if r <= middle {
             return query(l, r, queryL, middle, (treeIndex << 1)+1)
         } else if l > middle {
