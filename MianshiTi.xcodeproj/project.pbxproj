@@ -14,6 +14,8 @@
 		FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE1A22B16041009D8B6C /* UtilityTest.swift */; };
 		FD05CE2622C04E0F009D8B6C /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE2522C04E0F009D8B6C /* MinStack.swift */; };
 		FD05CE2722C04E0F009D8B6C /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05CE2522C04E0F009D8B6C /* MinStack.swift */; };
+		FD079A5A23265BD5004F04DA /* NumArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD079A5923265BD5004F04DA /* NumArray.swift */; };
+		FD079A5B23265BD5004F04DA /* NumArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD079A5923265BD5004F04DA /* NumArray.swift */; };
 		FD18944322748237003EA507 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944222748237003EA507 /* AppDelegate.m */; };
 		FD18944622748237003EA507 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18944522748237003EA507 /* ViewController.m */; };
 		FD18944922748237003EA507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD18944722748237003EA507 /* Main.storyboard */; };
@@ -66,8 +68,6 @@
 		FD70174622C89B28007AF46F /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174422C89B28007AF46F /* MaxHeap.swift */; };
 		FD70174822C89C68007AF46F /* MaxHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70174722C89C68007AF46F /* MaxHeapTests.swift */; };
 		FD73FA11227482EA0027C89D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73FA10227482EA0027C89D /* List.m */; };
-		FD87C9DB23239EAC00C3BAFD /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87C9DA23239EAC00C3BAFD /* MyCalendar.swift */; };
-		FD87C9DC23239EAC00C3BAFD /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87C9DA23239EAC00C3BAFD /* MyCalendar.swift */; };
 		FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938BFD22773CC50058F557 /* BinaryTree.m */; };
 		FD938C0222795B1B0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
 		FD938C0422795EAB0058F557 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD938C0122795B1B0058F557 /* Queue.m */; };
@@ -133,6 +133,7 @@
 		FD05CE1722B16003009D8B6C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		FD05CE1A22B16041009D8B6C /* UtilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTest.swift; sourceTree = "<group>"; };
 		FD05CE2522C04E0F009D8B6C /* MinStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
+		FD079A5923265BD5004F04DA /* NumArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumArray.swift; sourceTree = "<group>"; };
 		FD18943E22748237003EA507 /* MianshiTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MianshiTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD18944122748237003EA507 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD18944222748237003EA507 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -194,7 +195,6 @@
 		FD73FA10227482EA0027C89D /* List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		FD87C9D12316C0AE00C3BAFD /* mjmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mjmain.m; sourceTree = "<group>"; };
 		FD87C9D32316C33600C3BAFD /* main-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "main-arm64.cpp"; sourceTree = "<group>"; };
-		FD87C9DA23239EAC00C3BAFD /* MyCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendar.swift; sourceTree = "<group>"; };
 		FD938BFC22773CC50058F557 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		FD938BFD22773CC50058F557 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		FD938C0022795B1B0058F557 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
@@ -392,7 +392,7 @@
 			children = (
 				FD2097F423053086002AD227 /* LeetCode66.swift */,
 				FD2097F9230E4C70002AD227 /* TreeNode.swift */,
-				FD87C9DA23239EAC00C3BAFD /* MyCalendar.swift */,
+				FD079A5923265BD5004F04DA /* NumArray.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -648,7 +648,6 @@
 				FD05CE2622C04E0F009D8B6C /* MinStack.swift in Sources */,
 				FD1EA06C228A48C20048359D /* UITouch+Test.m in Sources */,
 				FD2097F523053086002AD227 /* LeetCode66.swift in Sources */,
-				FD87C9DB23239EAC00C3BAFD /* MyCalendar.swift in Sources */,
 				FD415B4B2292FC3C0034AA87 /* BigData.m in Sources */,
 				FD05CDD322A6BBF0009D8B6C /* HashMap.m in Sources */,
 				FDC580C922B3AF1600CE41EB /* MyCircleDeque.swift in Sources */,
@@ -666,6 +665,7 @@
 				FD6835102304E2D700A3B327 /* StackOC.m in Sources */,
 				FDE7FBEF22969088001BD1CE /* aa.m in Sources */,
 				FDC5C08822CE35F1004DC34C /* AVLNode.swift in Sources */,
+				FD079A5A23265BD5004F04DA /* NumArray.swift in Sources */,
 				FD2097FA230E4C70002AD227 /* TreeNode.swift in Sources */,
 				FD60B2A822AF7E6900D0ABF9 /* XView.m in Sources */,
 				FD3B3C8F22D8B77800B81A83 /* TestStackViewController.swift in Sources */,
@@ -685,7 +685,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB664B222C112C800FAC14E /* BinaryTreeNode.m in Sources */,
-				FD87C9DC23239EAC00C3BAFD /* MyCalendar.swift in Sources */,
 				FD6835112304E2D700A3B327 /* StackOC.m in Sources */,
 				FD30A83922D99B4600945137 /* NetWorkUtilityTest.swift in Sources */,
 				FDB664B722C660FA00FAC14E /* BSTTree.swift in Sources */,
@@ -701,6 +700,7 @@
 				FD2097F823055A8D002AD227 /* LeeCodeTests.swift in Sources */,
 				FD60B2A522AE495700D0ABF9 /* LFUCache.m in Sources */,
 				FD05CE1B22B16041009D8B6C /* UtilityTest.swift in Sources */,
+				FD079A5B23265BD5004F04DA /* NumArray.swift in Sources */,
 				FDC5C08C22CE3701004DC34C /* AVLTree.swift in Sources */,
 				FDEFF91022AE104B00498B36 /* LFUCacheTest.m in Sources */,
 				FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */,

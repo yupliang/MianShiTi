@@ -182,6 +182,24 @@ class LeeCodeTests: XCTestCase {
         r = s.canPartition416([1,2,3,5])
         XCTAssertEqual(false, r)
     }
+
+    func test307() {
+        var item = NumArray([1,3,5])
+        var r = item.sumRange(0, 2)
+        XCTAssertEqual(9, r)
+        item.update(1, 2)
+        r = item.sumRange(0, 2)
+        XCTAssertEqual(8, r)
+        
+        item = NumArray([])
+        item = NumArray([9,-8])
+        item.update(0, 3)
+        r = item.sumRange(1, 1)
+        r = item.sumRange(0, 1)
+        item.update(1, -3)
+        r = item.sumRange(0, 1)
+        print("")
+    }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
