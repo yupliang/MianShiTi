@@ -203,6 +203,11 @@ class LeeCodeTests: XCTestCase {
         print("")
     }
     
+    func test315() -> Void {
+        let r = s.countSmaller315([5,2,6,1])
+        XCTAssertEqual([2,1,1,0], r)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

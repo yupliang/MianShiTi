@@ -434,4 +434,8 @@ class Solution66 {
         arrMemory[key] = r
         return r
     }
+    func countSmaller315(_ nums: [Int]) -> [Int] {
+        
+        return []
+    }
 }
