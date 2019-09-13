@@ -462,59 +462,29 @@ class Solution66 {
         var rightIndex = middle+1
         var tem:[Int] = []
         while leftIndex <= middle && rightIndex<=end {
-            if nums[leftIndex] <= (nums[rightIndex] << 1) {
-                if let t = tem.last {
-                    if t > nums[leftIndex] {
-                        tem[tem.count-1] = nums[leftIndex]
-                        tem.append(t)
-                    } else {
-                        tem.append(nums[leftIndex])
-                    }
-                } else {
-                    tem.append(nums[leftIndex])
-                }
+            if nums[leftIndex] < nums[rightIndex] {
+                tem.append(nums[leftIndex])
                 leftIndex = leftIndex+1
             } else {
-                if let t = tem.last {
-                    if t > nums[rightIndex] {
-                        tem[tem.count-1] = nums[rightIndex]
-                        tem.append(t)
-                    } else {
-                        tem.append(nums[rightIndex])
-                    }
-                } else {
-                    tem.append(nums[rightIndex])
-                }
-                rightIndex += 1
-                count493 += middle-leftIndex+1
-            }
-        }
-        while leftIndex <= middle {//左半部分有剩余
-            if let t = tem.last {
-                if t > nums[leftIndex] {
-                    tem[tem.count-1] = nums[leftIndex]
-                    tem.append(t)
-                } else {
-                    tem.append(nums[leftIndex])
-                }
-            } else {
-                tem.append(nums[leftIndex])
-            }
-            leftIndex = leftIndex+1
-        }
-        while rightIndex <= end {//有半部分有剩余
-            if let t = tem.last {
-                if t > nums[rightIndex] {
-                    tem[tem.count-1] = nums[rightIndex]
-                    tem.append(t)
-                } else {
-                    tem.append(nums[rightIndex])
-                }
-            } else {
                 tem.append(nums[rightIndex])
+                rightIndex += 1
+                for x in leftIndex...middle {
+                    if nums[x] > nums[rightIndex-1] * 2 {
+                        count493 += middle-x+1
+                        break
+                    }
+                }
             }
+        }
+        while leftIndex <= middle {
+            tem.append(nums[leftIndex])
+            leftIndex += 1
+        }
+        while rightIndex <= end {
+            tem.append(nums[rightIndex])
             rightIndex += 1
         }
+        
         for i in 0...tem.count-1 {
             nums[begin+i] = tem[i]
         }
