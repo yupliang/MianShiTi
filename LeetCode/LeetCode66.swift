@@ -438,4 +438,85 @@ class Solution66 {
         
         return []
     }
+    var count493 = 0
+    func reversePairs493(_ nums: [Int]) -> Int {
+        count493 = 0
+        var x = Array(nums)
+        sortSplit493(&x, 0, nums.count-1)
+//        print("nums \(nums) x \(x)")
+        return count493
+    }
+    func sortSplit493(_ nums: inout [Int], _ begin:Int,_ end:Int) {
+        if begin < end {
+            let middle = (begin + end) >> 1
+//            print("left \(begin)-\(middle)")
+            sortSplit493(&nums, begin, middle)
+//            print("right \(middle+1)-\(end)")
+            sortSplit493(&nums, middle+1, end)
+            mergeArr493(&nums, begin, middle, end)
+        }
+    }
+    func mergeArr493(_ nums: inout [Int], _ begin:Int, _ middle:Int, _ end:Int) {
+//        print("merge [\(begin),\(middle)]--[\(middle+1),\(end)]")
+        var leftIndex = begin
+        var rightIndex = middle+1
+        var tem:[Int] = []
+        while leftIndex <= middle && rightIndex<=end {
+            if nums[leftIndex] <= (nums[rightIndex] << 1) {
+                if let t = tem.last {
+                    if t > nums[leftIndex] {
+                        tem[tem.count-1] = nums[leftIndex]
+                        tem.append(t)
+                    } else {
+                        tem.append(nums[leftIndex])
+                    }
+                } else {
+                    tem.append(nums[leftIndex])
+                }
+                leftIndex = leftIndex+1
+            } else {
+                if let t = tem.last {
+                    if t > nums[rightIndex] {
+                        tem[tem.count-1] = nums[rightIndex]
+                        tem.append(t)
+                    } else {
+                        tem.append(nums[rightIndex])
+                    }
+                } else {
+                    tem.append(nums[rightIndex])
+                }
+                rightIndex += 1
+                count493 += middle-leftIndex+1
+            }
+        }
+        while leftIndex <= middle {//左半部分有剩余
+            if let t = tem.last {
+                if t > nums[leftIndex] {
+                    tem[tem.count-1] = nums[leftIndex]
+                    tem.append(t)
+                } else {
+                    tem.append(nums[leftIndex])
+                }
+            } else {
+                tem.append(nums[leftIndex])
+            }
+            leftIndex = leftIndex+1
+        }
+        while rightIndex <= end {//有半部分有剩余
+            if let t = tem.last {
+                if t > nums[rightIndex] {
+                    tem[tem.count-1] = nums[rightIndex]
+                    tem.append(t)
+                } else {
+                    tem.append(nums[rightIndex])
+                }
+            } else {
+                tem.append(nums[rightIndex])
+            }
+            rightIndex += 1
+        }
+        for i in 0...tem.count-1 {
+            nums[begin+i] = tem[i]
+        }
+    }
 }

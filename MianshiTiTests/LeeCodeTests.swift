@@ -207,7 +207,17 @@ class LeeCodeTests: XCTestCase {
         let r = s.countSmaller315([5,2,6,1])
         XCTAssertEqual([2,1,1,0], r)
     }
-    
+    func test493() {
+//        var r = s.reversePairs493([1,3,2,3,1])
+//        XCTAssertEqual(2, r)
+        var r = s.reversePairs493([2,4,3,5,1])
+        XCTAssertEqual(3, r)
+    }
+    func testForIterator() {
+        for i in 0...3 {
+            print(i)
+        }
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
