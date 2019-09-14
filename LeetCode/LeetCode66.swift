@@ -435,9 +435,56 @@ class Solution66 {
         return r
     }
     func countSmaller315(_ nums: [Int]) -> [Int] {
-        
+        var x: [(Int,Int)] = Array<(Int,Int)>(repeating: (0,0), count: nums.count)
+        for i in 0...nums.count-1 {
+            x[i] = (i,nums[i])
+        }
+        var tempArr = Array<(Int,Int)>(repeating: (0,0), count: x.count)
+        sortSplit315(&x, 0, nums.count-1, &tempArr)
         return []
     }
+    
+    func sortSplit315(_ nums: inout [(Int,Int)], _ begin:Int,_ end:Int, _ temp:inout [(Int,Int)]) {
+        if begin < end {
+            let middle = (begin + end) >> 1
+            sortSplit315(&nums, begin, middle, &temp)
+            sortSplit315(&nums, middle+1, end, &temp)
+            mergeArr315(&nums, begin, middle, end, &temp)
+        }
+    }
+    func mergeArr315(_ nums: inout [(Int,Int)], _ begin:Int, _ middle:Int, _ end:Int, _ tem:inout [(Int,Int)]) {
+        //        print("merge [\(begin),\(middle)]--[\(middle+1),\(end)]")
+        var leftIndex = begin
+        var rightIndex = middle+1
+        var temIndex:Int = 0
+        while leftIndex <= middle && rightIndex<=end {
+            if nums[leftIndex].1 < nums[rightIndex].1 {
+                tem[temIndex] = nums[leftIndex]
+                temIndex += 1
+                leftIndex = leftIndex+1
+            } else {
+                tem[temIndex] = nums[rightIndex]
+                temIndex += 1
+                rightIndex += 1
+            }
+        }
+        while leftIndex <= middle {
+            tem[temIndex] = nums[leftIndex]
+            temIndex += 1
+            leftIndex += 1
+        }
+        while rightIndex <= end {
+            tem[temIndex] = nums[rightIndex]
+            temIndex += 1
+            rightIndex += 1
+        }
+        
+        for i in 0...end-begin {
+            nums[begin+i] = tem[i]
+        }
+    }
+    
+    
     var count493 = 0
     func reversePairs493(_ nums: [Int]) -> Int {
         count493 = 0
