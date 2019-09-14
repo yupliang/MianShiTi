@@ -459,25 +459,27 @@ class Solution66 {
         }
     }
     func mergeArr315(_ nums: inout [(Int,Int)], _ begin:Int, _ middle:Int, _ end:Int, _ tem:inout [(Int,Int)]) {
-        //        print("merge [\(begin),\(middle)]--[\(middle+1),\(end)]")
+//        print("merge [\(begin),\(middle)]--[\(middle+1),\(end)]")
         var leftIndex = begin
         var rightIndex = middle+1
         var temIndex:Int = 0
         while leftIndex <= middle && rightIndex<=end {
             if nums[leftIndex].1 <= nums[rightIndex].1 {
+                index315[nums[leftIndex].0] += rightIndex-middle-1
                 tem[temIndex] = nums[leftIndex]
                 temIndex += 1
                 leftIndex = leftIndex+1
             } else {
-                for i in leftIndex...middle {
-                    index315[nums[i].0] += 1
-                }
+//                for i in leftIndex...middle {
+//                    index315[nums[i].0] += 1
+//                }
                 tem[temIndex] = nums[rightIndex]
                 temIndex += 1
                 rightIndex += 1
             }
         }
         while leftIndex <= middle {
+            index315[nums[leftIndex].0] += rightIndex-middle-1
             tem[temIndex] = nums[leftIndex]
             temIndex += 1
             leftIndex += 1
