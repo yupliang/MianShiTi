@@ -437,6 +437,9 @@ class Solution66 {
 
     var index315:[Int]!
     func countSmaller315(_ nums: [Int]) -> [Int] {
+        if nums.count == 0 {
+            return []
+        }
         index315 = Array<Int>(repeating: 0, count: nums.count)
         var x: [(Int,Int)] = Array<(Int,Int)>(repeating: (0,0), count: nums.count)
         for i in 0...nums.count-1 {
