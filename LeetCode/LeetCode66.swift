@@ -434,14 +434,17 @@ class Solution66 {
         arrMemory[key] = r
         return r
     }
+
+    var index315:[Int]!
     func countSmaller315(_ nums: [Int]) -> [Int] {
+        index315 = Array<Int>(repeating: 0, count: nums.count)
         var x: [(Int,Int)] = Array<(Int,Int)>(repeating: (0,0), count: nums.count)
         for i in 0...nums.count-1 {
             x[i] = (i,nums[i])
         }
         var tempArr = Array<(Int,Int)>(repeating: (0,0), count: x.count)
         sortSplit315(&x, 0, nums.count-1, &tempArr)
-        return []
+        return index315
     }
     
     func sortSplit315(_ nums: inout [(Int,Int)], _ begin:Int,_ end:Int, _ temp:inout [(Int,Int)]) {
@@ -463,6 +466,9 @@ class Solution66 {
                 temIndex += 1
                 leftIndex = leftIndex+1
             } else {
+                for i in leftIndex...middle {
+                    index315[nums[i].0] += 1
+                }
                 tem[temIndex] = nums[rightIndex]
                 temIndex += 1
                 rightIndex += 1
