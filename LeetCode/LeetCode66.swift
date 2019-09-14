@@ -442,25 +442,26 @@ class Solution66 {
     func reversePairs493(_ nums: [Int]) -> Int {
         count493 = 0
         var x = Array(nums)
-        sortSplit493(&x, 0, nums.count-1)
+        var tempArr = Array<Int>(repeating: 0, count: x.count)
+        sortSplit493(&x, 0, nums.count-1, &tempArr)
 //        print("nums \(nums) x \(x)")
         return count493
     }
-    func sortSplit493(_ nums: inout [Int], _ begin:Int,_ end:Int) {
+    func sortSplit493(_ nums: inout [Int], _ begin:Int,_ end:Int, _ temp:inout [Int]) {
         if begin < end {
             let middle = (begin + end) >> 1
 //            print("left \(begin)-\(middle)")
-            sortSplit493(&nums, begin, middle)
+            sortSplit493(&nums, begin, middle, &temp)
 //            print("right \(middle+1)-\(end)")
-            sortSplit493(&nums, middle+1, end)
-            mergeArr493(&nums, begin, middle, end)
+            sortSplit493(&nums, middle+1, end, &temp)
+            mergeArr493(&nums, begin, middle, end, &temp)
         }
     }
-    func mergeArr493(_ nums: inout [Int], _ begin:Int, _ middle:Int, _ end:Int) {
+    func mergeArr493(_ nums: inout [Int], _ begin:Int, _ middle:Int, _ end:Int, _ tem:inout [Int]) {
 //        print("merge [\(begin),\(middle)]--[\(middle+1),\(end)]")
         var leftIndex = begin
         var rightIndex = middle+1
-        var tem:[Int] = Array<Int>(repeating: 0, count: end-begin+1)
+//        var tem:[Int] = Array<Int>(repeating: 0, count: end-begin+1)
         var temIndex:Int = 0
         while leftIndex <= middle && rightIndex<=end {
             if nums[leftIndex] < nums[rightIndex] {
