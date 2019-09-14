@@ -464,7 +464,7 @@ class Solution66 {
         var rightIndex = middle+1
         var temIndex:Int = 0
         while leftIndex <= middle && rightIndex<=end {
-            if nums[leftIndex].1 < nums[rightIndex].1 {
+            if nums[leftIndex].1 <= nums[rightIndex].1 {
                 tem[temIndex] = nums[leftIndex]
                 temIndex += 1
                 leftIndex = leftIndex+1
