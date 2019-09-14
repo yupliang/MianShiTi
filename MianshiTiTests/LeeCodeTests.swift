@@ -208,10 +208,10 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual([2,1,1,0], r)
     }
     func test493() {
-//        var r = s.reversePairs493([1,3,2,3,1])
-//        XCTAssertEqual(2, r)
-        var r = s.reversePairs493([-5,-5])
-        XCTAssertEqual(1, r)
+        var r = s.reversePairs493([1,3,2,3,1])
+        XCTAssertEqual(2, r)
+//        var r = s.reversePairs493([-5,-5])
+//        XCTAssertEqual(1, r)
     }
     func testForIterator() {
         for i in 0...3 {

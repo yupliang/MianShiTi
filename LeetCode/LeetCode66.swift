@@ -460,13 +460,18 @@ class Solution66 {
 //        print("merge [\(begin),\(middle)]--[\(middle+1),\(end)]")
         var leftIndex = begin
         var rightIndex = middle+1
-        var tem:[Int] = []
+        var tem:[Int] = Array<Int>(repeating: 0, count: end-begin+1)
+        var temIndex:Int = 0
         while leftIndex <= middle && rightIndex<=end {
             if nums[leftIndex] < nums[rightIndex] {
-                tem.append(nums[leftIndex])
+//                tem.append(nums[leftIndex])
+                tem[temIndex] = nums[leftIndex]
+                temIndex += 1
                 leftIndex = leftIndex+1
             } else {
-                tem.append(nums[rightIndex])
+//                tem.append(nums[rightIndex])
+                tem[temIndex] = nums[rightIndex]
+                temIndex += 1
                 rightIndex += 1
                 for x in leftIndex...middle {
                     if nums[x] > nums[rightIndex-1] * 2 {
@@ -477,15 +482,19 @@ class Solution66 {
             }
         }
         while leftIndex <= middle {
-            tem.append(nums[leftIndex])
+//            tem.append(nums[leftIndex])
+            tem[temIndex] = nums[leftIndex]
+            temIndex += 1
             leftIndex += 1
         }
         while rightIndex <= end {
-            tem.append(nums[rightIndex])
+//            tem.append(nums[rightIndex])
+            tem[temIndex] = nums[rightIndex]
+            temIndex += 1
             rightIndex += 1
         }
         
-        for i in 0...tem.count-1 {
+        for i in 0...end-begin {
             nums[begin+i] = tem[i]
         }
     }
