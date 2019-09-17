@@ -227,11 +227,15 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(3, r)
         r = s.divide(7, -3)
         XCTAssertEqual(-2, r)
+        r = s.divide(-2147483648, -1)
+        XCTAssertEqual(2147483647, r)
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            let r = s.divide(-2147483648, -1)
+
         }
     }
 
