@@ -222,6 +222,12 @@ class LeeCodeTests: XCTestCase {
             print(i)
         }
     }
+    func test29() {
+        var r = s.divide(10, 3)
+        XCTAssertEqual(3, r)
+        r = s.divide(7, -3)
+        XCTAssertEqual(-2, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

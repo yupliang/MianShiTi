@@ -557,4 +557,18 @@ class Solution66 {
             nums[begin+i] = tem[i]
         }
     }
+    func divide(_ dividend: Int, _ divisor: Int) -> Int {
+        var r = 0
+        var aDividend = abs(dividend)
+        let aDivisor = abs(divisor)
+        while aDividend > aDivisor {
+            aDividend -= aDivisor
+            r += 1
+        }
+        if (dividend > 0 && divisor < 0 || dividend < 0 && divisor > 0) {
+            return -r
+        } else {
+            return r
+        }
+    }
 }
