@@ -230,6 +230,17 @@ class LeeCodeTests: XCTestCase {
         r = s.divide(-2147483648, -1)
         XCTAssertEqual(2147483647, r)
     }
+    func test74() {
+        let matrix = [
+            [1,   3,  5,  7],
+            [10, 11, 16, 20],
+            [23, 30, 34, 50]
+        ]
+        var r = s.searchMatrix(matrix, 3)
+        XCTAssertEqual(true, r)
+        r = s.searchMatrix(matrix, 13)
+        XCTAssertEqual(false, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
