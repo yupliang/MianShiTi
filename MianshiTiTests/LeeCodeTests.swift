@@ -231,7 +231,7 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(2147483647, r)
     }
     func test74() {
-        let matrix = [
+        var matrix = [
             [1,   3,  5,  7],
             [10, 11, 16, 20],
             [23, 30, 34, 50]
@@ -240,6 +240,24 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(true, r)
         r = s.searchMatrix(matrix, 13)
         XCTAssertEqual(false, r)
+        matrix = [[1]]
+        r = s.searchMatrix(matrix, 1)
+        XCTAssertEqual(true, r)
+        matrix = [[1],[3]]
+        r = s.searchMatrix(matrix, 3)
+        XCTAssertEqual(true, r)
+        matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,50]]
+        r = s.searchMatrix(matrix, 10)
+        XCTAssertEqual(true, r)
+    }
+    func testhelper74() {
+        var row = 0,column = 0
+        s.helper74(1, 2, 1, &row, &column)
+        XCTAssertEqual(1, row)
+        XCTAssertEqual(0, column)
+        s.helper74(4, 3, 4, &row, &column)
+        XCTAssertEqual(1, row)
+        XCTAssertEqual(0, column)
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.

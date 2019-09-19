@@ -604,6 +604,9 @@ class Solution66 {
         helper74(middle, m, n, &row, &column)
         var value = matrix[row][column]
         var flag = value != target
+        if !flag {
+            return true
+        }
         while flag {
             if value > target {
                 end = middle
@@ -628,15 +631,7 @@ class Solution66 {
         return false
     }
     func helper74(_ value:Int, _ m:Int, _ n:Int, _ row:inout Int, _ column:inout Int) {
-        if value < n {
-            row = 0
-            column = value
-        } else {
-            row = value/n
-            column = value-row*n
-            if column == 0 {
-                row -= 1
-            }
-        }
+        row = value/n
+        column = (value+1)%n == 0 ? n-1 : (value+1)%n-1
     }
 }
