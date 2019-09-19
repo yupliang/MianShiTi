@@ -635,6 +635,12 @@ class Solution66 {
         column = (value+1)%n == 0 ? n-1 : (value+1)%n-1
     }
     func search(_ nums: [Int], _ target: Int) -> Bool {
+        if nums.count == 0 {
+            return false
+        }
+        if nums.count == 1 {
+            return nums[0] == target
+        }
         var media = 0
         for i in 1...nums.count-1 {
             if nums[i] < nums[i-1] {
@@ -673,6 +679,8 @@ class Solution66 {
                     return true
                 }
             }
+        } else {
+            return true
         }
         
         return false
