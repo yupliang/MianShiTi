@@ -634,4 +634,47 @@ class Solution66 {
         row = value/n
         column = (value+1)%n == 0 ? n-1 : (value+1)%n-1
     }
+    func search(_ nums: [Int], _ target: Int) -> Bool {
+        var media = 0
+        for i in 1...nums.count-1 {
+            if nums[i] < nums[i-1] {
+                media = i
+            }
+        }
+        var arr:[Int] = Array<Int>(repeating: 0, count: nums.count)
+        for i in 0...nums.count-1 {
+            if i < media {
+                arr[i + nums.count - media] = nums[i]
+            } else {
+                arr[i-media] = nums[i]
+            }
+        }
+        
+        var begin = 0
+        var end = arr.count - 1
+        var middle = (begin+end)>>1
+        if arr[middle] != target {
+            while begin != end {
+                if arr[middle] > target {
+                    if middle == end {
+                        end = begin
+                    } else {
+                        end = middle
+                    }
+                } else {
+                    if begin == middle {
+                        begin = end
+                    } else {
+                        begin = middle
+                    }
+                }
+                middle = (begin+end)>>1
+                if arr[middle] == target {
+                    return true
+                }
+            }
+        }
+        
+        return false
+    }
 }

@@ -259,6 +259,13 @@ class LeeCodeTests: XCTestCase {
         XCTAssertEqual(1, row)
         XCTAssertEqual(0, column)
     }
+    func test81() {
+        let arr = [2,5,6,0,0,1,2]
+        var r = s.search(arr, 0)
+        XCTAssertEqual(true, r)
+        r = s.search(arr, 3)
+        XCTAssertEqual(false, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
