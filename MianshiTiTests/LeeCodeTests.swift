@@ -270,6 +270,14 @@ class LeeCodeTests: XCTestCase {
         r = s.search(arr, 1)
         XCTAssertEqual(true, r)
     }
+    func test162() {
+        var nums = [1,2,3,1]
+        var r = s.findPeakElement(nums)
+        XCTAssertEqual(2, r)
+        nums = [1,2,1,3,5,6,4]
+        r = s.findPeakElement(nums)
+        XCTAssertTrue(r == 1 || r == 5)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
