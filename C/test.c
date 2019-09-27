@@ -36,14 +36,9 @@
 //
 char pear[40];
 int main() {
-//    char *ptr = (char *)malloc(10);
-//    printf("ptr is %p", ptr);
-//    int *p = 0;//0x7f8c85400690
-//    printf("引起一个断错误 int is %lu p is %lu\n", sizeof(int),sizeof(p));
-//    *p = 17;
-    const int * grape;
-    int const * grape1;
-    int * const grape_jelly;
-
+    char *p = "abc";
+    ungetc(*p, stdin);
+    printf("c is %c, getchar -- %c", *p,getchar());
+    putchar('\n');
     return 0;
 }
