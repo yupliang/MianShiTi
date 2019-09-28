@@ -736,12 +736,18 @@ class Solution66 {
             let rightMin = helper174(rowIndex, colIndex+1, rowSize, colSize, dungeon)
             let downMin = helper174(rowIndex+1, colIndex, rowSize, colSize, dungeon)
             var r = 0
-            if rightMin == Int(INT64_MAX) && downMin == Int(INT64_MAX) {//代表最后一个格子
-               r = -dungeon[rowIndex][colIndex]
-            } else {
-                r = -dungeon[rowIndex][colIndex] + min(rightMin, downMin)
+            if rowIndex == rowSize - 1 && colIndex == colSize - 1 {//代表最后一个格子
+                if dungeon[rowIndex][colIndex] >= 0 {
+                    dicCalculateMinimumHP[key] = 0
+                    return 0
+                } else {
+                    dicCalculateMinimumHP[key] = -dungeon[rowIndex][colIndex]
+                    return -dicCalculateMinimumHP[key]!
+                }
             }
             
+            r = -dungeon[rowIndex][colIndex] + min(rightMin, downMin)
+                
             if r < 0 {
                 r = 0
             }
