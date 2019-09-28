@@ -717,7 +717,9 @@ class Solution66 {
         }
         return result
     }
+    var dicCalculateMinimumHP:[String:Int] = [:]
     func calculateMinimumHP(_ dungeon: [[Int]]) -> Int {
+        dicCalculateMinimumHP.removeAll()
         let rowLen = dungeon.count
         let colLen = dungeon[0].count
         return helper174(0,0,rowLen,colLen,dungeon)
@@ -726,6 +728,10 @@ class Solution66 {
      帮助函数的用途：计算[rowIndex, colIndex]格子中救出公主所需要的最小生命值
      */
     func helper174(_ rowIndex:Int, _ colIndex:Int, _ rowSize:Int, _ colSize:Int, _ dungeon:[[Int]]) -> Int {
+        let key = "\(rowIndex)\(colIndex)"
+        if dicCalculateMinimumHP[key] != nil {
+            return dicCalculateMinimumHP[key]!
+        }
         if rowIndex < rowSize && colIndex < colSize {
             let rightMin = helper174(rowIndex, colIndex+1, rowSize, colSize, dungeon)
             let downMin = helper174(rowIndex+1, colIndex, rowSize, colSize, dungeon)
@@ -743,8 +749,10 @@ class Solution66 {
             if rowIndex == 0 && colIndex == 0 {
                 r += 1 //保证可以进入下一关
             }
+            dicCalculateMinimumHP[key] = r
             return r
         }
+        dicCalculateMinimumHP[key] = Int(INT64_MAX)
         return Int(INT64_MAX)
     }
 }
