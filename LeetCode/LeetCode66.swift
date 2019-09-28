@@ -730,19 +730,21 @@ class Solution66 {
             let rightMin = helper174(rowIndex, colIndex+1, rowSize, colSize, dungeon)
             let downMin = helper174(rowIndex+1, colIndex, rowSize, colSize, dungeon)
             var r = 0
-            if rightMin == INT_MAX && downMin == INT_MAX {//代表最后一个格子
+            if rightMin == Int(INT64_MAX) && downMin == Int(INT64_MAX) {//代表最后一个格子
                r = -dungeon[rowIndex][colIndex]
             } else {
                 r = -dungeon[rowIndex][colIndex] + min(rightMin, downMin)
             }
-            if rowIndex == 0 && colIndex == 0 {
-                r += 1 //保证可以进入下一关
-            }
+            
             if r < 0 {
                 r = 0
             }
+            
+            if rowIndex == 0 && colIndex == 0 {
+                r += 1 //保证可以进入下一关
+            }
             return r
         }
-        return Int(INT_MAX)
+        return Int(INT64_MAX)
     }
 }

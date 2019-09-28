@@ -288,6 +288,9 @@ class LeeCodeTests: XCTestCase {
         arr = [[-2,-3,3],[-5,-10,1],[10,30,-5]]
         r = s.calculateMinimumHP(arr)
         XCTAssertEqual(7, r)
+        arr = [[100]]
+        r = s.calculateMinimumHP(arr)
+        XCTAssertEqual(1, r)
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.
