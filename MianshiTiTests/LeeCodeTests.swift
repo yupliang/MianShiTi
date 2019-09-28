@@ -278,6 +278,17 @@ class LeeCodeTests: XCTestCase {
         r = s.findPeakElement(nums)
         XCTAssertTrue(r == 1 || r == 5)
     }
+    func test174() {
+        var arr = [[-1,-5],[4,-3]]
+        var r = s.calculateMinimumHP(arr)
+        XCTAssertEqual(r, 2)
+        arr = [[-1,-5],[-4,-3]]
+        r = s.calculateMinimumHP(arr)
+        XCTAssertEqual(9, r)
+        arr = [[-2,-3,3],[-5,-10,1],[10,30,-5]]
+        r = s.calculateMinimumHP(arr)
+        XCTAssertEqual(7, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

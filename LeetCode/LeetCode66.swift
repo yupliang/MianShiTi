@@ -717,4 +717,32 @@ class Solution66 {
         }
         return result
     }
+    func calculateMinimumHP(_ dungeon: [[Int]]) -> Int {
+        let rowLen = dungeon.count
+        let colLen = dungeon[0].count
+        return helper174(0,0,rowLen,colLen,dungeon)
+    }
+    /*
+     帮助函数的用途：计算[rowIndex, colIndex]格子中救出公主所需要的最小生命值
+     */
+    func helper174(_ rowIndex:Int, _ colIndex:Int, _ rowSize:Int, _ colSize:Int, _ dungeon:[[Int]]) -> Int {
+        if rowIndex < rowSize && colIndex < colSize {
+            let rightMin = helper174(rowIndex, colIndex+1, rowSize, colSize, dungeon)
+            let downMin = helper174(rowIndex+1, colIndex, rowSize, colSize, dungeon)
+            var r = 0
+            if rightMin == INT_MAX && downMin == INT_MAX {//代表最后一个格子
+               r = -dungeon[rowIndex][colIndex]
+            } else {
+                r = -dungeon[rowIndex][colIndex] + min(rightMin, downMin)
+            }
+            if rowIndex == 0 && colIndex == 0 {
+                r += 1 //保证可以进入下一关
+            }
+            if r < 0 {
+                r = 0
+            }
+            return r
+        }
+        return Int(INT_MAX)
+    }
 }
