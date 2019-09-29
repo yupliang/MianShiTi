@@ -55,6 +55,8 @@ void gettoken() {//读取下一个标记
     if (*p == '*') {
 //        printf("拷贝前 %s", this.string);
         strcpy(this.string, "point to(指向)");
+        this.type = '*';
+        return;
 //        printf("拷贝后 %s", this.string);
     }
     this.string[1] = '\0';
@@ -82,7 +84,7 @@ void deal_with_arrays() {
         printf("array ");
         gettoken();/*数字或]*/
         if (isdigit(this.string[0])) {
-            printf("0..%d", atoi(this.string)-1);
+            printf("0..%d ", atoi(this.string)-1);
             gettoken();//读取']'
         }
         gettoken();
