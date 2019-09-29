@@ -728,8 +728,9 @@ class Solution66 {
      帮助函数的用途：计算[rowIndex, colIndex]格子中救出公主所需要的最小生命值
      */
     func helper174(_ rowIndex:Int, _ colIndex:Int, _ rowSize:Int, _ colSize:Int, _ dungeon:[[Int]]) -> Int {
-        let key = "\(rowIndex)\(colIndex)"
+        let key = "\(rowIndex)_\(colIndex)"
         if dicCalculateMinimumHP[key] != nil {
+            
             return dicCalculateMinimumHP[key]!
         }
         if rowIndex == rowSize - 1 && colIndex == colSize - 1 {//代表最后一个格子
