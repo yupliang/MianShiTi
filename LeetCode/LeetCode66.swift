@@ -722,7 +722,7 @@ class Solution66 {
         dicCalculateMinimumHP.removeAll()
         let rowLen = dungeon.count
         let colLen = dungeon[0].count
-        return helper174(0,0,rowLen,colLen,dungeon)
+        return helper174(0,0,rowLen,colLen,dungeon) + 1
     }
     /*
      帮助函数的用途：计算[rowIndex, colIndex]格子中救出公主所需要的最小生命值
@@ -732,29 +732,24 @@ class Solution66 {
         if dicCalculateMinimumHP[key] != nil {
             return dicCalculateMinimumHP[key]!
         }
-        if rowIndex < rowSize && colIndex < colSize {
+        if rowIndex == rowSize - 1 && colIndex == colSize - 1 {//代表最后一个格子
+            if dungeon[rowIndex][colIndex] >= 0 {
+                dicCalculateMinimumHP[key] = 0
+                return 0
+            } else {
+                dicCalculateMinimumHP[key] = -dungeon[rowIndex][colIndex]
+                return -dungeon[rowIndex][colIndex]
+            }
+        } else if rowIndex < rowSize && colIndex < colSize {
             let rightMin = helper174(rowIndex, colIndex+1, rowSize, colSize, dungeon)
             let downMin = helper174(rowIndex+1, colIndex, rowSize, colSize, dungeon)
             var r = 0
-            if rowIndex == rowSize - 1 && colIndex == colSize - 1 {//代表最后一个格子
-                if dungeon[rowIndex][colIndex] >= 0 {
-                    dicCalculateMinimumHP[key] = 0
-                    return 0
-                } else {
-                    dicCalculateMinimumHP[key] = -dungeon[rowIndex][colIndex]
-                    return -dicCalculateMinimumHP[key]!
-                }
-            }
-            
             r = -dungeon[rowIndex][colIndex] + min(rightMin, downMin)
                 
             if r < 0 {
                 r = 0
             }
             
-            if rowIndex == 0 && colIndex == 0 {
-                r += 1 //保证可以进入下一关
-            }
             dicCalculateMinimumHP[key] = r
             return r
         }
