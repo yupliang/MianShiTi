@@ -34,6 +34,9 @@ enum type_tag classify_string() {
     if (STRCMP(s,==,"int")) {
         return TYPE;
     }
+    if (STRCMP(s,==,"char")) {
+        return TYPE;
+    }
     return IDENTIFIER;
 }
 void gettoken() {//读取下一个标记
@@ -93,6 +96,9 @@ void deal_with_arrays() {
 }
 
 void deal_with_func_args() {
+    while (this.type != ')') {
+        gettoken();
+    }
     gettoken();
     printf("function returning ");
 }
