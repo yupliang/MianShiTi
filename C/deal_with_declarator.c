@@ -92,19 +92,32 @@ void deal_with_arrays() {
     }
 }
 
+void deal_with_func_args() {
+    gettoken();
+    printf("function returning ");
+}
+
 void deal_with_declarator() {//处理声明器
     /*处理标识符之后可能存在数组*/
     switch (this.type) {
         case '[':
             deal_with_arrays();
             break;
-            
+        case '(':
+            deal_with_func_args();
+            break;
         default:
             break;
     }
     deal_with_pointers();
     while (top >= 0) {
-        printf("%s ", pop.string);
+        if (stack[top].type == '(') {
+            pop;
+            gettoken();
+            deal_with_declarator();
+        } else {
+            printf("%s ", pop.string);
+        }
     }
 }
 
