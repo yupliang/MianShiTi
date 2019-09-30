@@ -757,4 +757,19 @@ class Solution66 {
         dicCalculateMinimumHP[key] = Int(INT64_MAX)
         return Int(INT64_MAX)
     }
+    func findDuplicate(_ nums: [Int]) -> Int {
+        var tortoise = nums[0]
+        var hare = nums[0]
+        repeat {
+            tortoise = nums[tortoise]
+            hare = nums[nums[hare]]
+        } while(tortoise != hare)
+        
+        hare = nums[0]
+        while hare != tortoise {
+            hare = nums[hare]
+            tortoise = nums[tortoise]
+        }
+        return tortoise
+    }
 }

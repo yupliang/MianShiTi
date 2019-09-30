@@ -297,6 +297,17 @@ class LeeCodeTests: XCTestCase {
         r = s.calculateMinimumHP(arr)
         XCTAssertEqual(888, r)
     }
+    func test287() -> Void {
+        var arr = [1,3,4,2,2]
+        var r = s.findDuplicate(arr)
+        XCTAssertEqual(2, r)
+        arr = [3,1,3,4,2]
+        r = s.findDuplicate(arr)
+        XCTAssertEqual(3, r)
+        arr = [2,5,9,6,9,3,8,9,7,1]
+        r = s.findDuplicate(arr)
+        XCTAssertEqual(9, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
