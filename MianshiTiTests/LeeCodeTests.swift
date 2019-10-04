@@ -313,11 +313,18 @@ class LeeCodeTests: XCTestCase {
         let r = s.maxSubArray(arr)
         XCTAssertEqual(6, r)
     }
+    func test53ForDideAndConquerEdition() -> Void {
+        let arr = [4,5]
+        let r = s.maxSubArrayDivideAndConquerEdition(arr)
+        XCTAssertEqual(9, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
-            let r = s.divide(-2147483648, -1)
+            for i in 0...0 {
+                print("\(i) == i")
+            }
 
         }
     }

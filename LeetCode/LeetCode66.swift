@@ -785,4 +785,76 @@ class Solution66 {
         }
         return ans
     }
+    func maxSubArrayDivideAndConquerEdition(_ nums: [Int]) -> Int {//分治思想
+        var subBegin = 0
+        var subEnd = 0
+        return maxSubArrayDivideAndConquerEditionHelper(nums, 0, nums.count-1, &subBegin,&subEnd)
+    }
+    func maxSubArrayDivideAndConquerEditionHelper(_ nums:[Int],_ begin:Int, _ end:Int,_ subBegin:inout Int, _ subEnd:inout Int) -> Int {
+        let middle = (begin + end)/2
+        if middle == begin || middle == end {
+            if nums[begin] > nums[end] {
+                if nums[begin] + nums[end] > nums[begin]{
+                    subBegin = begin
+                    subEnd = end
+                    return nums[begin]+nums[end]
+                } else {
+                    subBegin = begin
+                    subEnd = begin
+                    return nums[begin]
+                }
+            } else {
+                if nums[begin] + nums[end] > nums[end]{
+                    subBegin = begin
+                    subEnd = end
+                    return nums[begin]+nums[end]
+                } else {
+                    subBegin = end
+                    subEnd = end
+                    return nums[end]
+                }
+            }
+        }
+        let leftPart = maxSubArrayDivideAndConquerEditionHelper(nums, begin, middle, &subBegin, &subEnd)
+        let leftSubBegin = subBegin
+        let leftSubEnd = subEnd
+        let rightPart = maxSubArrayDivideAndConquerEditionHelper(nums, middle+1, end, &subBegin,&subEnd)
+        let rightSubBegin = subBegin
+        let rightSubEnd = subEnd
+        //尝试将两部分结合
+        var sumCrossTwoParts = leftPart+rightPart
+        if (leftSubEnd + 1 <= middle) {
+            for i in leftSubEnd+1...middle {
+                sumCrossTwoParts = sumCrossTwoParts+nums[i]
+            }
+        }
+        if middle+1 <= rightSubBegin - 1 {
+            for i in middle+1...rightSubBegin-1 {
+                sumCrossTwoParts = sumCrossTwoParts+nums[i]
+            }
+        }
+        
+        if leftPart > rightPart {
+            if sumCrossTwoParts > leftPart {
+                subBegin = leftSubBegin
+                subEnd = rightSubEnd
+                return sumCrossTwoParts
+            } else {
+                subBegin = leftSubBegin
+                subEnd = leftSubEnd
+                return leftPart
+            }
+            
+        } else {
+            if sumCrossTwoParts > rightPart {
+                subBegin = leftSubBegin
+                subEnd = rightSubEnd
+                return sumCrossTwoParts
+            } else {
+                subBegin = rightSubBegin
+                subEnd = rightSubEnd
+                return rightPart
+            }
+        }
+    }
 }
