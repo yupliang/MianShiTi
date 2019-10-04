@@ -821,23 +821,35 @@ class Solution66 {
         let rightPart = maxSubArrayDivideAndConquerEditionHelper(nums, middle+1, end, &subBegin,&subEnd)
         let rightSubBegin = subBegin
         let rightSubEnd = subEnd
-        //尝试将两部分结合
-        var sumCrossTwoParts = leftPart+rightPart
-        if (leftSubEnd + 1 <= middle) {
-            for i in leftSubEnd+1...middle {
-                sumCrossTwoParts = sumCrossTwoParts+nums[i]
+        //尝试将两部分结合,既然是两部分结合，所以必须包含左半部分的最后一个；有半部分的第一个
+        var sumCrossTwoParts = 0, crossLeftBegin = 0,crossRightEnd = 0
+        
+        var thisLeftEndSum = 0, maxleft = 0
+        for i in 0...middle-leftSubBegin {
+            thisLeftEndSum += nums[middle-i]
+            if thisLeftEndSum > maxleft {
+                crossLeftBegin = middle-i
+                maxleft = thisLeftEndSum
             }
         }
+        sumCrossTwoParts += maxleft
+        
         if middle+1 <= rightSubBegin - 1 {
-            for i in middle+1...rightSubBegin-1 {
-                sumCrossTwoParts = sumCrossTwoParts+nums[i]
+            var thisRightFrontSum = 0, maxright = 0
+            for i in middle+1...rightSubEnd {
+                thisRightFrontSum += nums[i]
+                if thisRightFrontSum > maxright {
+                    crossRightEnd = i
+                    maxright = thisRightFrontSum
+                }
             }
+            sumCrossTwoParts += maxright
         }
         
         if leftPart > rightPart {
             if sumCrossTwoParts > leftPart {
-                subBegin = leftSubBegin
-                subEnd = rightSubEnd
+                subBegin = crossLeftBegin
+                subEnd = crossRightEnd
                 return sumCrossTwoParts
             } else {
                 subBegin = leftSubBegin
@@ -847,8 +859,8 @@ class Solution66 {
             
         } else {
             if sumCrossTwoParts > rightPart {
-                subBegin = leftSubBegin
-                subEnd = rightSubEnd
+                subBegin = crossLeftBegin
+                subEnd = crossRightEnd
                 return sumCrossTwoParts
             } else {
                 subBegin = rightSubBegin
