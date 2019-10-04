@@ -308,6 +308,11 @@ class LeeCodeTests: XCTestCase {
         r = s.findDuplicate(arr)
         XCTAssertEqual(9, r)
     }
+    func test53() -> Void {
+        let arr = [-2,1,-3,4,-1,2,1,-5,4]
+        let r = s.maxSubArray(arr)
+        XCTAssertEqual(6, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

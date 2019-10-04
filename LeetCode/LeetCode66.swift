@@ -772,4 +772,17 @@ class Solution66 {
         }
         return tortoise
     }
+    func maxSubArray(_ nums: [Int]) -> Int {
+        var sum = 0
+        var ans = nums[0]
+        for num in nums {
+            if sum >= 0 {
+                sum += num
+            } else {
+                sum = num
+            }
+            ans = max(sum, ans)
+        }
+        return ans
+    }
 }
