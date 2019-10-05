@@ -834,7 +834,7 @@ class Solution66 {
         }
         sumCrossTwoParts += maxleft
         
-        if middle+1 <= rightSubBegin - 1 {
+        if middle+1 <= rightSubBegin {
             var thisRightFrontSum = 0, maxright = 0
             for i in middle+1...rightSubEnd {
                 thisRightFrontSum += nums[i]
