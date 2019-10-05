@@ -825,7 +825,7 @@ class Solution66 {
         var sumCrossTwoParts = 0, crossLeftBegin = 0,crossRightEnd = 0
         
         var thisLeftEndSum = 0, maxleft = 0
-        for i in 0...middle-leftSubBegin {
+        for i in 0...middle-begin {
             thisLeftEndSum += nums[middle-i]
             if thisLeftEndSum > maxleft {
                 crossLeftBegin = middle-i
@@ -834,17 +834,16 @@ class Solution66 {
         }
         sumCrossTwoParts += maxleft
         
-        if middle+1 <= rightSubBegin {
-            var thisRightFrontSum = 0, maxright = 0
-            for i in middle+1...rightSubEnd {
-                thisRightFrontSum += nums[i]
-                if thisRightFrontSum > maxright {
-                    crossRightEnd = i
-                    maxright = thisRightFrontSum
-                }
+        var thisRightFrontSum = 0, maxright = 0
+        for i in middle+1...end {
+            thisRightFrontSum += nums[i]
+            if thisRightFrontSum > maxright {
+                crossRightEnd = i
+                maxright = thisRightFrontSum
             }
-            sumCrossTwoParts += maxright
         }
+        sumCrossTwoParts += maxright
+        
         
         if leftPart > rightPart {
             if sumCrossTwoParts > leftPart {
