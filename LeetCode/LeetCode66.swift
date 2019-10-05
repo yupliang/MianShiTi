@@ -791,6 +791,11 @@ class Solution66 {
         return maxSubArrayDivideAndConquerEditionHelper(nums, 0, nums.count-1, &subBegin,&subEnd)
     }
     func maxSubArrayDivideAndConquerEditionHelper(_ nums:[Int],_ begin:Int, _ end:Int,_ subBegin:inout Int, _ subEnd:inout Int) -> Int {
+        if begin == end {
+            subBegin = begin
+            subEnd = begin
+            return nums[begin]
+        }
         let middle = (begin + end)/2
         if middle == begin || middle == end {
             if nums[begin] > nums[end] {
@@ -823,11 +828,12 @@ class Solution66 {
         let rightSubEnd = subEnd
         //尝试将两部分结合,既然是两部分结合，所以必须包含左半部分的最后一个；有半部分的第一个
         var sumCrossTwoParts = 0, crossLeftBegin = 0,crossRightEnd = 0
-        
+        var leftDo = false, rightDo = false
         var thisLeftEndSum = 0, maxleft = 0
         for i in 0...middle-begin {
             thisLeftEndSum += nums[middle-i]
             if thisLeftEndSum > maxleft {
+                leftDo = true
                 crossLeftBegin = middle-i
                 maxleft = thisLeftEndSum
             }
@@ -838,6 +844,7 @@ class Solution66 {
         for i in middle+1...end {
             thisRightFrontSum += nums[i]
             if thisRightFrontSum > maxright {
+                rightDo = true
                 crossRightEnd = i
                 maxright = thisRightFrontSum
             }
@@ -846,7 +853,7 @@ class Solution66 {
         
         
         if leftPart > rightPart {
-            if sumCrossTwoParts > leftPart {
+            if leftDo && rightDo && sumCrossTwoParts > leftPart {
                 subBegin = crossLeftBegin
                 subEnd = crossRightEnd
                 return sumCrossTwoParts
@@ -857,7 +864,7 @@ class Solution66 {
             }
             
         } else {
-            if sumCrossTwoParts > rightPart {
+            if leftDo && rightDo && sumCrossTwoParts > rightPart {
                 subBegin = crossLeftBegin
                 subEnd = crossRightEnd
                 return sumCrossTwoParts

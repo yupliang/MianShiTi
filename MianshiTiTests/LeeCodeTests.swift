@@ -320,8 +320,9 @@ class LeeCodeTests: XCTestCase {
 //        arr = [-2,1,-3,4,-1,2,1,-5,4]
 //        r = s.maxSubArrayDivideAndConquerEdition(arr)
 //        XCTAssertEqual(6, r)
-        arr = [7,-4,-5,9,7,4,9,-4,6,-7,9,-5,7,0,-7,-5,-3,-7]
+        arr = [-2,-3,-1]
         var r = s.maxSubArrayDivideAndConquerEdition(arr)
+        XCTAssertEqual(-1, r)
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.
