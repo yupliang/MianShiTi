@@ -875,4 +875,17 @@ class Solution66 {
             }
         }
     }
+    func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
+        var arr = Array(nums)
+        for i in 0...arr.count-2 {
+            for j in 0...arr.count-2-i {
+                if arr[j] < arr[j+1] {
+                    let tmp = arr[j]
+                    arr[j] = arr[j+1]
+                    arr[j+1] = tmp
+                }
+            }
+        }
+        return arr[k-1]
+    }
 }

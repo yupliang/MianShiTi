@@ -324,6 +324,16 @@ class LeeCodeTests: XCTestCase {
         var r = s.maxSubArrayDivideAndConquerEdition(arr)
         XCTAssertEqual(-1, r)
     }
+    func  test215() -> Void {
+        var arr = [3,2,1,5,6,4]
+        var k = 2
+        var r = s.findKthLargest(arr, k)
+        XCTAssertEqual(5, r)
+        arr = [3,2,3,1,2,4,5,5,6]
+        k = 4
+        r = s.findKthLargest(arr, k)
+        XCTAssertEqual(4, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
