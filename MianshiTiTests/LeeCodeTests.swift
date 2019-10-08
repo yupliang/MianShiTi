@@ -334,6 +334,17 @@ class LeeCodeTests: XCTestCase {
         r = s.findKthLargest(arr, k)
         XCTAssertEqual(4, r)
     }
+    func test436() -> Void {
+        var arr = [[1,2]]
+        var r = s.findRightInterval(arr)
+        XCTAssertEqual([-1], r)
+        arr = [[3,4],[2,3],[1,2]]
+        r = s.findRightInterval(arr)
+        XCTAssertEqual([-1,0,1], r)
+        arr = [[1,4],[2,3],[3,4]]
+        r = s.findRightInterval(arr)
+        XCTAssertEqual([-1,2,-1], r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

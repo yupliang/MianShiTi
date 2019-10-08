@@ -875,7 +875,11 @@ class Solution66 {
             }
         }
     }
+    
     func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
+        if nums.count == 1 {
+            return nums[0]
+        }
         var arr = Array(nums)
         for i in 0...arr.count-2 {
             for j in 0...arr.count-2-i {
@@ -887,5 +891,32 @@ class Solution66 {
             }
         }
         return arr[k-1]
+    }
+    func findRightInterval(_ intervals: [[Int]]) -> [Int] {
+        var dic:[String:Int] = [:]
+        var index = 0
+        var res:[Int] = Array(repeating: 0, count: intervals.count)
+        for item in intervals {
+            dic["\(item[0])_\(item[1])"] = index
+            index += 1
+        }
+        var mutbleIntervals = Array(intervals)
+        mutbleIntervals.sort { (a, b) -> Bool in
+            return a[0] < b[0]
+        }
+        for i in 0...mutbleIntervals.count-1 {
+            var min = Int.max
+            var minIndex = -1
+            if i+1 <= mutbleIntervals.count-1 {
+                for j in i+1...mutbleIntervals.count-1 {
+                    if mutbleIntervals[j][0] >= mutbleIntervals[i][1] && mutbleIntervals[j][0] < min {
+                        min = mutbleIntervals[j][0]
+                        minIndex = dic["\(mutbleIntervals[j][0])_\(mutbleIntervals[j][1])"]!
+                    }
+                }
+            }
+            res[dic["\(mutbleIntervals[i][0])_\(mutbleIntervals[i][1])"]!] = minIndex
+        }
+        return res
     }
 }
