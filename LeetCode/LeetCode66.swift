@@ -905,18 +905,39 @@ class Solution66 {
             return a[0] < b[0]
         }
         for i in 0...mutbleIntervals.count-1 {
-            var min = Int.max
-            var minIndex = -1
-            if i+1 <= mutbleIntervals.count-1 {
-                for j in i+1...mutbleIntervals.count-1 {
-                    if mutbleIntervals[j][0] >= mutbleIntervals[i][1] && mutbleIntervals[j][0] < min {
-                        min = mutbleIntervals[j][0]
-                        minIndex = dic["\(mutbleIntervals[j][0])_\(mutbleIntervals[j][1])"]!
-                    }
-                }
+            let r = helper436Binary_search(mutbleIntervals, mutbleIntervals[i][1], 0, mutbleIntervals.count-1)
+            if let r = r {
+                res[dic["\(mutbleIntervals[i][0])_\(mutbleIntervals[i][1])"]!] = dic["\(r[0])_\(r[1])"]!
+            } else {
+                res[dic["\(mutbleIntervals[i][0])_\(mutbleIntervals[i][1])"]!] = -1
             }
-            res[dic["\(mutbleIntervals[i][0])_\(mutbleIntervals[i][1])"]!] = minIndex
+//            var min = Int.max
+//            var minIndex = -1
+//            if i+1 <= mutbleIntervals.count-1 {
+//                for j in i+1...mutbleIntervals.count-1 {
+//                    if mutbleIntervals[j][0] >= mutbleIntervals[i][1] && mutbleIntervals[j][0] < min {
+//                        min = mutbleIntervals[j][0]
+//                        minIndex = dic["\(mutbleIntervals[j][0])_\(mutbleIntervals[j][1])"]!
+//                    }
+//                }
+//            }
+//            res[dic["\(mutbleIntervals[i][0])_\(mutbleIntervals[i][1])"]!] = minIndex
         }
         return res
+    }
+    public func helper436Binary_search(_ intervals: [[Int]], _ target:Int,_ begin:Int, _ end:Int) -> [Int]?{
+        if begin >= end {
+            if intervals[begin][0] >= target {
+                return intervals[begin]
+            } else {
+                return nil
+            }
+        }
+        let mid = (begin + end)/2
+        if intervals[mid][0] >= target {
+            return helper436Binary_search(intervals, target, begin, mid)
+        } else {
+            return helper436Binary_search(intervals, target, mid+1, end)
+        }
     }
 }
