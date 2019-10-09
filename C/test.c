@@ -34,11 +34,9 @@
 //}
 //
 //
+//extern void my_lib_function();
 char pear[40];
 int main() {
-    char *p = "abc";
-    ungetc(*p, stdin);
-    printf("c is %c, getchar -- %c", *p,getchar());
-    putchar('\n');
+    my_lib_function();
     return 0;
 }
