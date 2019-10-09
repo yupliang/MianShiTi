@@ -40,3 +40,4 @@ int main() {
     my_lib_function();
     return 0;
 }
+//http://nickdesaulniers.github.io/blog/2016/11/20/static-and-dynamic-libraries/
