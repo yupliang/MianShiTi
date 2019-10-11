@@ -38,6 +38,7 @@
 char pear[40];
 int main() {
     my_lib_function();
+    sin(30);
     return 0;
 }
-//http://nickdesaulniers.github.io/blog/2016/11/20/static-and-dynamic-libraries/
+
