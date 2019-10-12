@@ -941,16 +941,32 @@ class Solution66 {
         }
     }
     func findLength(_ A: [Int], _ B: [Int]) -> Int {
+        var maxLength = 0
         for i in 0...A.count-1 {
             var length = A.count-1-i+1
-            while length>=1 {
+            while length>=1 && length > maxLength {
+                
                 for j in 0...B.count-1 {
                     if B.count-1-j+1 < length{
                         break
                     }
+                    var match = true
+                    for k in 0...length-1 {
+                        if A[i+k] != B[k] {
+                            match = false
+                            break
+                        }
+                    }
+                    if match {
+                        maxLength = max(length, maxLength)
+                        break
+                    }
                 }
+                
+                length -= 1
             }
+            
         }
-        return 0
+        return maxLength
     }
 }
