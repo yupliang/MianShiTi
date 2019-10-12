@@ -345,6 +345,12 @@ class LeeCodeTests: XCTestCase {
         r = s.findRightInterval(arr)
         XCTAssertEqual([-1,2,-1], r)
     }
+    func test718() -> Void {
+        var arrA = [1,2,3,2,1]
+        var arrB = [3,2,1,4,7]
+        var r = s.findLength(arrA, arrB)
+        XCTAssertEqual(3, r)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

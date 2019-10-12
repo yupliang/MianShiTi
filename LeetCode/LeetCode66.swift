@@ -940,4 +940,17 @@ class Solution66 {
             return helper436Binary_search(intervals, target, mid+1, end)
         }
     }
+    func findLength(_ A: [Int], _ B: [Int]) -> Int {
+        for i in 0...A.count-1 {
+            var length = A.count-1-i+1
+            while length>=1 {
+                for j in 0...B.count-1 {
+                    if B.count-1-j+1 < length{
+                        break
+                    }
+                }
+            }
+        }
+        return 0
+    }
 }
