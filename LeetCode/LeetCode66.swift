@@ -952,7 +952,7 @@ class Solution66 {
                     }
                     var match = true
                     for k in 0...length-1 {
-                        if A[i+k] != B[k] {
+                        if A[i+k] != B[k+j] {
                             match = false
                             break
                         }
