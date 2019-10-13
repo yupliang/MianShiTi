@@ -354,6 +354,10 @@ class LeeCodeTests: XCTestCase {
         arrB = [1,0,0,0,0]
         r = s.findLength(arrA, arrB)
         XCTAssertEqual(4, r)
+        arrA = [0,0,0,0,0,0,1,0,0,0]
+        arrB = [0,0,0,0,0,0,0,1,0,0]
+        r = s.findLength(arrA, arrB)
+        XCTAssertEqual(9, r)
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.
