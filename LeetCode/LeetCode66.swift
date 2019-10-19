@@ -970,4 +970,29 @@ class Solution66 {
      
         return maxLength
     }
+    func getMoney(_ Values:[Int], _ Total:Int) -> (String,Int,[Int]) {//功能驱动函数
+        var minValue = Int.max
+        var minValueArr:[Int] = []
+        minValue = getMoneyHelper(Values, Total, &minValueArr)
+        if minValue == Int.max {
+            return ("Fail", minValue,[])
+        } else {
+            return ("Success", minValue,minValueArr)
+        }
+    }
+    private func getMoneyHelper(_ Values:[Int], _ Total:Int, _ minValueArr:inout [Int]) -> Int {//功能实现函数
+        var minV = Int.max
+        for i in Values {
+            if Total > i {
+                let r0 = getMoneyHelper(Values, Total-i, &minValueArr)
+                if r0 < Int.max {                
+                    minV = min(minV, r0+1)
+                }
+            } else if Total == i {
+                minV = 1
+            }
+        }
+        
+        return minV
+    }
 }

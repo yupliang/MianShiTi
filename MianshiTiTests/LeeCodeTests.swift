@@ -359,6 +359,22 @@ class LeeCodeTests: XCTestCase {
         r = s.findLength(arrA, arrB)
         XCTAssertEqual(9, r)
     }
+    
+    func testGetMoney() -> Void {
+        let vs = [2,3,7]
+        var total = 1
+        var r = s.getMoney(vs, total)
+        XCTAssertEqual(r.0, "Fail")
+        
+        total = 4
+        r = s.getMoney(vs, total)
+        XCTAssertEqual(r.0, "Success")
+        XCTAssertEqual(r.1, 2)
+        total = 15
+        r = s.getMoney(vs, total)
+        XCTAssertEqual(r.1, 4)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
