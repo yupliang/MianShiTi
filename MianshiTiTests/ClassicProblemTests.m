@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "BTreeProblemOC.h"
+#include "AlgorithmAnalysisC.h"
 
 @interface ClassicProblemTests : XCTestCase
 
@@ -46,6 +47,8 @@
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
+        double r = Eval(30);
+        printf("eval r is %f", r);
     }];
 }
 

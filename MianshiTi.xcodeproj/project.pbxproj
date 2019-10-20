@@ -97,6 +97,8 @@
 		FDE3F2742298EAF8001448E2 /* DoubleListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F2732298EAF8001448E2 /* DoubleListTests.m */; };
 		FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F2762298EB60001448E2 /* DoubleLinkedList.m */; };
 		FDE3F2782298EB60001448E2 /* DoubleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3F2762298EB60001448E2 /* DoubleLinkedList.m */; };
+		FDE7857A235C0E4800014A32 /* AlgorithmAnalysisC.c in Sources */ = {isa = PBXBuildFile; fileRef = FDE78579235C0E4800014A32 /* AlgorithmAnalysisC.c */; };
+		FDE7857B235C0E4800014A32 /* AlgorithmAnalysisC.c in Sources */ = {isa = PBXBuildFile; fileRef = FDE78579235C0E4800014A32 /* AlgorithmAnalysisC.c */; };
 		FDE7FBEF22969088001BD1CE /* aa.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBEE22969088001BD1CE /* aa.m */; };
 		FDE7FBF022969088001BD1CE /* aa.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBEE22969088001BD1CE /* aa.m */; };
 		FDE7FBF5229690D1001BD1CE /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */; };
@@ -221,6 +223,8 @@
 		FDE3F2732298EAF8001448E2 /* DoubleListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleListTests.m; sourceTree = "<group>"; };
 		FDE3F2752298EB60001448E2 /* DoubleLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleLinkedList.h; sourceTree = "<group>"; };
 		FDE3F2762298EB60001448E2 /* DoubleLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkedList.m; sourceTree = "<group>"; };
+		FDE78578235C0E4800014A32 /* AlgorithmAnalysisC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmAnalysisC.h; sourceTree = "<group>"; };
+		FDE78579235C0E4800014A32 /* AlgorithmAnalysisC.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AlgorithmAnalysisC.c; sourceTree = "<group>"; };
 		FDE7FBED22969088001BD1CE /* aa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aa.h; sourceTree = "<group>"; };
 		FDE7FBEE22969088001BD1CE /* aa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aa.m; sourceTree = "<group>"; };
 		FDE7FBF4229690D1001BD1CE /* RuntimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
@@ -373,6 +377,8 @@
 				FD2097F02302EB11002AD227 /* BTreeProblem.swift */,
 				FD6835122304E3A700A3B327 /* BTreeProblemOC.h */,
 				FD6835132304E3A700A3B327 /* BTreeProblemOC.m */,
+				FDE78578235C0E4800014A32 /* AlgorithmAnalysisC.h */,
+				FDE78579235C0E4800014A32 /* AlgorithmAnalysisC.c */,
 			);
 			path = ClassicProblem;
 			sourceTree = "<group>";
@@ -660,6 +666,7 @@
 				FDE3F2772298EB60001448E2 /* DoubleLinkedList.m in Sources */,
 				FD60B2A422AE495700D0ABF9 /* LFUCache.m in Sources */,
 				FD938BFE22773CC50058F557 /* BinaryTree.m in Sources */,
+				FDE7857A235C0E4800014A32 /* AlgorithmAnalysisC.c in Sources */,
 				FD23014422AF810300273390 /* CView.m in Sources */,
 				FD1894752274825D003EA507 /* Node.m in Sources */,
 				FD6835102304E2D700A3B327 /* StackOC.m in Sources */,
@@ -711,6 +718,7 @@
 				FDE3F27222983729001448E2 /* DLLNode.m in Sources */,
 				FDB664B422C113F200FAC14E /* MinStackTest.swift in Sources */,
 				FDC580C722B3532700CE41EB /* MyCircleQueueTest.swift in Sources */,
+				FDE7857B235C0E4800014A32 /* AlgorithmAnalysisC.c in Sources */,
 				FDE7FBF022969088001BD1CE /* aa.m in Sources */,
 				FDFA958422E9466700B7C87C /* SegmentTreeTests.swift in Sources */,
 				FD2FC8A12296CD5500C8B432 /* LRUCache.m in Sources */,
